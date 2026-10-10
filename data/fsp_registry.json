@@ -1,0 +1,4627 @@
+[
+ {
+  "fsp_id": "FSP-100003",
+  "full_name": "Николаев Тимофей Дмитриевич",
+  "email": "timofey.nikolaev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-17894",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-44687",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-10350",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-47762",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100005",
+  "full_name": "Смирнов Кирилл Дмитриевич",
+  "email": "kirill.smirnov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-63523",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-81118",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-47777",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-25194",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100007",
+  "full_name": "Соловьёв Кирилл Юрьевич",
+  "email": "kirill.solovev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-76550",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-40613",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-86011",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-69682",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100008",
+  "full_name": "Кузнецова Татьяна Сергеевна",
+  "email": "tatyana.kuznetsova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-51505",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-47667",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-62098",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100014",
+  "full_name": "Сорокин Ярослав Алексеевич",
+  "email": "yaroslav.sorokin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-25292",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-25220",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-58629",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-95841",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100022",
+  "full_name": "Морозов Никита Игоревич",
+  "email": "nikita.morozov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-61807",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-66446",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-97562",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-47125",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-27987",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100023",
+  "full_name": "Ильин Константин Михайлович",
+  "email": "konstantin.ilin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-20011",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-55793",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100024",
+  "full_name": "Ильин Фёдор Владимирович",
+  "email": "fedor.ilin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-56129",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-58331",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-76462",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100036",
+  "full_name": "Соколов Никита Дмитриевич",
+  "email": "nikita.sokolov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-63242",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100039",
+  "full_name": "Алексеев Сергей Викторович",
+  "email": "sergey.alekseev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-63665",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-68979",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-77908",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-33850",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100047",
+  "full_name": "Егоров Глеб Александрович",
+  "email": "gleb.egorov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-79878",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-96799",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100049",
+  "full_name": "Максимов Арсений Алексеевич",
+  "email": "arseniy.maksimov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-82135",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100053",
+  "full_name": "Никитин Павел Евгеньевич",
+  "email": "pavel.nikitin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-71712",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-72676",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-20730",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100055",
+  "full_name": "Виноградов Матвей Дмитриевич",
+  "email": "matvey.vinogradov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-96742",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-79316",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-30332",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-70686",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100056",
+  "full_name": "Соколов Максим Олегович",
+  "email": "maksim.sokolov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-41051",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-46064",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100057",
+  "full_name": "Соловьёв Егор Сергеевич",
+  "email": "egor.solovev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-89026",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-37762",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-22119",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-43422",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-83249",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100059",
+  "full_name": "Семёнов Никита Михайлович",
+  "email": "nikita.semenov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-34123",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-97584",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100062",
+  "full_name": "Ильин Дмитрий Александрович",
+  "email": "dmitriy.ilin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-46749",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100063",
+  "full_name": "Егоров Тимофей Олегович",
+  "email": "timofey.egorov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-90460",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100067",
+  "full_name": "Гусев Павел Сергеевич",
+  "email": "pavel.gusev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-83905",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-63627",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-70505",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100070",
+  "full_name": "Петров Егор Дмитриевич",
+  "email": "egor.petrov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-98754",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100071",
+  "full_name": "Поляков Павел Михайлович",
+  "email": "pavel.polyakov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-35830",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-70012",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-87354",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-93769",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-58929",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100072",
+  "full_name": "Волков Павел Николаевич",
+  "email": "pavel.volkov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-20835",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-74921",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-58085",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-39470",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100076",
+  "full_name": "Ильин Арсений Павлович",
+  "email": "arseniy.ilin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-30707",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100079",
+  "full_name": "Новиков Сергей Викторович",
+  "email": "sergey.novikov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-61347",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100083",
+  "full_name": "Борисова Ксения Алексеевна",
+  "email": "kseniya.borisova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-29671",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-15772",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-75803",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-64559",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-62550",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100084",
+  "full_name": "Дмитриев Михаил Викторович",
+  "email": "mihail.dmitriev2@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-96154",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100085",
+  "full_name": "Соловьёва Юлия Евгеньевна",
+  "email": "yuliya.soloveva@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-36569",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-51160",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-61505",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100086",
+  "full_name": "Николаев Глеб Юрьевич",
+  "email": "gleb.nikolaev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-28322",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-63004",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-58790",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100087",
+  "full_name": "Михайлова Ксения Александровна",
+  "email": "kseniya.mihaylova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-64949",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-60905",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-17679",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-75390",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-60134",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100088",
+  "full_name": "Попов Ярослав Викторович",
+  "email": "yaroslav.popov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-52413",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-56095",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-40490",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-90495",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-74517",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100089",
+  "full_name": "Андреев Сергей Алексеевич",
+  "email": "sergey.andreev2@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-85082",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-59595",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100091",
+  "full_name": "Воробьёва Валерия Михайловна",
+  "email": "valeriya.vorobeva@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-19725",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-14062",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-81702",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100095",
+  "full_name": "Волкова Ольга Сергеевна",
+  "email": "olga.volkova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-62082",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100098",
+  "full_name": "Лебедев Арсений Юрьевич",
+  "email": "arseniy.lebedev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-93284",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-16626",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100102",
+  "full_name": "Воробьёв Павел Алексеевич",
+  "email": "pavel.vorobev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-71674",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2023,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-32280",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-83273",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-50250",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100104",
+  "full_name": "Воробьёв Алексей Викторович",
+  "email": "aleksey.vorobev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-50906",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100105",
+  "full_name": "Андреев Денис Михайлович",
+  "email": "denis.andreev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-91675",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-95267",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100109",
+  "full_name": "Яковлев Матвей Олегович",
+  "email": "matvey.yakovlev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-17686",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100112",
+  "full_name": "Попов Кирилл Николаевич",
+  "email": "kirill.popov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-14696",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-93563",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-57624",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-91232",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100115",
+  "full_name": "Захарова Виктория Павловна",
+  "email": "viktoriya.zaharova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-29048",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-82559",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-98129",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-56168",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-79979",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100116",
+  "full_name": "Лебедев Михаил Викторович",
+  "email": "mihail.lebedev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-81645",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-60797",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-42943",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100117",
+  "full_name": "Кузнецов Роман Михайлович",
+  "email": "roman.kuznetsov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-34100",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-80390",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-83575",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-85061",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-53393",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100119",
+  "full_name": "Соколова Валерия Андреевна",
+  "email": "valeriya.sokolova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-83149",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100122",
+  "full_name": "Лебедева Алиса Евгеньевна",
+  "email": "alisa.lebedeva@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-53365",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-98039",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-86568",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-35362",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100125",
+  "full_name": "Киселёв Илья Павлович",
+  "email": "ilya.kiselev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-15230",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-77880",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100126",
+  "full_name": "Максимов Роман Михайлович",
+  "email": "roman.maksimov2@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-57477",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-96736",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-15655",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-73113",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-43850",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100127",
+  "full_name": "Киселёва Наталья Павловна",
+  "email": "natalya.kiseleva@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-79655",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-59969",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-89365",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-79444",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-80685",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100132",
+  "full_name": "Петров Максим Николаевич",
+  "email": "maksim.petrov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-80504",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100133",
+  "full_name": "Смирнов Тимофей Владимирович",
+  "email": "timofey.smirnov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-75404",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-33394",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-42728",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100136",
+  "full_name": "Андреев Владислав Игоревич",
+  "email": "vladislav.andreev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-82789",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100138",
+  "full_name": "Михайлов Егор Игоревич",
+  "email": "egor.mihaylov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-70784",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100139",
+  "full_name": "Степанов Павел Евгеньевич",
+  "email": "pavel.stepanov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-22524",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100141",
+  "full_name": "Ильин Ярослав Олегович",
+  "email": "yaroslav.ilin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-88250",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-27865",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-74478",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100142",
+  "full_name": "Захаров Павел Юрьевич",
+  "email": "pavel.zaharov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-52027",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-24464",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100143",
+  "full_name": "Иванов Андрей Владимирович",
+  "email": "andrey.ivanov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-60014",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-68059",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-30789",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-37321",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100146",
+  "full_name": "Воробьёв Дмитрий Евгеньевич",
+  "email": "dmitriy.vorobev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-15737",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-44517",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-34318",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-30202",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-96283",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100149",
+  "full_name": "Соколов Егор Сергеевич",
+  "email": "egor.sokolov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-66438",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-82120",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-10025",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100153",
+  "full_name": "Степанов Егор Викторович",
+  "email": "egor.stepanov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-73944",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-44898",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100155",
+  "full_name": "Андреева Анастасия Евгеньевна",
+  "email": "anastasiya.andreeva@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-16957",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-96520",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-79048",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-76655",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100157",
+  "full_name": "Кузьмин Роман Павлович",
+  "email": "roman.kuzmin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-84035",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-78656",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100160",
+  "full_name": "Киселёв Арсений Владимирович",
+  "email": "arseniy.kiselev2@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-15559",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100166",
+  "full_name": "Антонова Анна Михайловна",
+  "email": "anna.antonova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-35369",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-51482",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-11480",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-78118",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-37175",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100170",
+  "full_name": "Николаева Юлия Викторовна",
+  "email": "yuliya.nikolaeva@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-25002",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-16648",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-85246",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-16047",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-47560",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100172",
+  "full_name": "Романов Арсений Андреевич",
+  "email": "arseniy.romanov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-56064",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100175",
+  "full_name": "Антонов Тимофей Павлович",
+  "email": "timofey.antonov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-81943",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-86379",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-14087",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-60173",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100177",
+  "full_name": "Семёнов Матвей Сергеевич",
+  "email": "matvey.semenov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-89963",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-20494",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-80673",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100178",
+  "full_name": "Соловьёв Никита Игоревич",
+  "email": "nikita.solovev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-91830",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100180",
+  "full_name": "Полякова Полина Владимировна",
+  "email": "polina.polyakova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-61127",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-68827",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-87165",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-79637",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-22881",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100183",
+  "full_name": "Яковлева Наталья Дмитриевна",
+  "email": "natalya.yakovleva@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-29510",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-61292",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-19229",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100185",
+  "full_name": "Поляков Роман Андреевич",
+  "email": "roman.polyakov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-12151",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-80851",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100186",
+  "full_name": "Сорокин Арсений Юрьевич",
+  "email": "arseniy.sorokin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-50283",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-23937",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100189",
+  "full_name": "Ковалёв Алексей Владимирович",
+  "email": "aleksey.kovalev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-15651",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-24769",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100190",
+  "full_name": "Попов Ярослав Николаевич",
+  "email": "yaroslav.popov2@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-67129",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-64079",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100193",
+  "full_name": "Яковлева Виктория Владимировна",
+  "email": "viktoriya.yakovleva@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-92157",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-53634",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-90281",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-13199",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100195",
+  "full_name": "Орлова Полина Игоревна",
+  "email": "polina.orlova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-70014",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100196",
+  "full_name": "Фёдоров Иван Юрьевич",
+  "email": "ivan.fedorov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-69759",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-39724",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-52769",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100203",
+  "full_name": "Михайлов Константин Игоревич",
+  "email": "konstantin.mihaylov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-77353",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100204",
+  "full_name": "Сорокина Дарья Евгеньевна",
+  "email": "darya.sorokina@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-24643",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-39697",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-72851",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-88335",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-82235",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100205",
+  "full_name": "Кузнецов Кирилл Дмитриевич",
+  "email": "kirill.kuznetsov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-90341",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-80402",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-79315",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100209",
+  "full_name": "Тарасов Андрей Владимирович",
+  "email": "andrey.tarasov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-71082",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100213",
+  "full_name": "Захаров Никита Олегович",
+  "email": "nikita.zaharov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-36444",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-22053",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-16230",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100214",
+  "full_name": "Максимов Максим Юрьевич",
+  "email": "maksim.maksimov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-66849",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-43612",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-37912",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-41506",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-93090",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100216",
+  "full_name": "Зайцева Анна Юрьевна",
+  "email": "anna.zaytseva@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-38574",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-43332",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-51079",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-24806",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-28993",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100217",
+  "full_name": "Виноградова Мария Викторовна",
+  "email": "mariya.vinogradova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-40862",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-92752",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-74447",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100218",
+  "full_name": "Гусев Егор Евгеньевич",
+  "email": "egor.gusev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-46935",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-51864",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100219",
+  "full_name": "Григорьев Максим Андреевич",
+  "email": "maksim.grigorev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-63546",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-34975",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-88654",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-42547",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100220",
+  "full_name": "Борисов Константин Евгеньевич",
+  "email": "konstantin.borisov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-33510",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-49650",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-27290",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100222",
+  "full_name": "Романов Дмитрий Алексеевич",
+  "email": "dmitriy.romanov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-76681",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-98723",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-84814",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100223",
+  "full_name": "Поляков Константин Владимирович",
+  "email": "konstantin.polyakov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-88943",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-94363",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100224",
+  "full_name": "Зайцев Фёдор Алексеевич",
+  "email": "fedor.zaytsev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-79111",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-65382",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-72601",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-60867",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-77284",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100226",
+  "full_name": "Григорьев Ярослав Викторович",
+  "email": "yaroslav.grigorev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-25293",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-24668",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-98316",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-96208",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-29025",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100231",
+  "full_name": "Семёнов Евгений Владимирович",
+  "email": "evgeniy.semenov2@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-89908",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100236",
+  "full_name": "Кузьмин Михаил Игоревич",
+  "email": "mihail.kuzmin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-56461",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-86230",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-85030",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100239",
+  "full_name": "Гусев Сергей Юрьевич",
+  "email": "sergey.gusev2@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-81766",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-49998",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-89391",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-50593",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100240",
+  "full_name": "Поляков Владислав Олегович",
+  "email": "vladislav.polyakov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-21161",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-75881",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-46039",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-79932",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-13049",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100243",
+  "full_name": "Морозов Евгений Викторович",
+  "email": "evgeniy.morozov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-76889",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-46629",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-99128",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-49405",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100246",
+  "full_name": "Макаров Константин Андреевич",
+  "email": "konstantin.makarov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-93681",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-32344",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-89032",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-26702",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-98832",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100248",
+  "full_name": "Николаев Никита Дмитриевич",
+  "email": "nikita.nikolaev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-21211",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-18126",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-19556",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100249",
+  "full_name": "Антонов Владислав Михайлович",
+  "email": "vladislav.antonov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-48150",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-35377",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-56890",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-17928",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-73097",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100251",
+  "full_name": "Семёнов Константин Владимирович",
+  "email": "konstantin.semenov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-82704",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100253",
+  "full_name": "Кузьмин Алексей Викторович",
+  "email": "aleksey.kuzmin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-96966",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-29472",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-94550",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-76619",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-78875",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100257",
+  "full_name": "Романов Артём Андреевич",
+  "email": "artem.romanov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-14221",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-83196",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-75509",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-62870",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100259",
+  "full_name": "Кузьмин Матвей Александрович",
+  "email": "matvey.kuzmin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-47737",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-87003",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-68422",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-84609",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100260",
+  "full_name": "Киселёв Алексей Евгеньевич",
+  "email": "aleksey.kiselev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-63907",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100261",
+  "full_name": "Смирнов Арсений Дмитриевич",
+  "email": "arseniy.smirnov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-31150",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-32079",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-18943",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100263",
+  "full_name": "Семёнова Анна Дмитриевна",
+  "email": "anna.semenova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-70132",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-32756",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100266",
+  "full_name": "Медведев Арсений Игоревич",
+  "email": "arseniy.medvedev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-34057",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-97163",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100267",
+  "full_name": "Лебедев Евгений Андреевич",
+  "email": "evgeniy.lebedev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-59993",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": 1,
+    "role": "winner",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-89874",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-30027",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-57131",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100273",
+  "full_name": "Захаров Максим Дмитриевич",
+  "email": "maksim.zaharov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-44843",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100277",
+  "full_name": "Поляков Фёдор Евгеньевич",
+  "email": "fedor.polyakov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-53620",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-87620",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-83649",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-51896",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-85617",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100278",
+  "full_name": "Фёдорова Ксения Юрьевна",
+  "email": "kseniya.fedorova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-61296",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-39500",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-59375",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-12826",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100279",
+  "full_name": "Попова Алёна Юрьевна",
+  "email": "alena.popova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-85455",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100282",
+  "full_name": "Дмитриев Михаил Сергеевич",
+  "email": "mihail.dmitriev3@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-14588",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-32492",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-95419",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-85377",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-10697",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100286",
+  "full_name": "Волкова Виктория Николаевна",
+  "email": "viktoriya.volkova@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-62776",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-96188",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-93780",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100289",
+  "full_name": "Сорокин Алексей Викторович",
+  "email": "aleksey.sorokin@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-38503",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-25448",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100290",
+  "full_name": "Соколов Матвей Александрович",
+  "email": "matvey.sokolov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-49227",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-24246",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100291",
+  "full_name": "Соловьёв Роман Евгеньевич",
+  "email": "roman.solovev@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-60967",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-75536",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2024,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-66223",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-88261",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100296",
+  "full_name": "Александров Егор Евгеньевич",
+  "email": "egor.aleksandrov@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-26899",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-45585",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-77213",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2025,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-34928",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "продуктовое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-31694",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-100299",
+  "full_name": "Зайцев Фёдор Сергеевич",
+  "email": "fedor.zaytsev2@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-94557",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-11545",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-12758",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-34621",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-900000",
+  "full_name": "Кузнецов Тимофей Павлович",
+  "email": "demo1@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-82297",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": 3,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-59105",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2025,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-55955",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": false
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-900001",
+  "full_name": "Павлов Глеб Алексеевич",
+  "email": "demo2@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-64336",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": 1,
+    "role": "winner",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-85740",
+    "event": "Первенство России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-78021",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2025,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-41697",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-900002",
+  "full_name": "Белов Роман Сергеевич",
+  "email": "demo3@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-23051",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование беспилотных авиационных систем",
+    "year": 2023,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-87763",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-30847",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2024,
+    "place": null,
+    "role": "participant",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-13314",
+    "event": "Кубок России по спортивному программированию",
+    "discipline": "программирование робототехники",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-900003",
+  "full_name": "Макаров Фёдор Сергеевич",
+  "email": "demo4@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-59559",
+    "event": "Всероссийский хакатон ФСП",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": 2,
+    "role": "prize",
+    "team": true
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-93674",
+    "event": "Региональные соревнования по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2023,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ },
+ {
+  "fsp_id": "FSP-900004",
+  "full_name": "Михайлов Владислав Дмитриевич",
+  "email": "demo5@example.ru",
+  "results": [
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-22160",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "программирование систем информационной безопасности",
+    "year": 2026,
+    "place": 2,
+    "role": "prize",
+    "team": false
+   },
+   {
+    "source": "fsp",
+    "external_id": "FSP-RES-74361",
+    "event": "Чемпионат России по спортивному программированию",
+    "discipline": "алгоритмическое программирование",
+    "year": 2026,
+    "place": null,
+    "role": "participant",
+    "team": true
+   }
+  ]
+ }
+]

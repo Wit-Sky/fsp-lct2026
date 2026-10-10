@@ -1,0 +1,4661 @@
+[
+ {
+  "need": {
+   "id": 1,
+   "title": "Backend-разработчик (middle)",
+   "spec": "backend",
+   "grade": "middle",
+   "skills": [
+    {
+     "name": "Python",
+     "weight": 1
+    },
+    {
+     "name": "Go",
+     "weight": 3
+    },
+    {
+     "name": "Docker",
+     "weight": 2
+    }
+   ],
+   "description": "Ищем backend-разработчик уровня middle. Ключевое: Python, Go, Docker.",
+   "salary_from": 180000,
+   "salary_to": 320000,
+   "salary_type": "gross",
+   "work_format": "office"
+  },
+  "candidates": [
+   {
+    "candidate_id": 165,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Linux",
+     "Kafka",
+     "Redis",
+     "SQL"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 23,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Redis",
+     "Linux",
+     "Spring",
+     "PostgreSQL",
+     "Python",
+     "Docker",
+     "Kafka",
+     "Go",
+     "SQL"
+    ],
+    "experience_years": 2.4,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2024,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 295,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "SQL",
+     "Docker",
+     "Java",
+     "Kubernetes",
+     "REST",
+     "Python",
+     "PostgreSQL"
+    ],
+    "experience_years": 0.3,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 210,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "Python",
+     "Docker",
+     "gRPC",
+     "Spring",
+     "Linux",
+     "Redis",
+     "Java",
+     "REST",
+     "PostgreSQL"
+    ],
+    "experience_years": 6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 96,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Go",
+     "REST",
+     "Linux",
+     "gRPC",
+     "SQL",
+     "Docker",
+     "Java",
+     "PostgreSQL"
+    ],
+    "experience_years": 5,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 187,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Python",
+     "PostgreSQL",
+     "REST",
+     "FastAPI",
+     "Redis",
+     "Java"
+    ],
+    "experience_years": 0.1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 13,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Redis",
+     "Python",
+     "REST",
+     "Django",
+     "Kubernetes",
+     "Docker",
+     "PostgreSQL",
+     "SQL"
+    ],
+    "experience_years": 2.7,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 202,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "REST",
+     "PostgreSQL",
+     "Docker",
+     "SQL",
+     "FastAPI",
+     "Spring",
+     "Kafka",
+     "Go",
+     "Python"
+    ],
+    "experience_years": 1.2,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 274,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Python",
+     "gRPC",
+     "Redis",
+     "REST",
+     "SQL",
+     "Go"
+    ],
+    "experience_years": 7.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 222,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "Python",
+     "PostgreSQL",
+     "Linux",
+     "Kafka",
+     "Docker",
+     "SQL",
+     "REST",
+     "Java"
+    ],
+    "experience_years": 7,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 107,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Kubernetes",
+     "Redis",
+     "FastAPI",
+     "Python"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 183,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Go",
+     "Docker",
+     "PostgreSQL",
+     "Linux",
+     "Python"
+    ],
+    "experience_years": 4.2,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2025,
+      "role": "winner"
+     }
+    ]
+   },
+   {
+    "candidate_id": 56,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Python",
+     "Redis",
+     "Docker",
+     "REST",
+     "Linux",
+     "Java"
+    ],
+    "experience_years": 3,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 269,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "PostgreSQL",
+     "Redis",
+     "FastAPI",
+     "Docker",
+     "SQL",
+     "Django"
+    ],
+    "experience_years": 5.3,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 280,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Go",
+     "PostgreSQL",
+     "Django",
+     "Kubernetes"
+    ],
+    "experience_years": 1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 54,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Docker",
+     "Python",
+     "Redis",
+     "REST",
+     "PostgreSQL",
+     "Kafka",
+     "Spring",
+     "Go"
+    ],
+    "experience_years": 5.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 62,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Docker",
+     "REST",
+     "Python",
+     "Redis",
+     "Go",
+     "Django",
+     "SQL",
+     "Linux"
+    ],
+    "experience_years": 0.6,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2023,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 163,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Linux",
+     "PostgreSQL",
+     "Docker",
+     "Python",
+     "Java",
+     "Django"
+    ],
+    "experience_years": 4.1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 129,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Linux",
+     "REST",
+     "Kafka",
+     "Docker"
+    ],
+    "experience_years": 1.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 171,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Python",
+     "SQL",
+     "Linux",
+     "Redis",
+     "Java"
+    ],
+    "experience_years": 1.8,
+    "fsp_results": []
+   }
+  ]
+ },
+ {
+  "need": {
+   "id": 2,
+   "title": "Backend-разработчик (junior)",
+   "spec": "backend",
+   "grade": "junior",
+   "skills": [
+    {
+     "name": "FastAPI",
+     "weight": 1
+    },
+    {
+     "name": "gRPC",
+     "weight": 2
+    },
+    {
+     "name": "PostgreSQL",
+     "weight": 1
+    },
+    {
+     "name": "SQL",
+     "weight": 1
+    },
+    {
+     "name": "Linux",
+     "weight": 1
+    }
+   ],
+   "description": "Ищем backend-разработчик уровня junior. Ключевое: FastAPI, gRPC, PostgreSQL, SQL, Linux.",
+   "salary_from": 70000,
+   "salary_to": 140000,
+   "salary_type": "net",
+   "work_format": "office"
+  },
+  "candidates": [
+   {
+    "candidate_id": 258,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Redis",
+     "SQL",
+     "Python",
+     "Java",
+     "Docker",
+     "Go",
+     "Linux"
+    ],
+    "experience_years": 4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 60,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Kafka",
+     "PostgreSQL",
+     "Python",
+     "REST"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 184,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Kafka",
+     "SQL",
+     "Django",
+     "FastAPI",
+     "Python",
+     "gRPC"
+    ],
+    "experience_years": 2,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 274,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Python",
+     "gRPC",
+     "Redis",
+     "REST",
+     "SQL",
+     "Go"
+    ],
+    "experience_years": 7.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 21,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Python",
+     "gRPC",
+     "Docker",
+     "PostgreSQL"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 188,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Docker",
+     "FastAPI",
+     "Linux",
+     "REST",
+     "PostgreSQL"
+    ],
+    "experience_years": 5.7,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 269,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "PostgreSQL",
+     "Redis",
+     "FastAPI",
+     "Docker",
+     "SQL",
+     "Django"
+    ],
+    "experience_years": 5.3,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 93,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "PostgreSQL",
+     "Java",
+     "Python",
+     "Docker",
+     "Spring",
+     "SQL"
+    ],
+    "experience_years": 4.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 289,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "PostgreSQL",
+     "Python",
+     "Docker",
+     "FastAPI",
+     "SQL"
+    ],
+    "experience_years": 1.7,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 44,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "PostgreSQL",
+     "Redis",
+     "Docker",
+     "REST",
+     "Kubernetes",
+     "Kafka",
+     "Python"
+    ],
+    "experience_years": 2.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 278,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "Java",
+     "Kubernetes",
+     "REST",
+     "Docker",
+     "Redis",
+     "FastAPI",
+     "SQL",
+     "Python",
+     "gRPC"
+    ],
+    "experience_years": 4.2,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2026,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 71,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Python",
+     "Django",
+     "PostgreSQL",
+     "REST",
+     "Linux"
+    ],
+    "experience_years": 4.8,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2026,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2026,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 183,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Go",
+     "Docker",
+     "PostgreSQL",
+     "Linux",
+     "Python"
+    ],
+    "experience_years": 4.2,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2025,
+      "role": "winner"
+     }
+    ]
+   },
+   {
+    "candidate_id": 160,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Docker",
+     "REST",
+     "Kubernetes",
+     "Django",
+     "SQL",
+     "PostgreSQL"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 52,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Python",
+     "Linux",
+     "FastAPI",
+     "Django",
+     "PostgreSQL"
+    ],
+    "experience_years": 3.8,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 80,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "PostgreSQL",
+     "Linux",
+     "REST",
+     "SQL"
+    ],
+    "experience_years": 3.7,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 63,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "REST",
+     "Docker",
+     "Python",
+     "Linux",
+     "Spring",
+     "Java"
+    ],
+    "experience_years": 0.5,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 167,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Python",
+     "FastAPI",
+     "Django",
+     "Docker",
+     "SQL"
+    ],
+    "experience_years": 5.2,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 54,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Docker",
+     "Python",
+     "Redis",
+     "REST",
+     "PostgreSQL",
+     "Kafka",
+     "Spring",
+     "Go"
+    ],
+    "experience_years": 5.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 23,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Redis",
+     "Linux",
+     "Spring",
+     "PostgreSQL",
+     "Python",
+     "Docker",
+     "Kafka",
+     "Go",
+     "SQL"
+    ],
+    "experience_years": 2.4,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2024,
+      "role": "participant"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "need": {
+   "id": 4,
+   "title": "Backend-разработчик (middle)",
+   "spec": "backend",
+   "grade": "middle",
+   "skills": [
+    {
+     "name": "Django",
+     "weight": 2
+    },
+    {
+     "name": "Kafka",
+     "weight": 3
+    },
+    {
+     "name": "PostgreSQL",
+     "weight": 1
+    }
+   ],
+   "description": "Ищем backend-разработчик уровня middle. Ключевое: Django, Kafka, PostgreSQL.",
+   "salary_from": 220000,
+   "salary_to": 320000,
+   "salary_type": "gross",
+   "work_format": "hybrid"
+  },
+  "candidates": [
+   {
+    "candidate_id": 202,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "REST",
+     "PostgreSQL",
+     "Docker",
+     "SQL",
+     "FastAPI",
+     "Spring",
+     "Kafka",
+     "Go",
+     "Python"
+    ],
+    "experience_years": 1.2,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 255,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Django",
+     "Kafka",
+     "Docker",
+     "Python",
+     "Spring",
+     "FastAPI",
+     "Java"
+    ],
+    "experience_years": 1.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 52,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Python",
+     "Linux",
+     "FastAPI",
+     "Django",
+     "PostgreSQL"
+    ],
+    "experience_years": 3.8,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 28,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Kubernetes",
+     "gRPC",
+     "Docker",
+     "Redis"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 213,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "FastAPI",
+     "Kafka",
+     "REST",
+     "Docker"
+    ],
+    "experience_years": 5.2,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 91,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Docker",
+     "Linux",
+     "Go",
+     "Python"
+    ],
+    "experience_years": 1.9,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 42,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "FastAPI",
+     "Python",
+     "PostgreSQL",
+     "Kafka",
+     "Linux",
+     "Spring",
+     "SQL",
+     "Java"
+    ],
+    "experience_years": 4.9,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 127,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Docker",
+     "FastAPI",
+     "PostgreSQL",
+     "Python"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 238,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Java",
+     "Kafka",
+     "Redis",
+     "PostgreSQL",
+     "SQL"
+    ],
+    "experience_years": 3.3,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 164,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Docker",
+     "FastAPI",
+     "Kafka",
+     "Linux",
+     "Redis",
+     "gRPC",
+     "Python"
+    ],
+    "experience_years": 2.7,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 172,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Linux",
+     "Docker",
+     "REST",
+     "SQL"
+    ],
+    "experience_years": 0.2,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 163,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Linux",
+     "PostgreSQL",
+     "Docker",
+     "Python",
+     "Java",
+     "Django"
+    ],
+    "experience_years": 4.1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 122,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "FastAPI",
+     "REST",
+     "Java",
+     "Go",
+     "Linux",
+     "SQL",
+     "Docker",
+     "Kubernetes"
+    ],
+    "experience_years": 5.7,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "winner"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2026,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 168,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Python",
+     "FastAPI",
+     "REST",
+     "PostgreSQL",
+     "Redis"
+    ],
+    "experience_years": 5.9,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 64,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Django",
+     "FastAPI",
+     "Python",
+     "PostgreSQL",
+     "Docker",
+     "REST",
+     "Java",
+     "Kafka",
+     "Redis"
+    ],
+    "experience_years": 2.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 158,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "Django",
+     "REST",
+     "Python",
+     "FastAPI",
+     "Linux"
+    ],
+    "experience_years": 7.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 174,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Docker",
+     "Django",
+     "Python",
+     "Redis",
+     "PostgreSQL",
+     "Kafka"
+    ],
+    "experience_years": 3,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 206,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Linux",
+     "Django",
+     "Redis",
+     "Kafka",
+     "PostgreSQL",
+     "FastAPI",
+     "Java"
+    ],
+    "experience_years": 2.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 70,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "PostgreSQL",
+     "Python",
+     "REST",
+     "Kafka",
+     "Java",
+     "Go"
+    ],
+    "experience_years": 6.6,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2024,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 184,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Kafka",
+     "SQL",
+     "Django",
+     "FastAPI",
+     "Python",
+     "gRPC"
+    ],
+    "experience_years": 2,
+    "fsp_results": []
+   }
+  ]
+ },
+ {
+  "need": {
+   "id": 6,
+   "title": "Backend-разработчик (senior)",
+   "spec": "backend",
+   "grade": "senior",
+   "skills": [
+    {
+     "name": "Go",
+     "weight": 3
+    },
+    {
+     "name": "SQL",
+     "weight": 3
+    },
+    {
+     "name": "REST",
+     "weight": 2
+    },
+    {
+     "name": "Spring",
+     "weight": 3
+    },
+    {
+     "name": "Redis",
+     "weight": 3
+    }
+   ],
+   "description": "Ищем backend-разработчик уровня senior. Ключевое: Go, SQL, REST, Spring, Redis.",
+   "salary_from": 320000,
+   "salary_to": 390000,
+   "salary_type": "net",
+   "work_format": "hybrid"
+  },
+  "candidates": [
+   {
+    "candidate_id": 109,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "PostgreSQL",
+     "SQL",
+     "FastAPI",
+     "Spring",
+     "REST",
+     "Kubernetes",
+     "Docker"
+    ],
+    "experience_years": 2.1,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 274,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Python",
+     "gRPC",
+     "Redis",
+     "REST",
+     "SQL",
+     "Go"
+    ],
+    "experience_years": 7.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 118,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "REST",
+     "Spring",
+     "Linux",
+     "PostgreSQL",
+     "Python",
+     "SQL",
+     "Java",
+     "Kafka"
+    ],
+    "experience_years": 0.7,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 117,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Spring",
+     "Linux",
+     "Go",
+     "Java",
+     "PostgreSQL"
+    ],
+    "experience_years": 4.2,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 240,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "gRPC",
+     "Linux",
+     "Docker",
+     "REST",
+     "Redis",
+     "PostgreSQL",
+     "Kubernetes"
+    ],
+    "experience_years": 0.2,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 91,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Docker",
+     "Linux",
+     "Go",
+     "Python"
+    ],
+    "experience_years": 1.9,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 101,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Spring",
+     "Django",
+     "Kubernetes",
+     "SQL",
+     "Docker",
+     "Go",
+     "Redis",
+     "Java"
+    ],
+    "experience_years": 5.8,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 171,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Python",
+     "SQL",
+     "Linux",
+     "Redis",
+     "Java"
+    ],
+    "experience_years": 1.8,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 74,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "REST",
+     "Go",
+     "Kubernetes",
+     "PostgreSQL",
+     "Python"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 57,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "REST",
+     "Go",
+     "PostgreSQL",
+     "Python",
+     "Kafka"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 168,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Python",
+     "FastAPI",
+     "REST",
+     "PostgreSQL",
+     "Redis"
+    ],
+    "experience_years": 5.9,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 279,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Redis",
+     "SQL",
+     "Java",
+     "Linux"
+    ],
+    "experience_years": 2.2,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2024,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 16,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "SQL",
+     "Redis",
+     "Linux",
+     "Python",
+     "REST",
+     "Java",
+     "Spring",
+     "Docker",
+     "PostgreSQL"
+    ],
+    "experience_years": 2.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 58,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "Kafka",
+     "Redis",
+     "Python",
+     "SQL",
+     "PostgreSQL",
+     "REST",
+     "Linux",
+     "FastAPI"
+    ],
+    "experience_years": 1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 254,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "SQL",
+     "Spring",
+     "Kafka",
+     "Go",
+     "Python",
+     "Redis",
+     "PostgreSQL"
+    ],
+    "experience_years": 7.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 210,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "Python",
+     "Docker",
+     "gRPC",
+     "Spring",
+     "Linux",
+     "Redis",
+     "Java",
+     "REST",
+     "PostgreSQL"
+    ],
+    "experience_years": 6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 23,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Redis",
+     "Linux",
+     "Spring",
+     "PostgreSQL",
+     "Python",
+     "Docker",
+     "Kafka",
+     "Go",
+     "SQL"
+    ],
+    "experience_years": 2.4,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2024,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 278,
+    "spec": "backend",
+    "claimed_grade": "senior",
+    "skills": [
+     "Java",
+     "Kubernetes",
+     "REST",
+     "Docker",
+     "Redis",
+     "FastAPI",
+     "SQL",
+     "Python",
+     "gRPC"
+    ],
+    "experience_years": 4.2,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2026,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 105,
+    "spec": "backend",
+    "claimed_grade": "middle",
+    "skills": [
+     "SQL",
+     "REST",
+     "Spring",
+     "Java",
+     "Docker",
+     "Python",
+     "Kubernetes"
+    ],
+    "experience_years": 4.1,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 96,
+    "spec": "backend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Go",
+     "REST",
+     "Linux",
+     "gRPC",
+     "SQL",
+     "Docker",
+     "Java",
+     "PostgreSQL"
+    ],
+    "experience_years": 5,
+    "fsp_results": []
+   }
+  ]
+ },
+ {
+  "need": {
+   "id": 3,
+   "title": "Frontend-разработчик (junior)",
+   "spec": "frontend",
+   "grade": "junior",
+   "skills": [
+    {
+     "name": "REST",
+     "weight": 3
+    },
+    {
+     "name": "HTML",
+     "weight": 2
+    },
+    {
+     "name": "TypeScript",
+     "weight": 3
+    }
+   ],
+   "description": "Ищем frontend-разработчик уровня junior. Ключевое: REST, HTML, TypeScript.",
+   "salary_from": 80000,
+   "salary_to": 120000,
+   "salary_type": "net",
+   "work_format": "hybrid"
+  },
+  "candidates": [
+   {
+    "candidate_id": 40,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "HTML",
+     "CSS",
+     "TypeScript",
+     "Vite",
+     "Figma",
+     "React",
+     "REST",
+     "JavaScript"
+    ],
+    "experience_years": 5,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 189,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "JavaScript",
+     "React",
+     "TypeScript",
+     "CSS",
+     "Next.js",
+     "HTML",
+     "REST",
+     "Webpack"
+    ],
+    "experience_years": 4.3,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "winner"
+     }
+    ]
+   },
+   {
+    "candidate_id": 85,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "CSS",
+     "Vue",
+     "HTML",
+     "JavaScript",
+     "Webpack"
+    ],
+    "experience_years": 1.4,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "winner"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 73,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Vite",
+     "CSS",
+     "REST",
+     "Redux",
+     "React",
+     "HTML"
+    ],
+    "experience_years": 0.8,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 212,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "HTML",
+     "REST",
+     "JavaScript",
+     "React",
+     "Next.js",
+     "TypeScript"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 186,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "TypeScript",
+     "CSS",
+     "Redux",
+     "Figma",
+     "JavaScript"
+    ],
+    "experience_years": 0.6,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "winner"
+     }
+    ]
+   },
+   {
+    "candidate_id": 169,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "React",
+     "HTML",
+     "TypeScript",
+     "Redux",
+     "JavaScript",
+     "CSS"
+    ],
+    "experience_years": 2.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 228,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "JavaScript",
+     "TypeScript",
+     "CSS",
+     "HTML"
+    ],
+    "experience_years": 1.2,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 275,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "REST",
+     "Figma",
+     "CSS",
+     "HTML"
+    ],
+    "experience_years": 0.2,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 181,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "HTML",
+     "REST",
+     "TypeScript",
+     "CSS",
+     "JavaScript",
+     "Accessibility"
+    ],
+    "experience_years": 3.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 111,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "TypeScript",
+     "Jest",
+     "REST",
+     "HTML",
+     "JavaScript",
+     "Figma"
+    ],
+    "experience_years": 2.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 110,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "REST",
+     "Next.js",
+     "JavaScript",
+     "CSS",
+     "TypeScript"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 9,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "TypeScript",
+     "JavaScript",
+     "REST",
+     "CSS"
+    ],
+    "experience_years": 2.7,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 136,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Jest",
+     "React",
+     "TypeScript",
+     "JavaScript",
+     "CSS"
+    ],
+    "experience_years": 1.7,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 115,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "HTML",
+     "Vite",
+     "TypeScript",
+     "Next.js",
+     "Vue",
+     "React",
+     "REST"
+    ],
+    "experience_years": 0.9,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 8,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "JavaScript",
+     "REST",
+     "TypeScript",
+     "React",
+     "Jest",
+     "Accessibility",
+     "Vue"
+    ],
+    "experience_years": 4.9,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 30,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "TypeScript",
+     "HTML",
+     "CSS",
+     "REST",
+     "JavaScript",
+     "Figma"
+    ],
+    "experience_years": 2.3,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 38,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Redux",
+     "REST",
+     "Vue",
+     "JavaScript",
+     "CSS",
+     "Jest",
+     "React",
+     "Next.js"
+    ],
+    "experience_years": 5.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 4,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "HTML",
+     "Jest",
+     "Figma",
+     "Vue",
+     "Next.js",
+     "TypeScript"
+    ],
+    "experience_years": 4.1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 68,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Vue",
+     "REST",
+     "HTML",
+     "CSS",
+     "JavaScript"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   }
+  ]
+ },
+ {
+  "need": {
+   "id": 5,
+   "title": "Frontend-разработчик (junior)",
+   "spec": "frontend",
+   "grade": "junior",
+   "skills": [
+    {
+     "name": "CSS",
+     "weight": 2
+    },
+    {
+     "name": "Webpack",
+     "weight": 1
+    },
+    {
+     "name": "Next.js",
+     "weight": 1
+    },
+    {
+     "name": "JavaScript",
+     "weight": 2
+    },
+    {
+     "name": "HTML",
+     "weight": 1
+    },
+    {
+     "name": "Figma",
+     "weight": 1
+    }
+   ],
+   "description": "Ищем frontend-разработчик уровня junior. Ключевое: CSS, Webpack, Next.js, JavaScript, HTML, Figma.",
+   "salary_from": 100000,
+   "salary_to": 130000,
+   "salary_type": "net",
+   "work_format": "remote"
+  },
+  "candidates": [
+   {
+    "candidate_id": 98,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Webpack",
+     "JavaScript",
+     "CSS",
+     "Next.js",
+     "Jest",
+     "Redux",
+     "HTML"
+    ],
+    "experience_years": 2.5,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2024,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 137,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "CSS",
+     "JavaScript",
+     "Jest",
+     "Redux",
+     "HTML",
+     "Vue"
+    ],
+    "experience_years": 8.8,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 143,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Redux",
+     "Webpack",
+     "React",
+     "REST",
+     "Figma",
+     "JavaScript",
+     "CSS"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 48,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "CSS",
+     "React",
+     "Vue",
+     "Figma",
+     "Webpack",
+     "TypeScript",
+     "JavaScript"
+    ],
+    "experience_years": 2.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 30,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "TypeScript",
+     "HTML",
+     "CSS",
+     "REST",
+     "JavaScript",
+     "Figma"
+    ],
+    "experience_years": 2.3,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 180,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "React",
+     "Jest",
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "Redux"
+    ],
+    "experience_years": 3.9,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2025,
+      "role": "winner"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "winner"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 161,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Jest",
+     "Next.js",
+     "CSS",
+     "JavaScript",
+     "Webpack",
+     "Figma"
+    ],
+    "experience_years": 5.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 50,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "JavaScript",
+     "REST",
+     "Redux",
+     "Webpack"
+    ],
+    "experience_years": 0.8,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 66,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "JavaScript",
+     "React",
+     "Next.js",
+     "Vite",
+     "CSS",
+     "TypeScript"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 235,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "CSS",
+     "REST",
+     "Vite",
+     "React",
+     "TypeScript",
+     "Next.js",
+     "JavaScript"
+    ],
+    "experience_years": 4.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 262,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "CSS",
+     "JavaScript",
+     "Vite",
+     "Redux",
+     "HTML",
+     "TypeScript",
+     "Next.js"
+    ],
+    "experience_years": 2.1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 189,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "JavaScript",
+     "React",
+     "TypeScript",
+     "CSS",
+     "Next.js",
+     "HTML",
+     "REST",
+     "Webpack"
+    ],
+    "experience_years": 4.3,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "winner"
+     }
+    ]
+   },
+   {
+    "candidate_id": 125,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "HTML",
+     "REST",
+     "TypeScript",
+     "Vite",
+     "Figma",
+     "JavaScript",
+     "CSS",
+     "React"
+    ],
+    "experience_years": 5.3,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 7,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "REST",
+     "Redux",
+     "Jest",
+     "Webpack"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2024,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 217,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "Vue",
+     "Jest",
+     "JavaScript",
+     "REST",
+     "Webpack",
+     "Next.js",
+     "Figma"
+    ],
+    "experience_years": 6.7,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2024,
+      "role": "winner"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2026,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 100,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Next.js",
+     "Vue",
+     "React",
+     "TypeScript",
+     "CSS",
+     "Webpack"
+    ],
+    "experience_years": 6.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 186,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "TypeScript",
+     "CSS",
+     "Redux",
+     "Figma",
+     "JavaScript"
+    ],
+    "experience_years": 0.6,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "winner"
+     }
+    ]
+   },
+   {
+    "candidate_id": 149,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "HTML",
+     "Figma",
+     "REST",
+     "Next.js"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 97,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "React",
+     "Vue",
+     "HTML",
+     "Webpack",
+     "JavaScript",
+     "REST",
+     "TypeScript"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 73,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Vite",
+     "CSS",
+     "REST",
+     "Redux",
+     "React",
+     "HTML"
+    ],
+    "experience_years": 0.8,
+    "fsp_results": []
+   }
+  ]
+ },
+ {
+  "need": {
+   "id": 7,
+   "title": "Frontend-разработчик (middle)",
+   "spec": "frontend",
+   "grade": "middle",
+   "skills": [
+    {
+     "name": "CSS",
+     "weight": 1
+    },
+    {
+     "name": "TypeScript",
+     "weight": 2
+    },
+    {
+     "name": "JavaScript",
+     "weight": 3
+    },
+    {
+     "name": "Accessibility",
+     "weight": 2
+    }
+   ],
+   "description": "Ищем frontend-разработчик уровня middle. Ключевое: CSS, TypeScript, JavaScript, Accessibility.",
+   "salary_from": 230000,
+   "salary_to": 320000,
+   "salary_type": "gross",
+   "work_format": "remote"
+  },
+  "candidates": [
+   {
+    "candidate_id": 262,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "CSS",
+     "JavaScript",
+     "Vite",
+     "Redux",
+     "HTML",
+     "TypeScript",
+     "Next.js"
+    ],
+    "experience_years": 2.1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 32,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "HTML",
+     "JavaScript",
+     "CSS",
+     "React",
+     "TypeScript",
+     "Vite",
+     "Jest",
+     "Next.js"
+    ],
+    "experience_years": 7.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 155,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "TypeScript",
+     "HTML",
+     "Webpack",
+     "CSS",
+     "Redux",
+     "Accessibility",
+     "Vite"
+    ],
+    "experience_years": 4.7,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2025,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 61,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Next.js",
+     "HTML",
+     "Accessibility",
+     "TypeScript",
+     "Vite"
+    ],
+    "experience_years": 3.8,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 94,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "CSS",
+     "Figma",
+     "Redux",
+     "TypeScript",
+     "React",
+     "HTML"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 239,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "TypeScript",
+     "Vue",
+     "Redux",
+     "React",
+     "JavaScript",
+     "HTML"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "winner"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 31,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Redux",
+     "Jest",
+     "Vite",
+     "Next.js",
+     "HTML",
+     "Figma",
+     "JavaScript",
+     "TypeScript",
+     "React"
+    ],
+    "experience_years": 9.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 235,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "CSS",
+     "REST",
+     "Vite",
+     "React",
+     "TypeScript",
+     "Next.js",
+     "JavaScript"
+    ],
+    "experience_years": 4.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 59,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "React",
+     "Jest",
+     "Figma",
+     "CSS"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2023,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 189,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "JavaScript",
+     "React",
+     "TypeScript",
+     "CSS",
+     "Next.js",
+     "HTML",
+     "REST",
+     "Webpack"
+    ],
+    "experience_years": 4.3,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "winner"
+     }
+    ]
+   },
+   {
+    "candidate_id": 276,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Webpack",
+     "CSS",
+     "JavaScript",
+     "Redux",
+     "TypeScript",
+     "REST"
+    ],
+    "experience_years": 8.1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 259,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "HTML",
+     "Next.js",
+     "JavaScript",
+     "Figma",
+     "Jest",
+     "TypeScript"
+    ],
+    "experience_years": 4.2,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2026,
+      "role": "prize"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 22,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "TypeScript",
+     "CSS",
+     "Vite",
+     "React",
+     "Webpack",
+     "HTML",
+     "Next.js"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2024,
+      "role": "winner"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2025,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 284,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "HTML",
+     "JavaScript",
+     "Webpack",
+     "Accessibility",
+     "CSS",
+     "React",
+     "Next.js"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 249,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "Webpack",
+     "REST",
+     "HTML",
+     "React",
+     "Figma",
+     "CSS",
+     "TypeScript",
+     "Vue",
+     "JavaScript"
+    ],
+    "experience_years": 7.8,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 36,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "CSS",
+     "React",
+     "JavaScript",
+     "REST",
+     "Redux",
+     "Accessibility"
+    ],
+    "experience_years": 2.9,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2024,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 72,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "JavaScript",
+     "Redux",
+     "TypeScript",
+     "React",
+     "REST",
+     "Accessibility",
+     "CSS",
+     "HTML"
+    ],
+    "experience_years": 2.4,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 243,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Redux",
+     "Jest",
+     "React",
+     "Accessibility"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 224,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Redux",
+     "Jest",
+     "React",
+     "CSS",
+     "JavaScript",
+     "Vite"
+    ],
+    "experience_years": 2.5,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2024,
+      "role": "winner"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2024,
+      "role": "winner"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2026,
+      "role": "winner"
+     }
+    ]
+   },
+   {
+    "candidate_id": 247,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "CSS",
+     "JavaScript",
+     "Figma",
+     "HTML",
+     "React",
+     "Next.js",
+     "Vue",
+     "REST"
+    ],
+    "experience_years": 8.9,
+    "fsp_results": []
+   }
+  ]
+ },
+ {
+  "need": {
+   "id": 8,
+   "title": "Frontend-разработчик (senior)",
+   "spec": "frontend",
+   "grade": "senior",
+   "skills": [
+    {
+     "name": "React",
+     "weight": 2
+    },
+    {
+     "name": "TypeScript",
+     "weight": 1
+    },
+    {
+     "name": "REST",
+     "weight": 1
+    },
+    {
+     "name": "Accessibility",
+     "weight": 1
+    }
+   ],
+   "description": "Ищем frontend-разработчик уровня senior. Ключевое: React, TypeScript, REST, Accessibility.",
+   "salary_from": 310000,
+   "salary_to": 410000,
+   "salary_type": "gross",
+   "work_format": "remote"
+  },
+  "candidates": [
+   {
+    "candidate_id": 197,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "React",
+     "Next.js",
+     "Redux",
+     "CSS",
+     "JavaScript",
+     "HTML"
+    ],
+    "experience_years": 1.7,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 130,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "TypeScript",
+     "Figma",
+     "Redux",
+     "JavaScript",
+     "Vue",
+     "React",
+     "Next.js",
+     "CSS"
+    ],
+    "experience_years": 6.2,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 230,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "TypeScript",
+     "HTML",
+     "Jest",
+     "Figma",
+     "Redux",
+     "React",
+     "CSS",
+     "Accessibility",
+     "Vue"
+    ],
+    "experience_years": 6.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 94,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "CSS",
+     "Figma",
+     "Redux",
+     "TypeScript",
+     "React",
+     "HTML"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 249,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "Webpack",
+     "REST",
+     "HTML",
+     "React",
+     "Figma",
+     "CSS",
+     "TypeScript",
+     "Vue",
+     "JavaScript"
+    ],
+    "experience_years": 7.8,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 259,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "HTML",
+     "Next.js",
+     "JavaScript",
+     "Figma",
+     "Jest",
+     "TypeScript"
+    ],
+    "experience_years": 4.2,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2026,
+      "role": "prize"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 182,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "REST",
+     "React",
+     "Redux",
+     "Jest",
+     "CSS"
+    ],
+    "experience_years": 4.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 113,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Vite",
+     "Next.js",
+     "React",
+     "TypeScript",
+     "JavaScript"
+    ],
+    "experience_years": 4.6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 159,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Next.js",
+     "Redux",
+     "TypeScript",
+     "React",
+     "HTML",
+     "Accessibility"
+    ],
+    "experience_years": 3.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 166,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "React",
+     "Redux",
+     "TypeScript",
+     "Vue",
+     "JavaScript",
+     "Vite",
+     "Accessibility",
+     "CSS",
+     "Next.js"
+    ],
+    "experience_years": 8.5,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2025,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 247,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "CSS",
+     "JavaScript",
+     "Figma",
+     "HTML",
+     "React",
+     "Next.js",
+     "Vue",
+     "REST"
+    ],
+    "experience_years": 8.9,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 55,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Vite",
+     "Webpack",
+     "Accessibility",
+     "HTML",
+     "React",
+     "Figma",
+     "Vue"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2024,
+      "role": "winner"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 135,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "JavaScript",
+     "CSS",
+     "Next.js",
+     "TypeScript"
+    ],
+    "experience_years": 0.1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 75,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "Webpack",
+     "Vite",
+     "Vue",
+     "CSS",
+     "HTML"
+    ],
+    "experience_years": 3.1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 131,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "HTML",
+     "Vite",
+     "CSS",
+     "Redux",
+     "React",
+     "Webpack",
+     "Accessibility",
+     "JavaScript",
+     "TypeScript"
+    ],
+    "experience_years": 7.3,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 15,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "Jest",
+     "Redux",
+     "CSS",
+     "HTML",
+     "Next.js",
+     "JavaScript",
+     "REST",
+     "TypeScript"
+    ],
+    "experience_years": 5.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 235,
+    "spec": "frontend",
+    "claimed_grade": "senior",
+    "skills": [
+     "CSS",
+     "REST",
+     "Vite",
+     "React",
+     "TypeScript",
+     "Next.js",
+     "JavaScript"
+    ],
+    "experience_years": 4.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 293,
+    "spec": "frontend",
+    "claimed_grade": "junior",
+    "skills": [
+     "JavaScript",
+     "Redux",
+     "TypeScript",
+     "React",
+     "CSS"
+    ],
+    "experience_years": 1.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 125,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "HTML",
+     "REST",
+     "TypeScript",
+     "Vite",
+     "Figma",
+     "JavaScript",
+     "CSS",
+     "React"
+    ],
+    "experience_years": 5.3,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 102,
+    "spec": "frontend",
+    "claimed_grade": "middle",
+    "skills": [
+     "Accessibility",
+     "Webpack",
+     "React",
+     "CSS",
+     "HTML"
+    ],
+    "experience_years": 3.8,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2025,
+      "role": "prize"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "need": {
+   "id": 25,
+   "title": "Разработчик ПО БАС (senior)",
+   "spec": "bas",
+   "grade": "senior",
+   "skills": [
+    {
+     "name": "Docker",
+     "weight": 3
+    },
+    {
+     "name": "Embedded C",
+     "weight": 3
+    },
+    {
+     "name": "C++",
+     "weight": 1
+    },
+    {
+     "name": "Computer Vision",
+     "weight": 3
+    },
+    {
+     "name": "ArduPilot",
+     "weight": 2
+    }
+   ],
+   "description": "Ищем разработчик по бас уровня senior. Ключевое: Docker, Embedded C, C++, Computer Vision, ArduPilot.",
+   "salary_from": 290000,
+   "salary_to": 430000,
+   "salary_type": "net",
+   "work_format": "office"
+  },
+  "candidates": [
+   {
+    "candidate_id": 170,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "SQL",
+     "C++",
+     "Python",
+     "ArduPilot",
+     "Computer Vision",
+     "Embedded C",
+     "MAVLink"
+    ],
+    "experience_years": 7.9,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 198,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "GNSS",
+     "SQL",
+     "PX4",
+     "Kalman filter"
+    ],
+    "experience_years": 6.5,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 300,
+    "spec": "bas",
+    "claimed_grade": "senior",
+    "skills": [
+     "GNSS",
+     "MAVLink",
+     "Kalman filter",
+     "Computer Vision",
+     "Python",
+     "C++",
+     "ROS 2",
+     "Docker"
+    ],
+    "experience_years": 6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 53,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "MAVLink",
+     "Computer Vision",
+     "PX4",
+     "C++",
+     "Python"
+    ],
+    "experience_years": 4.4,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2026,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 209,
+    "spec": "bas",
+    "claimed_grade": "senior",
+    "skills": [
+     "Python",
+     "GNSS",
+     "Computer Vision",
+     "MAVLink",
+     "C++",
+     "Linux",
+     "ROS 2",
+     "ArduPilot",
+     "PX4"
+    ],
+    "experience_years": 6,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 200,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "Linux",
+     "SQL",
+     "Computer Vision",
+     "Python",
+     "ROS 2",
+     "MAVLink",
+     "Docker"
+    ],
+    "experience_years": 2.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 277,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "Computer Vision",
+     "ROS 2",
+     "C++",
+     "Embedded C",
+     "MAVLink",
+     "Docker",
+     "Python"
+    ],
+    "experience_years": 0.4,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "winner"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 126,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "C++",
+     "MAVLink",
+     "Computer Vision",
+     "Linux",
+     "Kalman filter",
+     "Docker",
+     "Python",
+     "GNSS",
+     "ArduPilot"
+    ],
+    "experience_years": 4.8,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "winner"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2026,
+      "role": "winner"
+     }
+    ]
+   },
+   {
+    "candidate_id": 260,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "ROS 2",
+     "Python",
+     "Computer Vision",
+     "C++",
+     "Docker",
+     "ArduPilot"
+    ],
+    "experience_years": 3.1,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 281,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "MAVLink",
+     "Python",
+     "PX4",
+     "ROS 2",
+     "Embedded C"
+    ],
+    "experience_years": 2.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 232,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "C++",
+     "Computer Vision",
+     "MAVLink",
+     "Linux",
+     "GNSS",
+     "Embedded C"
+    ],
+    "experience_years": 2.7,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 204,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "C++",
+     "Linux",
+     "Kalman filter",
+     "ArduPilot",
+     "Docker",
+     "Python",
+     "MAVLink",
+     "ROS 2"
+    ],
+    "experience_years": 4.7,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 2,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "Computer Vision",
+     "ArduPilot",
+     "Linux",
+     "Embedded C",
+     "Python"
+    ],
+    "experience_years": 4.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 190,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "C++",
+     "MAVLink",
+     "PX4",
+     "Linux",
+     "Kalman filter"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "winner"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 157,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "Linux",
+     "Embedded C",
+     "ROS 2",
+     "ArduPilot",
+     "Python",
+     "Kalman filter"
+    ],
+    "experience_years": 3.3,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 201,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "Linux",
+     "Docker",
+     "MAVLink",
+     "PX4",
+     "GNSS",
+     "ROS 2",
+     "Python"
+    ],
+    "experience_years": 1.7,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 268,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "ROS 2",
+     "MAVLink",
+     "Docker",
+     "Computer Vision",
+     "SQL",
+     "Embedded C",
+     "Linux",
+     "ArduPilot"
+    ],
+    "experience_years": 8.1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 173,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "ArduPilot",
+     "SQL",
+     "Linux",
+     "Embedded C"
+    ],
+    "experience_years": 1.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 76,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "C++",
+     "Linux",
+     "Computer Vision",
+     "MAVLink",
+     "PX4",
+     "ROS 2",
+     "ArduPilot",
+     "Embedded C"
+    ],
+    "experience_years": 1,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "winner"
+     }
+    ]
+   },
+   {
+    "candidate_id": 81,
+    "spec": "bas",
+    "claimed_grade": "senior",
+    "skills": [
+     "ArduPilot",
+     "C++",
+     "Python",
+     "Embedded C",
+     "Docker",
+     "SQL",
+     "Linux"
+    ],
+    "experience_years": 5.0,
+    "fsp_results": []
+   }
+  ]
+ },
+ {
+  "need": {
+   "id": 26,
+   "title": "Разработчик ПО БАС (senior)",
+   "spec": "bas",
+   "grade": "senior",
+   "skills": [
+    {
+     "name": "Python",
+     "weight": 3
+    },
+    {
+     "name": "ROS 2",
+     "weight": 3
+    },
+    {
+     "name": "PX4",
+     "weight": 3
+    },
+    {
+     "name": "Linux",
+     "weight": 3
+    }
+   ],
+   "description": "Ищем разработчик по бас уровня senior. Ключевое: Python, ROS 2, PX4, Linux.",
+   "salary_from": 290000,
+   "salary_to": 360000,
+   "salary_type": "net",
+   "work_format": "office"
+  },
+  "candidates": [
+   {
+    "candidate_id": 179,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "GNSS",
+     "C++",
+     "Embedded C",
+     "ArduPilot",
+     "Python"
+    ],
+    "experience_years": 5.5,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 81,
+    "spec": "bas",
+    "claimed_grade": "senior",
+    "skills": [
+     "ArduPilot",
+     "C++",
+     "Python",
+     "Embedded C",
+     "Docker",
+     "SQL",
+     "Linux"
+    ],
+    "experience_years": 5.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 277,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "Computer Vision",
+     "ROS 2",
+     "C++",
+     "Embedded C",
+     "MAVLink",
+     "Docker",
+     "Python"
+    ],
+    "experience_years": 0.4,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "winner"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 170,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "SQL",
+     "C++",
+     "Python",
+     "ArduPilot",
+     "Computer Vision",
+     "Embedded C",
+     "MAVLink"
+    ],
+    "experience_years": 7.9,
+    "fsp_results": [
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 157,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "Linux",
+     "Embedded C",
+     "ROS 2",
+     "ArduPilot",
+     "Python",
+     "Kalman filter"
+    ],
+    "experience_years": 3.3,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 260,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "ROS 2",
+     "Python",
+     "Computer Vision",
+     "C++",
+     "Docker",
+     "ArduPilot"
+    ],
+    "experience_years": 3.1,
+    "fsp_results": [
+     {
+      "discipline": "алгоритмическое программирование",
+      "year": 2023,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 1,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "SQL",
+     "MAVLink",
+     "Embedded C",
+     "Python"
+    ],
+    "experience_years": 3.5,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 150,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "C++",
+     "Python",
+     "MAVLink",
+     "Linux"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 204,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "C++",
+     "Linux",
+     "Kalman filter",
+     "ArduPilot",
+     "Docker",
+     "Python",
+     "MAVLink",
+     "ROS 2"
+    ],
+    "experience_years": 4.7,
+    "fsp_results": [
+     {
+      "discipline": "программирование робототехники",
+      "year": 2023,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование робототехники",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "participant"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 43,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "MAVLink",
+     "Computer Vision",
+     "PX4",
+     "Linux"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 268,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "ROS 2",
+     "MAVLink",
+     "Docker",
+     "Computer Vision",
+     "SQL",
+     "Embedded C",
+     "Linux",
+     "ArduPilot"
+    ],
+    "experience_years": 8.1,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 190,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "C++",
+     "MAVLink",
+     "PX4",
+     "Linux",
+     "Kalman filter"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2024,
+      "role": "winner"
+     },
+     {
+      "discipline": "программирование систем информационной безопасности",
+      "year": 2026,
+      "role": "prize"
+     }
+    ]
+   },
+   {
+    "candidate_id": 196,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "ArduPilot",
+     "Python",
+     "Linux",
+     "PX4",
+     "GNSS",
+     "Embedded C",
+     "C++",
+     "Docker",
+     "MAVLink"
+    ],
+    "experience_years": 1.8,
+    "fsp_results": [
+     {
+      "discipline": "продуктовое программирование",
+      "year": 2024,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "prize"
+     },
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2026,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 20,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "C++",
+     "ROS 2",
+     "Embedded C",
+     "Python",
+     "Computer Vision",
+     "MAVLink"
+    ],
+    "experience_years": 0.0,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 209,
+    "spec": "bas",
+    "claimed_grade": "senior",
+    "skills": [
+     "Python",
+     "GNSS",
+     "Computer Vision",
+     "MAVLink",
+     "C++",
+     "Linux",
+     "ROS 2",
+     "ArduPilot",
+     "PX4"
+    ],
+    "experience_years": 6,
+    "fsp_results": [
+     {
+      "discipline": "программирование беспилотных авиационных систем",
+      "year": 2025,
+      "role": "participant"
+     }
+    ]
+   },
+   {
+    "candidate_id": 2,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "Computer Vision",
+     "ArduPilot",
+     "Linux",
+     "Embedded C",
+     "Python"
+    ],
+    "experience_years": 4.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 232,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "C++",
+     "Computer Vision",
+     "MAVLink",
+     "Linux",
+     "GNSS",
+     "Embedded C"
+    ],
+    "experience_years": 2.7,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 300,
+    "spec": "bas",
+    "claimed_grade": "senior",
+    "skills": [
+     "GNSS",
+     "MAVLink",
+     "Kalman filter",
+     "Computer Vision",
+     "Python",
+     "C++",
+     "ROS 2",
+     "Docker"
+    ],
+    "experience_years": 6,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 281,
+    "spec": "bas",
+    "claimed_grade": "junior",
+    "skills": [
+     "MAVLink",
+     "Python",
+     "PX4",
+     "ROS 2",
+     "Embedded C"
+    ],
+    "experience_years": 2.4,
+    "fsp_results": []
+   },
+   {
+    "candidate_id": 201,
+    "spec": "bas",
+    "claimed_grade": "middle",
+    "skills": [
+     "Linux",
+     "Docker",
+     "MAVLink",
+     "PX4",
+     "GNSS",
+     "ROS 2",
+     "Python"
+    ],
+    "experience_years": 1.7,
+    "fsp_results": []
+   }
+  ]
+ }
+]

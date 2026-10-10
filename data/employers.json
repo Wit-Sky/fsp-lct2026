@@ -1,0 +1,92 @@
+[
+ {
+  "id": 1,
+  "name": "ООО «Облачные решения Север»",
+  "inn": "7710433218",
+  "field": "облачные сервисы",
+  "description": "Разрабатываем платформу хранения и обработки данных для логистики.",
+  "contacts": "hr@company01.example.ru, +7 900 189-85-64",
+  "owner_email": "hr@company01.example.ru"
+ },
+ {
+  "id": 2,
+  "name": "АО «ФинПоток»",
+  "inn": "7700133890",
+  "field": "финтех",
+  "description": "Платёжные сервисы и мобильный банкинг для малого бизнеса.",
+  "contacts": "hr@company02.example.ru, +7 900 674-35-93",
+  "owner_email": "hr@company02.example.ru"
+ },
+ {
+  "id": 3,
+  "name": "ООО «Медиатека Плюс»",
+  "inn": "7786379402",
+  "field": "медиа",
+  "description": "Стриминговый сервис образовательного видео.",
+  "contacts": "hr@company03.example.ru, +7 900 814-64-53",
+  "owner_email": "hr@company03.example.ru"
+ },
+ {
+  "id": 4,
+  "name": "ООО «ГородДанных»",
+  "inn": "7742351161",
+  "field": "умный город",
+  "description": "Цифровые сервисы для транспорта и ЖКХ.",
+  "contacts": "hr@company04.example.ru, +7 900 467-54-87",
+  "owner_email": "hr@company04.example.ru"
+ },
+ {
+  "id": 5,
+  "name": "ООО «Ритейл Технологии»",
+  "inn": "7740781618",
+  "field": "электронная коммерция",
+  "description": "Маркетплейс товаров для дома и сада.",
+  "contacts": "hr@company05.example.ru, +7 900 400-90-89",
+  "owner_email": "hr@company05.example.ru"
+ },
+ {
+  "id": 6,
+  "name": "ООО «ЭдТех Лаб»",
+  "inn": "7759310341",
+  "field": "образование",
+  "description": "Онлайн-тренажёры по программированию для школьников.",
+  "contacts": "hr@company06.example.ru, +7 900 975-39-22",
+  "owner_email": "hr@company06.example.ru"
+ },
+ {
+  "id": 7,
+  "name": "АО «Индустриальные системы»",
+  "inn": "7764752553",
+  "field": "промышленность",
+  "description": "Системы мониторинга производственного оборудования.",
+  "contacts": "hr@company07.example.ru, +7 900 786-44-99",
+  "owner_email": "hr@company07.example.ru"
+ },
+ {
+  "id": 8,
+  "name": "ООО «МедСервис Онлайн»",
+  "inn": "7719283276",
+  "field": "здравоохранение",
+  "description": "Сервис записи к врачу и телемедицины.",
+  "contacts": "hr@company08.example.ru, +7 900 376-91-98",
+  "owner_email": "hr@company08.example.ru"
+ },
+ {
+  "id": 9,
+  "name": "ООО «АэроСкан Сервис»",
+  "inn": "7783503056",
+  "field": "эксплуатант БВС",
+  "description": "Аэрофотосъёмка и мониторинг линейных объектов беспилотниками.",
+  "contacts": "hr@company09.example.ru, +7 900 374-18-37",
+  "owner_email": "hr@company09.example.ru"
+ },
+ {
+  "id": 10,
+  "name": "ООО «Небесный Патруль»",
+  "inn": "7795376724",
+  "field": "эксплуатант БВС",
+  "description": "Доставка и патрулирование с помощью беспилотных авиационных систем.",
+  "contacts": "hr@company10.example.ru, +7 900 242-41-81",
+  "owner_email": "hr@company10.example.ru"
+ }
+]
