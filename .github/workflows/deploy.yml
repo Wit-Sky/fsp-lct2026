@@ -1,0 +1,56 @@
+# Автодеплой стенда на ВМ Yandex Cloud при пуше в main (и вручную — Run workflow).
+# Секреты репозитория: DEPLOY_HOST (IP ВМ), DEPLOY_SSH_KEY (приватный ключ ~/.ssh/fsp_deploy).
+# Код копируется rsync-ом с раннера — серверу не нужен доступ к закрытому репозиторию. .env на сервере не трогается.
+name: deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Frontend build check
+        working-directory: frontend
+        run: npm ci && npm run build
+
+      - name: SSH key
+        env:
+          SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          HOST: ${{ secrets.DEPLOY_HOST }}
+        run: |
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy && chmod 600 ~/.ssh/deploy
+          ssh-keyscan -T 10 "$HOST" >> ~/.ssh/known_hosts
+
+      - name: Upload code
+        env:
+          HOST: ${{ secrets.DEPLOY_HOST }}
+        run: |
+          rsync -az --delete -e "ssh -i ~/.ssh/deploy" \
+            --exclude .git --exclude .env --exclude 'frontend/node_modules' --exclude 'frontend/dist' \
+            --exclude TZ.md --exclude 'validation' --exclude 'docs/*.pdf' \
+            ./ "deploy@$HOST:/opt/fsp/app/"
+
+      - name: Restart stack
+        env:
+          HOST: ${{ secrets.DEPLOY_HOST }}
+        run: |
+          ssh -i ~/.ssh/deploy "deploy@$HOST" '
+            set -e
+            cd /opt/fsp/app
+            docker compose up -d --build --remove-orphans
+            docker image prune -f >/dev/null
+            docker builder prune -f --keep-storage 1gb >/dev/null   # диск ВМ 9 ГБ
+            for i in $(seq 1 40); do curl -fsS http://127.0.0.1:8000/api/health && exit 0; sleep 3; done
+            docker compose logs --tail 80 backend; exit 1
+          '

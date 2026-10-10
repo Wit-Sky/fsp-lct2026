@@ -1,0 +1,6 @@
+# HTTPS для стенда: сертификат Let's Encrypt выпускается автоматически на домен из DOMAIN
+# (без своего домена подойдёт <ip-с-дефисами>.sslip.io, например 51-250-1-2.sslip.io).
+{$DOMAIN} {
+	encode gzip
+	reverse_proxy frontend:80
+}
