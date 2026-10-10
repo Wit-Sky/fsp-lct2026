@@ -5,6 +5,7 @@ const candidateNav = [
   { to: "/candidate", label: "Мой путь", end: true },
   { to: "/candidate/category", label: "Категория" },
   { to: "/candidate/invitations", label: "Приглашения" },
+  { to: "/candidate/tasks", label: "Задания" },
   { to: "/candidate/vacancies", label: "Вакансии" },
   { to: "/candidate/profile", label: "Профиль" },
 ];
@@ -12,6 +13,7 @@ const employerNav = [
   { to: "/employer", label: "Подбор", end: true },
   { to: "/employer/search", label: "База кандидатов" },
   { to: "/employer/invitations", label: "Приглашения" },
+  { to: "/employer/tasks", label: "Задания" },
   { to: "/employer/company", label: "Компания" },
 ];
 

@@ -9,6 +9,8 @@ import Profile from "./pages/candidate/Profile";
 import TestResult from "./pages/candidate/TestResult";
 import TestRun from "./pages/candidate/TestRun";
 import Vacancies from "./pages/candidate/Vacancies";
+import CandidateTasks from "./pages/candidate/Tasks";
+import EmployerTasks from "./pages/employer/Tasks";
 import CandidatePage from "./pages/employer/CandidatePage";
 import Company from "./pages/employer/Company";
 import EmployerInvitations from "./pages/employer/Invitations";
@@ -31,6 +33,7 @@ export default function App() {
           <Route path="category" element={<Category />} />
           <Route path="invitations" element={<CandidateInvitations />} />
           <Route path="vacancies" element={<Vacancies />} />
+          <Route path="tasks" element={<CandidateTasks />} />
         </Route>
 
         <Route path="employer" element={<Guard role="employer" />}>
@@ -40,6 +43,7 @@ export default function App() {
           <Route path="candidates/:candId" element={<CandidatePage />} />
           <Route path="invitations" element={<EmployerInvitations />} />
           <Route path="company" element={<Company />} />
+          <Route path="tasks" element={<EmployerTasks />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" replace />} />
