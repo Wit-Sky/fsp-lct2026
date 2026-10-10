@@ -816,6 +816,146 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/tasks": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Опубликовать регулярное задание
+         * @description Короткая задача для кандидатов специализации (и грейда, если указан): решить её или предложить подход. Система предлагает задание подходящим кандидатам.
+         */
+        post: operations["create_task_api_tasks_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/employer/tasks": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Мои регулярные задания
+         * @description Задания компании, новые сверху, с числом полученных ответов.
+         */
+        get: operations["my_tasks_api_employer_tasks_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/tasks/{task_id}/close": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Снять задание
+         * @description Задание перестаёт предлагаться кандидатам; полученные ответы сохраняются.
+         */
+        post: operations["close_task_api_tasks__task_id__close_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/tasks/{task_id}/answers": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Ответы на задание
+         * @description Ответы кандидатов на задание своей компании: имя (если кандидат его не скрыл), грейд, текст ответа и оценка. Контакты здесь не раскрываются — для связи нужно приглашение.
+         */
+        get: operations["task_answers_api_tasks__task_id__answers_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/task-answers/{answer_id}/review": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Оценить ответ
+         * @description Оценка 0–3 и комментарий; кандидат видит их в своих заданиях.
+         */
+        post: operations["review_answer_api_task_answers__answer_id__review_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/me/tasks": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Мои регулярные задания
+         * @description До 3 свежих заданий работодателей по специализации и грейду кандидата, на которые он ещё не ответил, и история своих ответов с оценками.
+         */
+        get: operations["my_candidate_tasks_api_me_tasks_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/tasks/{task_id}/answer": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Ответить на задание
+         * @description Решение или подход к решению в свободной форме. Один ответ на задание; свежий ответ повышает фактор актуальности профиля в подборке.
+         */
+        post: operations["answer_task_api_tasks__task_id__answer_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -929,6 +1069,16 @@ export interface components {
             spec: string | null;
             /** Skills */
             skills: string[];
+            /**
+             * Roles
+             * @default []
+             */
+            roles: string[];
+            /**
+             * Soft Skills
+             * @default []
+             */
+            soft_skills: string[];
             /** Grade */
             grade: string | null;
             /** Status */
@@ -1190,6 +1340,18 @@ export interface components {
             /** Items */
             items: components["schemas"]["MatchOut"][];
         };
+        /** MyTasksOut */
+        MyTasksOut: {
+            /**
+             * Offered
+             * @description Предложенные задания по специализации кандидата, на которые он ещё не ответил
+             */
+            offered: components["schemas"]["TaskOut"][];
+            /** Answered */
+            answered: components["schemas"]["TaskAnswerOut"][];
+            /** Hint */
+            hint?: string | null;
+        };
         /** NeedCreated */
         NeedCreated: {
             /** Id */
@@ -1324,6 +1486,13 @@ export interface components {
             spec?: ("backend" | "frontend" | "bas") | null;
             /** Skills */
             skills?: string[] | null;
+            /**
+             * Roles
+             * @description Роли в команде (например, «Тимлид», «Разработчик»)
+             */
+            roles?: string[] | null;
+            /** Soft Skills */
+            soft_skills?: string[] | null;
             /** Experience Years */
             experience_years?: number | null;
             /** About */
@@ -1364,6 +1533,16 @@ export interface components {
             spec: string | null;
             /** Skills */
             skills: string[];
+            /**
+             * Roles
+             * @default []
+             */
+            roles: string[];
+            /**
+             * Soft Skills
+             * @default []
+             */
+            soft_skills: string[];
             /** Experience Years */
             experience_years: number | null;
             /** About */
@@ -1476,6 +1655,16 @@ export interface components {
              * @default []
              */
             skills: string[];
+            /**
+             * Roles
+             * @default []
+             */
+            roles: string[];
+            /**
+             * Soft Skills
+             * @default []
+             */
+            soft_skills: string[];
             /** Spec */
             spec?: string | null;
             /** Claimed Grade */
@@ -1495,6 +1684,105 @@ export interface components {
              * @default 1
              */
             weight: number;
+        };
+        /** TaskAnswerIn */
+        TaskAnswerIn: {
+            /** Answer */
+            answer: string;
+        };
+        /** TaskAnswerOut */
+        TaskAnswerOut: {
+            /** Id */
+            id: number;
+            /** Task Id */
+            task_id: number;
+            /** Task Title */
+            task_title: string;
+            /** Candidate Id */
+            candidate_id: number;
+            /** Candidate Name */
+            candidate_name?: string | null;
+            /** Candidate Grade */
+            candidate_grade?: string | null;
+            /** Answer */
+            answer: string;
+            /** Rating */
+            rating: number | null;
+            /** Feedback */
+            feedback: string | null;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /** Reviewed At */
+            reviewed_at: string | null;
+        };
+        /** TaskIn */
+        TaskIn: {
+            /** Title */
+            title: string;
+            /**
+             * Text
+             * @description Условие: задача или ситуация, к которой нужно предложить подход
+             */
+            text: string;
+            /**
+             * Spec
+             * @enum {string}
+             */
+            spec: "backend" | "frontend" | "bas";
+            /**
+             * Grade
+             * @description Для какого грейда; пусто — для всех грейдов специализации
+             */
+            grade?: ("junior" | "middle" | "senior") | null;
+            /**
+             * Kind
+             * @description solve — решить; approach — предложить подход к решению
+             * @default solve
+             * @enum {string}
+             */
+            kind: "solve" | "approach";
+        };
+        /** TaskOut */
+        TaskOut: {
+            /** Id */
+            id: number;
+            /** Title */
+            title: string;
+            /** Text */
+            text: string;
+            /** Spec */
+            spec: string;
+            /** Grade */
+            grade: string | null;
+            /** Kind */
+            kind: string;
+            /** Active */
+            active: boolean;
+            /** Company */
+            company: string;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /**
+             * Answers
+             * @default 0
+             */
+            answers: number;
+        };
+        /** TaskReviewIn */
+        TaskReviewIn: {
+            /**
+             * Rating
+             * @description 0 — не решено, 1 — частично, 2 — хорошо, 3 — отлично
+             */
+            rating: number;
+            /** Feedback */
+            feedback?: string | null;
         };
         /** TestResultOut */
         TestResultOut: {
@@ -3865,6 +4153,382 @@ export interface operations {
                 };
                 content: {
                     "application/json": unknown;
+                };
+            };
+        };
+    };
+    create_task_api_tasks_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["TaskIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TaskOut"];
+                };
+            };
+            /** @description Нет или неверный токен */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Нет доступа / кулдаун */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Ошибка валидации */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+        };
+    };
+    my_tasks_api_employer_tasks_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TaskOut"][];
+                };
+            };
+            /** @description Нет или неверный токен */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Нет доступа / кулдаун */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+        };
+    };
+    close_task_api_tasks__task_id__close_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                task_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TaskOut"];
+                };
+            };
+            /** @description Нет или неверный токен */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Нет доступа / кулдаун */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Не найдено */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    task_answers_api_tasks__task_id__answers_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                task_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TaskAnswerOut"][];
+                };
+            };
+            /** @description Нет или неверный токен */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Нет доступа / кулдаун */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Не найдено */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    review_answer_api_task_answers__answer_id__review_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                answer_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["TaskReviewIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TaskAnswerOut"];
+                };
+            };
+            /** @description Нет или неверный токен */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Нет доступа / кулдаун */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Не найдено */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Ошибка валидации */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+        };
+    };
+    my_candidate_tasks_api_me_tasks_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MyTasksOut"];
+                };
+            };
+            /** @description Нет или неверный токен */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Нет доступа / кулдаун */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+        };
+    };
+    answer_task_api_tasks__task_id__answer_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                task_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["TaskAnswerIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TaskAnswerOut"];
+                };
+            };
+            /** @description Нет или неверный токен */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Нет доступа / кулдаун */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Не найдено */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Конфликт */
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+            /** @description Ошибка валидации */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
                 };
             };
         };
