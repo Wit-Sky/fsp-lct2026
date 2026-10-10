@@ -1,0 +1,1012 @@
+[
+ {
+  "id": 1,
+  "employer_id": 1,
+  "title": "Backend-разработчик (middle)",
+  "spec": "backend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "Python",
+    "weight": 1
+   },
+   {
+    "name": "Go",
+    "weight": 3
+   },
+   {
+    "name": "Docker",
+    "weight": 2
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня middle. Ключевое: Python, Go, Docker.",
+  "salary_from": 180000,
+  "salary_to": 320000,
+  "salary_type": "gross",
+  "work_format": "office",
+  "published": true
+ },
+ {
+  "id": 2,
+  "employer_id": 1,
+  "title": "Backend-разработчик (junior)",
+  "spec": "backend",
+  "grade": "junior",
+  "skills": [
+   {
+    "name": "FastAPI",
+    "weight": 1
+   },
+   {
+    "name": "gRPC",
+    "weight": 2
+   },
+   {
+    "name": "PostgreSQL",
+    "weight": 1
+   },
+   {
+    "name": "SQL",
+    "weight": 1
+   },
+   {
+    "name": "Linux",
+    "weight": 1
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня junior. Ключевое: FastAPI, gRPC, PostgreSQL, SQL, Linux.",
+  "salary_from": 70000,
+  "salary_to": 140000,
+  "salary_type": "net",
+  "work_format": "office",
+  "published": false
+ },
+ {
+  "id": 3,
+  "employer_id": 1,
+  "title": "Frontend-разработчик (junior)",
+  "spec": "frontend",
+  "grade": "junior",
+  "skills": [
+   {
+    "name": "REST",
+    "weight": 3
+   },
+   {
+    "name": "HTML",
+    "weight": 2
+   },
+   {
+    "name": "TypeScript",
+    "weight": 3
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня junior. Ключевое: REST, HTML, TypeScript.",
+  "salary_from": 80000,
+  "salary_to": 120000,
+  "salary_type": "net",
+  "work_format": "hybrid",
+  "published": false
+ },
+ {
+  "id": 4,
+  "employer_id": 2,
+  "title": "Backend-разработчик (middle)",
+  "spec": "backend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "Django",
+    "weight": 2
+   },
+   {
+    "name": "Kafka",
+    "weight": 3
+   },
+   {
+    "name": "PostgreSQL",
+    "weight": 1
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня middle. Ключевое: Django, Kafka, PostgreSQL.",
+  "salary_from": 220000,
+  "salary_to": 320000,
+  "salary_type": "gross",
+  "work_format": "hybrid",
+  "published": true
+ },
+ {
+  "id": 5,
+  "employer_id": 2,
+  "title": "Frontend-разработчик (junior)",
+  "spec": "frontend",
+  "grade": "junior",
+  "skills": [
+   {
+    "name": "CSS",
+    "weight": 2
+   },
+   {
+    "name": "Webpack",
+    "weight": 1
+   },
+   {
+    "name": "Next.js",
+    "weight": 1
+   },
+   {
+    "name": "JavaScript",
+    "weight": 2
+   },
+   {
+    "name": "HTML",
+    "weight": 1
+   },
+   {
+    "name": "Figma",
+    "weight": 1
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня junior. Ключевое: CSS, Webpack, Next.js, JavaScript, HTML, Figma.",
+  "salary_from": 100000,
+  "salary_to": 130000,
+  "salary_type": "net",
+  "work_format": "remote",
+  "published": true
+ },
+ {
+  "id": 6,
+  "employer_id": 2,
+  "title": "Backend-разработчик (senior)",
+  "spec": "backend",
+  "grade": "senior",
+  "skills": [
+   {
+    "name": "Go",
+    "weight": 3
+   },
+   {
+    "name": "SQL",
+    "weight": 3
+   },
+   {
+    "name": "REST",
+    "weight": 2
+   },
+   {
+    "name": "Spring",
+    "weight": 3
+   },
+   {
+    "name": "Redis",
+    "weight": 3
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня senior. Ключевое: Go, SQL, REST, Spring, Redis.",
+  "salary_from": 320000,
+  "salary_to": 390000,
+  "salary_type": "net",
+  "work_format": "hybrid",
+  "published": false
+ },
+ {
+  "id": 7,
+  "employer_id": 3,
+  "title": "Frontend-разработчик (middle)",
+  "spec": "frontend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "CSS",
+    "weight": 1
+   },
+   {
+    "name": "TypeScript",
+    "weight": 2
+   },
+   {
+    "name": "JavaScript",
+    "weight": 3
+   },
+   {
+    "name": "Accessibility",
+    "weight": 2
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня middle. Ключевое: CSS, TypeScript, JavaScript, Accessibility.",
+  "salary_from": 230000,
+  "salary_to": 320000,
+  "salary_type": "gross",
+  "work_format": "remote",
+  "published": true
+ },
+ {
+  "id": 8,
+  "employer_id": 3,
+  "title": "Frontend-разработчик (senior)",
+  "spec": "frontend",
+  "grade": "senior",
+  "skills": [
+   {
+    "name": "React",
+    "weight": 2
+   },
+   {
+    "name": "TypeScript",
+    "weight": 1
+   },
+   {
+    "name": "REST",
+    "weight": 1
+   },
+   {
+    "name": "Accessibility",
+    "weight": 1
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня senior. Ключевое: React, TypeScript, REST, Accessibility.",
+  "salary_from": 310000,
+  "salary_to": 410000,
+  "salary_type": "gross",
+  "work_format": "remote",
+  "published": false
+ },
+ {
+  "id": 9,
+  "employer_id": 3,
+  "title": "Backend-разработчик (middle)",
+  "spec": "backend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "PostgreSQL",
+    "weight": 1
+   },
+   {
+    "name": "Linux",
+    "weight": 1
+   },
+   {
+    "name": "Docker",
+    "weight": 2
+   },
+   {
+    "name": "Python",
+    "weight": 1
+   },
+   {
+    "name": "SQL",
+    "weight": 1
+   },
+   {
+    "name": "REST",
+    "weight": 1
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня middle. Ключевое: PostgreSQL, Linux, Docker, Python, SQL, REST.",
+  "salary_from": 160000,
+  "salary_to": 250000,
+  "salary_type": "net",
+  "work_format": "office",
+  "published": false
+ },
+ {
+  "id": 10,
+  "employer_id": 4,
+  "title": "Backend-разработчик (middle)",
+  "spec": "backend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "Linux",
+    "weight": 2
+   },
+   {
+    "name": "Docker",
+    "weight": 2
+   },
+   {
+    "name": "FastAPI",
+    "weight": 3
+   },
+   {
+    "name": "PostgreSQL",
+    "weight": 3
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня middle. Ключевое: Linux, Docker, FastAPI, PostgreSQL.",
+  "salary_from": 170000,
+  "salary_to": 250000,
+  "salary_type": "gross",
+  "work_format": "hybrid",
+  "published": true
+ },
+ {
+  "id": 11,
+  "employer_id": 4,
+  "title": "Frontend-разработчик (middle)",
+  "spec": "frontend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "JavaScript",
+    "weight": 3
+   },
+   {
+    "name": "Jest",
+    "weight": 3
+   },
+   {
+    "name": "CSS",
+    "weight": 2
+   },
+   {
+    "name": "REST",
+    "weight": 3
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня middle. Ключевое: JavaScript, Jest, CSS, REST.",
+  "salary_from": 170000,
+  "salary_to": 260000,
+  "salary_type": "net",
+  "work_format": "office",
+  "published": true
+ },
+ {
+  "id": 12,
+  "employer_id": 4,
+  "title": "Backend-разработчик (junior)",
+  "spec": "backend",
+  "grade": "junior",
+  "skills": [
+   {
+    "name": "SQL",
+    "weight": 3
+   },
+   {
+    "name": "Go",
+    "weight": 3
+   },
+   {
+    "name": "FastAPI",
+    "weight": 3
+   },
+   {
+    "name": "Docker",
+    "weight": 1
+   },
+   {
+    "name": "Java",
+    "weight": 3
+   },
+   {
+    "name": "Django",
+    "weight": 2
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня junior. Ключевое: SQL, Go, FastAPI, Docker, Java, Django.",
+  "salary_from": 90000,
+  "salary_to": 130000,
+  "salary_type": "net",
+  "work_format": "remote",
+  "published": true
+ },
+ {
+  "id": 13,
+  "employer_id": 5,
+  "title": "Frontend-разработчик (senior)",
+  "spec": "frontend",
+  "grade": "senior",
+  "skills": [
+   {
+    "name": "TypeScript",
+    "weight": 2
+   },
+   {
+    "name": "JavaScript",
+    "weight": 1
+   },
+   {
+    "name": "React",
+    "weight": 3
+   },
+   {
+    "name": "Vite",
+    "weight": 1
+   },
+   {
+    "name": "REST",
+    "weight": 1
+   },
+   {
+    "name": "Vue",
+    "weight": 1
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня senior. Ключевое: TypeScript, JavaScript, React, Vite, REST, Vue.",
+  "salary_from": 300000,
+  "salary_to": 430000,
+  "salary_type": "net",
+  "work_format": "office",
+  "published": false
+ },
+ {
+  "id": 14,
+  "employer_id": 5,
+  "title": "Backend-разработчик (middle)",
+  "spec": "backend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "FastAPI",
+    "weight": 1
+   },
+   {
+    "name": "Python",
+    "weight": 3
+   },
+   {
+    "name": "Docker",
+    "weight": 2
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня middle. Ключевое: FastAPI, Python, Docker.",
+  "salary_from": 150000,
+  "salary_to": 230000,
+  "salary_type": "net",
+  "work_format": "office",
+  "published": false
+ },
+ {
+  "id": 15,
+  "employer_id": 5,
+  "title": "Frontend-разработчик (middle)",
+  "spec": "frontend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "HTML",
+    "weight": 2
+   },
+   {
+    "name": "React",
+    "weight": 2
+   },
+   {
+    "name": "Next.js",
+    "weight": 3
+   },
+   {
+    "name": "Vue",
+    "weight": 3
+   },
+   {
+    "name": "JavaScript",
+    "weight": 1
+   },
+   {
+    "name": "Webpack",
+    "weight": 3
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня middle. Ключевое: HTML, React, Next.js, Vue, JavaScript, Webpack.",
+  "salary_from": 190000,
+  "salary_to": 230000,
+  "salary_type": "net",
+  "work_format": "remote",
+  "published": false
+ },
+ {
+  "id": 16,
+  "employer_id": 6,
+  "title": "Frontend-разработчик (senior)",
+  "spec": "frontend",
+  "grade": "senior",
+  "skills": [
+   {
+    "name": "TypeScript",
+    "weight": 1
+   },
+   {
+    "name": "CSS",
+    "weight": 1
+   },
+   {
+    "name": "JavaScript",
+    "weight": 3
+   },
+   {
+    "name": "Vite",
+    "weight": 3
+   },
+   {
+    "name": "Figma",
+    "weight": 1
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня senior. Ключевое: TypeScript, CSS, JavaScript, Vite, Figma.",
+  "salary_from": 320000,
+  "salary_to": 370000,
+  "salary_type": "net",
+  "work_format": "remote",
+  "published": false
+ },
+ {
+  "id": 17,
+  "employer_id": 6,
+  "title": "Backend-разработчик (middle)",
+  "spec": "backend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "Docker",
+    "weight": 1
+   },
+   {
+    "name": "SQL",
+    "weight": 1
+   },
+   {
+    "name": "Python",
+    "weight": 3
+   },
+   {
+    "name": "Linux",
+    "weight": 3
+   },
+   {
+    "name": "Kafka",
+    "weight": 1
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня middle. Ключевое: Docker, SQL, Python, Linux, Kafka.",
+  "salary_from": 200000,
+  "salary_to": 260000,
+  "salary_type": "net",
+  "work_format": "office",
+  "published": false
+ },
+ {
+  "id": 18,
+  "employer_id": 6,
+  "title": "Frontend-разработчик (junior)",
+  "spec": "frontend",
+  "grade": "junior",
+  "skills": [
+   {
+    "name": "HTML",
+    "weight": 2
+   },
+   {
+    "name": "Figma",
+    "weight": 1
+   },
+   {
+    "name": "Vite",
+    "weight": 2
+   },
+   {
+    "name": "JavaScript",
+    "weight": 1
+   },
+   {
+    "name": "TypeScript",
+    "weight": 1
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня junior. Ключевое: HTML, Figma, Vite, JavaScript, TypeScript.",
+  "salary_from": 90000,
+  "salary_to": 140000,
+  "salary_type": "gross",
+  "work_format": "office",
+  "published": true
+ },
+ {
+  "id": 19,
+  "employer_id": 7,
+  "title": "Backend-разработчик (middle)",
+  "spec": "backend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "SQL",
+    "weight": 1
+   },
+   {
+    "name": "gRPC",
+    "weight": 3
+   },
+   {
+    "name": "Kubernetes",
+    "weight": 2
+   },
+   {
+    "name": "PostgreSQL",
+    "weight": 1
+   },
+   {
+    "name": "REST",
+    "weight": 2
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня middle. Ключевое: SQL, gRPC, Kubernetes, PostgreSQL, REST.",
+  "salary_from": 230000,
+  "salary_to": 290000,
+  "salary_type": "gross",
+  "work_format": "remote",
+  "published": true
+ },
+ {
+  "id": 20,
+  "employer_id": 7,
+  "title": "Backend-разработчик (senior)",
+  "spec": "backend",
+  "grade": "senior",
+  "skills": [
+   {
+    "name": "PostgreSQL",
+    "weight": 3
+   },
+   {
+    "name": "Linux",
+    "weight": 1
+   },
+   {
+    "name": "Kafka",
+    "weight": 3
+   },
+   {
+    "name": "Java",
+    "weight": 3
+   },
+   {
+    "name": "SQL",
+    "weight": 1
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня senior. Ключевое: PostgreSQL, Linux, Kafka, Java, SQL.",
+  "salary_from": 370000,
+  "salary_to": 430000,
+  "salary_type": "gross",
+  "work_format": "office",
+  "published": false
+ },
+ {
+  "id": 21,
+  "employer_id": 7,
+  "title": "Frontend-разработчик (junior)",
+  "spec": "frontend",
+  "grade": "junior",
+  "skills": [
+   {
+    "name": "HTML",
+    "weight": 3
+   },
+   {
+    "name": "REST",
+    "weight": 1
+   },
+   {
+    "name": "TypeScript",
+    "weight": 2
+   },
+   {
+    "name": "Jest",
+    "weight": 2
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня junior. Ключевое: HTML, REST, TypeScript, Jest.",
+  "salary_from": 90000,
+  "salary_to": 130000,
+  "salary_type": "net",
+  "work_format": "office",
+  "published": true
+ },
+ {
+  "id": 22,
+  "employer_id": 8,
+  "title": "Backend-разработчик (middle)",
+  "spec": "backend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "Linux",
+    "weight": 3
+   },
+   {
+    "name": "Java",
+    "weight": 3
+   },
+   {
+    "name": "Spring",
+    "weight": 2
+   },
+   {
+    "name": "PostgreSQL",
+    "weight": 1
+   },
+   {
+    "name": "SQL",
+    "weight": 2
+   },
+   {
+    "name": "Redis",
+    "weight": 2
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня middle. Ключевое: Linux, Java, Spring, PostgreSQL, SQL, Redis.",
+  "salary_from": 150000,
+  "salary_to": 220000,
+  "salary_type": "net",
+  "work_format": "office",
+  "published": false
+ },
+ {
+  "id": 23,
+  "employer_id": 8,
+  "title": "Frontend-разработчик (junior)",
+  "spec": "frontend",
+  "grade": "junior",
+  "skills": [
+   {
+    "name": "Accessibility",
+    "weight": 2
+   },
+   {
+    "name": "Vite",
+    "weight": 2
+   },
+   {
+    "name": "JavaScript",
+    "weight": 2
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня junior. Ключевое: Accessibility, Vite, JavaScript.",
+  "salary_from": 90000,
+  "salary_to": 130000,
+  "salary_type": "gross",
+  "work_format": "hybrid",
+  "published": true
+ },
+ {
+  "id": 24,
+  "employer_id": 8,
+  "title": "Frontend-разработчик (junior)",
+  "spec": "frontend",
+  "grade": "junior",
+  "skills": [
+   {
+    "name": "JavaScript",
+    "weight": 3
+   },
+   {
+    "name": "TypeScript",
+    "weight": 2
+   },
+   {
+    "name": "HTML",
+    "weight": 2
+   },
+   {
+    "name": "Next.js",
+    "weight": 3
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня junior. Ключевое: JavaScript, TypeScript, HTML, Next.js.",
+  "salary_from": 90000,
+  "salary_to": 160000,
+  "salary_type": "gross",
+  "work_format": "office",
+  "published": true
+ },
+ {
+  "id": 25,
+  "employer_id": 9,
+  "title": "Разработчик ПО БАС (senior)",
+  "spec": "bas",
+  "grade": "senior",
+  "skills": [
+   {
+    "name": "Docker",
+    "weight": 3
+   },
+   {
+    "name": "Embedded C",
+    "weight": 3
+   },
+   {
+    "name": "C++",
+    "weight": 1
+   },
+   {
+    "name": "Computer Vision",
+    "weight": 3
+   },
+   {
+    "name": "ArduPilot",
+    "weight": 2
+   }
+  ],
+  "description": "Ищем разработчик по бас уровня senior. Ключевое: Docker, Embedded C, C++, Computer Vision, ArduPilot.",
+  "salary_from": 290000,
+  "salary_to": 430000,
+  "salary_type": "net",
+  "work_format": "office",
+  "published": false
+ },
+ {
+  "id": 26,
+  "employer_id": 9,
+  "title": "Разработчик ПО БАС (senior)",
+  "spec": "bas",
+  "grade": "senior",
+  "skills": [
+   {
+    "name": "Python",
+    "weight": 3
+   },
+   {
+    "name": "ROS 2",
+    "weight": 3
+   },
+   {
+    "name": "PX4",
+    "weight": 3
+   },
+   {
+    "name": "Linux",
+    "weight": 3
+   }
+  ],
+  "description": "Ищем разработчик по бас уровня senior. Ключевое: Python, ROS 2, PX4, Linux.",
+  "salary_from": 290000,
+  "salary_to": 360000,
+  "salary_type": "net",
+  "work_format": "office",
+  "published": true
+ },
+ {
+  "id": 27,
+  "employer_id": 9,
+  "title": "Backend-разработчик (junior)",
+  "spec": "backend",
+  "grade": "junior",
+  "skills": [
+   {
+    "name": "FastAPI",
+    "weight": 3
+   },
+   {
+    "name": "Linux",
+    "weight": 3
+   },
+   {
+    "name": "SQL",
+    "weight": 1
+   },
+   {
+    "name": "REST",
+    "weight": 1
+   },
+   {
+    "name": "Docker",
+    "weight": 1
+   },
+   {
+    "name": "PostgreSQL",
+    "weight": 3
+   }
+  ],
+  "description": "Ищем backend-разработчик уровня junior. Ключевое: FastAPI, Linux, SQL, REST, Docker, PostgreSQL.",
+  "salary_from": 110000,
+  "salary_to": 150000,
+  "salary_type": "gross",
+  "work_format": "hybrid",
+  "published": true
+ },
+ {
+  "id": 28,
+  "employer_id": 10,
+  "title": "Разработчик ПО БАС (middle)",
+  "spec": "bas",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "Docker",
+    "weight": 1
+   },
+   {
+    "name": "ArduPilot",
+    "weight": 2
+   },
+   {
+    "name": "Python",
+    "weight": 2
+   },
+   {
+    "name": "Kalman filter",
+    "weight": 3
+   }
+  ],
+  "description": "Ищем разработчик по бас уровня middle. Ключевое: Docker, ArduPilot, Python, Kalman filter.",
+  "salary_from": 190000,
+  "salary_to": 230000,
+  "salary_type": "net",
+  "work_format": "hybrid",
+  "published": false
+ },
+ {
+  "id": 29,
+  "employer_id": 10,
+  "title": "Разработчик ПО БАС (middle)",
+  "spec": "bas",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "Linux",
+    "weight": 1
+   },
+   {
+    "name": "ArduPilot",
+    "weight": 2
+   },
+   {
+    "name": "PX4",
+    "weight": 2
+   },
+   {
+    "name": "Kalman filter",
+    "weight": 2
+   },
+   {
+    "name": "Python",
+    "weight": 1
+   }
+  ],
+  "description": "Ищем разработчик по бас уровня middle. Ключевое: Linux, ArduPilot, PX4, Kalman filter, Python.",
+  "salary_from": 180000,
+  "salary_to": 220000,
+  "salary_type": "net",
+  "work_format": "remote",
+  "published": true
+ },
+ {
+  "id": 30,
+  "employer_id": 10,
+  "title": "Frontend-разработчик (middle)",
+  "spec": "frontend",
+  "grade": "middle",
+  "skills": [
+   {
+    "name": "CSS",
+    "weight": 1
+   },
+   {
+    "name": "Vite",
+    "weight": 1
+   },
+   {
+    "name": "Figma",
+    "weight": 3
+   },
+   {
+    "name": "REST",
+    "weight": 1
+   },
+   {
+    "name": "JavaScript",
+    "weight": 3
+   },
+   {
+    "name": "TypeScript",
+    "weight": 2
+   }
+  ],
+  "description": "Ищем frontend-разработчик уровня middle. Ключевое: CSS, Vite, Figma, REST, JavaScript, TypeScript.",
+  "salary_from": 180000,
+  "salary_to": 310000,
+  "salary_type": "gross",
+  "work_format": "hybrid",
+  "published": true
+ }
+]
