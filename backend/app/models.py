@@ -162,3 +162,31 @@ class Application(Base):
     status: Mapped[str] = mapped_column(String(16), default="sent")
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+
+
+class Task(Base):
+    """Регулярное короткое задание от работодателя (ТЗ 2.1): решить или предложить подход. Поддерживает актуальность профиля."""
+    __tablename__ = "tasks"
+    __table_args__ = (Index("ix_tasks_spec", "spec"),)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    employer_id: Mapped[int] = mapped_column(ForeignKey("employers.id", ondelete="CASCADE"), index=True)
+    spec: Mapped[str] = mapped_column(String(32))
+    grade: Mapped[str | None] = mapped_column(String(16), nullable=True)   # None — для любого грейда
+    title: Mapped[str] = mapped_column(String(255))
+    text: Mapped[str] = mapped_column(Text)
+    kind: Mapped[str] = mapped_column(String(16))                          # solve | approach
+    active: Mapped[bool] = mapped_column(Boolean, default=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class TaskAnswer(Base):
+    __tablename__ = "task_answers"
+    __table_args__ = (UniqueConstraint("task_id", "candidate_id"),)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    task_id: Mapped[int] = mapped_column(ForeignKey("tasks.id", ondelete="CASCADE"), index=True)
+    candidate_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    answer: Mapped[str] = mapped_column(Text)
+    rating: Mapped[int | None] = mapped_column(Integer, nullable=True)     # 0–3, ставит работодатель
+    feedback: Mapped[str | None] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    reviewed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)

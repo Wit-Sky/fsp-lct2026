@@ -1,12 +1,12 @@
 """Загрузка данных из БД в словари для чистых модулей (testing / profile / matching) и сборка ответов."""
 from datetime import date
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db import aware
 from app.models import (Application, CandidateProfile, Category, Employer, ExternalIdentity, Invitation, Need,
-                        User, VerifiedResult)
+                        TaskAnswer, User, VerifiedResult)
 from app.services import matching, profile as profile_svc
 
 
@@ -35,6 +35,8 @@ async def load_candidates(session: AsyncSession, spec: str | None = None, ids: l
         res.setdefault(r.user_id, []).append(result_dict(r))
     fsp_ids = {e.user_id: e.subject for e in (await session.execute(
         select(ExternalIdentity).where(ExternalIdentity.user_id.in_(uids), ExternalIdentity.provider == "fsp"))).scalars()}
+    task_at = dict((await session.execute(select(TaskAnswer.candidate_id, func.max(TaskAnswer.created_at))
+                                          .where(TaskAnswer.candidate_id.in_(uids)).group_by(TaskAnswer.candidate_id))).all())
 
     out = []
     today = date.today()
@@ -59,6 +61,7 @@ async def load_candidates(session: AsyncSession, spec: str | None = None, ids: l
             "fsp_id": fsp_ids.get(u.id), "results": results, "visible_fields": dict(p.visible_fields or {}),
             "grade": cat.grade if cat else None, "status": cat.status if cat else "none",
             "theta": cat.theta if cat else None, "tested_at": aware(cat.tested_at) if cat else None,
+            "task_at": aware(task_at.get(u.id)),
             "minor": profile_svc.is_minor(p.birth_date, today), "fsp_score": fs, "fsp_explain": fx,
         })
     return out

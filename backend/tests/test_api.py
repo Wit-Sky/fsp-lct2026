@@ -191,3 +191,53 @@ async def test_resume_pdf_parse_and_roles_in_profile(client):
     assert bad.status_code == 422
     r = await client.put("/api/me/profile", headers=hc, json={"roles": d["roles"], "soft_skills": d["soft_skills"]})
     assert r.json()["roles"] == d["roles"] and r.json()["soft_skills"] == d["soft_skills"]
+
+
+async def test_regular_tasks_flow(client):
+    he = await register(client, "hr-tasks@example.ru", "employer")
+    await client.put("/api/employer", headers=he, json={"name": "ООО «Задачи»"})
+    r = await client.post("/api/tasks", headers=he, json={"title": "Кэш для каталога", "spec": "backend", "grade": "junior",
+                                                          "kind": "approach", "text": "Каталог товаров читается в 100 раз чаще, чем меняется. Как ускорить?"})
+    assert r.status_code == 201, r.text
+    task_id = r.json()["id"]
+    assert (await client.post("/api/tasks", headers=he, json={"title": "x", "spec": "backend", "text": "коротко"})).status_code == 422
+
+    # кандидат без специализации заданий не получает; с категорией backend/junior — получает
+    hc = await register(client, "tasks-cand@example.ru")
+    mine = (await client.get("/api/me/tasks", headers=hc)).json()
+    assert mine["offered"] == [] and mine["hint"]
+    await client.put("/api/me/profile", headers=hc, json={"full_name": "Решатель Задач", "spec": "backend", "consent_pd": True,
+                                                         "visible_fields": {"full_name": True}})
+    await _pass_test(client, hc, "backend", "junior")
+    mine = (await client.get("/api/me/tasks", headers=hc)).json()
+    assert task_id in [t["id"] for t in mine["offered"]]
+    r = await client.post(f"/api/tasks/{task_id}/answer", headers=hc, json={"answer": "Кэш в Redis с инвалидацией по событию изменения."})
+    assert r.status_code == 201, r.text
+    answer_id = r.json()["id"]
+    assert (await client.post(f"/api/tasks/{task_id}/answer", headers=hc, json={"answer": "Повторный ответ на задание."})).status_code == 409
+    assert task_id not in [t["id"] for t in (await client.get("/api/me/tasks", headers=hc)).json()["offered"]]
+
+    # работодатель видит ответ без контактов и оценивает; чужой работодатель — нет
+    ans = (await client.get(f"/api/tasks/{task_id}/answers", headers=he)).json()
+    assert ans[0]["candidate_name"] == "Решатель Задач" and ans[0]["candidate_grade"] == "junior" and "email" not in ans[0]
+    other = await demo(client, "employer")
+    assert (await client.get(f"/api/tasks/{task_id}/answers", headers=other)).status_code == 404
+    assert (await client.post(f"/api/task-answers/{answer_id}/review", headers=other, json={"rating": 3})).status_code == 404
+    r = await client.post(f"/api/task-answers/{answer_id}/review", headers=he, json={"rating": 2, "feedback": "Хорошо, учтите TTL"})
+    assert r.json()["rating"] == 2
+    mine = (await client.get("/api/me/tasks", headers=hc)).json()
+    assert mine["answered"][0]["rating"] == 2 and mine["answered"][0]["feedback"] == "Хорошо, учтите TTL"
+    assert (await client.get("/api/employer/tasks", headers=he)).json()[0]["answers"] == 1
+
+    # снятое задание больше не предлагается
+    assert (await client.post(f"/api/tasks/{task_id}/close", headers=he)).json()["active"] is False
+    hc2 = await register(client, "tasks-cand2@example.ru")
+    await client.put("/api/me/profile", headers=hc2, json={"spec": "backend", "consent_pd": True})
+    assert task_id not in [t["id"] for t in (await client.get("/api/me/tasks", headers=hc2)).json()["offered"]]
+
+
+async def test_demo_tasks_seeded(client):
+    hc = await demo(client, "candidate")
+    await client.put("/api/me/profile", headers=hc, json={"spec": "frontend"})
+    offered = (await client.get("/api/me/tasks", headers=hc)).json()["offered"]
+    assert any(t["company"] == "ООО «Демо Работодатель»" and t["spec"] == "frontend" for t in offered)

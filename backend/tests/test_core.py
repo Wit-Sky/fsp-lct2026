@@ -125,3 +125,16 @@ def test_resume_parse_roles_and_soft_skills():
     assert {"Python", "FastAPI", "PostgreSQL", "Docker"} <= set(d["skills"])
     assert {"Тимлид", "Ментор", "Разработчик"} <= set(d["roles"])
     assert {"Ответственность", "Работа в команде", "Обучаемость", "Стрессоустойчивость"} <= set(d["soft_skills"])
+
+
+def test_freshness_counts_regular_task():
+    from datetime import datetime, timedelta, timezone
+    now = datetime(2026, 10, 11, tzinfo=timezone.utc)
+    need = {"spec": "backend", "grade": "middle", "skills": [{"name": "Python", "weight": 1}], "salary_to": 200000}
+    cand = {"id": 1, "spec": "backend", "grade": "middle", "status": "confirmed", "theta": 0.9, "theta_pct": 0.5,
+            "skills": ["Python"], "results": [], "tested_at": now - timedelta(days=300)}
+    old, ex_old = matching.score(need, cand, now)
+    fresh, ex_new = matching.score(need, {**cand, "task_at": now - timedelta(days=5)}, now)
+    assert fresh > old
+    f = next(e for e in ex_new if e["factor"] == "freshness")
+    assert f["value"] == 1.0 and f["text"].startswith("Регулярное задание решено 5 дн. назад")
