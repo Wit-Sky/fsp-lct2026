@@ -37,3 +37,7 @@
   Caddy с автоматическим HTTPS (профиль `https`, домен `<ip>.sslip.io` без покупки домена),
   `.github/workflows/deploy.yml` — при пуше в main: сборка фронтенда → rsync на ВМ → `docker compose up -d --build` → проверка /api/health.
   Секреты репозитория: `DEPLOY_HOST`, `DEPLOY_SSH_KEY`.
+
+## 11.10, ~04:20 МСК — стенд поднят
+- **https://81-26-180-5.sslip.io** (Yandex Cloud, Ubuntu 24.04, 2 vCPU / 4 ГБ, диск 9 ГБ). Демо-входы, API, HTTPS (Let's Encrypt через Caddy) — проверено.
+- Первый деплой сделан вручную из ветки `frontend`; дальше — автоматически при пуше в main (после добавления секретов DEPLOY_HOST и DEPLOY_SSH_KEY).

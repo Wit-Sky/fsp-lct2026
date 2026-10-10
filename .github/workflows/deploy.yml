@@ -50,6 +50,7 @@ jobs:
             cd /opt/fsp/app
             docker compose up -d --build --remove-orphans
             docker image prune -f >/dev/null
+            docker builder prune -f --keep-storage 1gb >/dev/null   # диск ВМ 9 ГБ
             for i in $(seq 1 40); do curl -fsS http://127.0.0.1:8000/api/health && exit 0; sleep 3; done
             docker compose logs --tail 80 backend; exit 1
           '
