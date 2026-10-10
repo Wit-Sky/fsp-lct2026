@@ -385,3 +385,58 @@ class ApplicationOut(BaseModel):
 
 class ApplicationStatusIn(BaseModel):
     status: Literal["viewed", "accepted", "declined"]
+
+
+# ---------------------------------------------------------------- регулярные задания
+
+TaskKind = Literal["solve", "approach"]
+
+
+class TaskIn(BaseModel):
+    title: str = Field(min_length=3, max_length=255)
+    text: str = Field(min_length=10, description="Условие: задача или ситуация, к которой нужно предложить подход")
+    spec: Spec
+    grade: Grade | None = Field(None, description="Для какого грейда; пусто — для всех грейдов специализации")
+    kind: TaskKind = Field("solve", description="solve — решить; approach — предложить подход к решению")
+
+
+class TaskOut(BaseModel):
+    id: int
+    title: str
+    text: str
+    spec: str
+    grade: str | None
+    kind: str
+    active: bool
+    company: str
+    created_at: datetime
+    answers: int = 0
+
+
+class TaskAnswerIn(BaseModel):
+    answer: str = Field(min_length=10, max_length=5000)
+
+
+class TaskReviewIn(BaseModel):
+    rating: int = Field(ge=0, le=3, description="0 — не решено, 1 — частично, 2 — хорошо, 3 — отлично")
+    feedback: str | None = Field(None, max_length=2000)
+
+
+class TaskAnswerOut(BaseModel):
+    id: int
+    task_id: int
+    task_title: str
+    candidate_id: int
+    candidate_name: str | None = None
+    candidate_grade: str | None = None
+    answer: str
+    rating: int | None
+    feedback: str | None
+    created_at: datetime
+    reviewed_at: datetime | None
+
+
+class MyTasksOut(BaseModel):
+    offered: list[TaskOut] = Field(description="Предложенные задания по специализации кандидата, на которые он ещё не ответил")
+    answered: list[TaskAnswerOut]
+    hint: str | None = None

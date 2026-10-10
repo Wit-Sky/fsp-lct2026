@@ -16,13 +16,24 @@ from sqlalchemy import func, select, text
 from app import config
 from app.auth import hash_password
 from app.db import SessionLocal, engine, utcnow
-from app.models import (CandidateProfile, Category, Employer, ExternalIdentity, GradeAttempt, Need, User,
+from app.models import (CandidateProfile, Category, Employer, ExternalIdentity, GradeAttempt, Need, Task, User,
                         VerifiedResult)
 from app.services import testing
 
 log = logging.getLogger("seed")
 EMPLOYER_USER_BASE = 1000          # id пользователей-работодателей: 1001, 1002, …
 DEMO_CANDIDATE_ID, DEMO_EMPLOYER_USER_ID, DEMO_EMPLOYER_ID = 900, 901, 900
+DEMO_TASKS = [
+    ("backend", None, "approach", "Медленный список заказов",
+     "Эндпоинт GET /orders?user_id=… стал отвечать 3 секунды: в таблице orders 20 млн строк, запрос сортирует по created_at. "
+     "Как найдёте причину и что предложите? Опишите шаги и итоговое решение."),
+    ("frontend", None, "solve", "Поиск с подсказками",
+     "Поле поиска отправляет запрос к API на каждый ввод символа, ответы иногда приходят не по порядку и подсказки «прыгают». "
+     "Как исправить? Приведите код или опишите решение."),
+    ("bas", None, "approach", "Потеря телеметрии на дальности",
+     "На удалении 3 км от станции управления пропадает часть пакетов телеметрии MAVLink. Какие причины проверите "
+     "и в каком порядке? Что можно изменить в настройках потока сообщений?"),
+]
 
 
 def _load(name: str) -> list:
@@ -43,7 +54,7 @@ async def _sync_sequences(s) -> None:
     if engine.dialect.name != "postgresql":
         return
     for t in ("users", "employers", "needs", "external_identities", "verified_results", "grade_attempts",
-              "categories", "invitations", "applications"):
+              "categories", "invitations", "applications", "tasks", "task_answers"):
         await s.execute(text(f"SELECT setval(pg_get_serial_sequence('{t}', 'id'), "
                              f"COALESCE((SELECT MAX(id) FROM {t}), 0) + 1, false)"))
 
@@ -135,6 +146,9 @@ async def seed() -> bool:
                    skills=[{"name": "React", "weight": 3}, {"name": "TypeScript", "weight": 2}, {"name": "CSS", "weight": 1}],
                    description="Личный кабинет клиента на React + TypeScript.", salary_from=90000, salary_to=140000,
                    salary_type="net", work_format="remote", published=False))
+        # регулярные задания демо-работодателя — чтобы в демо было что предложить кандидатам
+        for spec, grade, kind, title, text in DEMO_TASKS:
+            s.add(Task(employer_id=DEMO_EMPLOYER_ID, spec=spec, grade=grade, kind=kind, title=title, text=text))
         await s.flush()
         await _sync_sequences(s)
         await s.commit()

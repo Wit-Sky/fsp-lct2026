@@ -4,7 +4,7 @@ from fastapi import APIRouter, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app import config, errors
-from app.routers import auth, employer, me, tests, vacancies
+from app.routers import auth, employer, me, tasks, tests, vacancies
 
 logging.basicConfig(level=logging.INFO)
 
@@ -35,6 +35,7 @@ async def health():
     return {"status": "ok"}
 
 
-for r in (auth.router, me.router, tests.router, employer.router, vacancies.router, vacancies.catalog_router):
+for r in (auth.router, me.router, tests.router, employer.router, vacancies.router, vacancies.catalog_router,
+          tasks.employer_router, tasks.candidate_router):
     api.include_router(r)
 app.include_router(api)

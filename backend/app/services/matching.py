@@ -73,7 +73,7 @@ def _fallback_fsp(results: list[dict], spec: str) -> tuple[float, list[dict]]:
 
 def score(need: dict, cand: dict, now=None) -> tuple[float, list[dict]]:
     """Скор 0..100 и объяснение. cand = поля candidates.json + {grade, status, theta, tested_at}
-    и, если есть, {theta_pct, fsp_score, fsp_explain}."""
+    и, если есть, {theta_pct, fsp_score, fsp_explain, task_at — последний ответ на регулярное задание}."""
     now = _now(now)
     explain: list[dict] = []
 
@@ -104,13 +104,15 @@ def score(need: dict, cand: dict, now=None) -> tuple[float, list[dict]]:
     fsp_text = "; ".join(e["text"] for e in fx) or (NO_FSP_TEXT if fs == 0 else "")
     explain.append({"factor": "fsp", "weight": W_FSP, "value": round(fs, 3), "text": fsp_text})
 
-    tested = _as_dt(cand.get("tested_at"))
-    fr = freshness(tested, now)
-    if tested is None:
+    tested, task_at = _as_dt(cand.get("tested_at")), _as_dt(cand.get("task_at"))
+    last = max((d for d in (tested, task_at) if d is not None), default=None)   # тест или регулярное задание
+    fr = freshness(last, now)
+    if last is None:
         f_text = "Нет данных о тесте"
     else:
-        days = max(0, (now - tested).days)
-        f_text = f"Тест пройден {days} дн. назад" + (" — профиль актуален" if fr == 1.0 else "")
+        days = max(0, (now - last).days)
+        what = "Регулярное задание решено" if last == task_at and task_at != tested else "Тест пройден"
+        f_text = f"{what} {days} дн. назад" + (" — профиль актуален" if fr == 1.0 else "")
     explain.append({"factor": "freshness", "weight": W_FRESH, "value": round(fr, 3), "text": f_text})
 
     pm, p_texts = 0.0, []
