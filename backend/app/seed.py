@@ -38,6 +38,16 @@ def _days_ago(cid: int) -> int:
     return 1 + int(hashlib.sha256(f"tested:{cid}".encode()).hexdigest()[:8], 16) % 420
 
 
+async def _sync_sequences(s) -> None:
+    """После вставок с явными id сдвигаем последовательности Postgres, иначе следующий автоматический id совпадёт."""
+    if engine.dialect.name != "postgresql":
+        return
+    for t in ("users", "employers", "needs", "external_identities", "verified_results", "grade_attempts",
+              "categories", "invitations", "applications"):
+        await s.execute(text(f"SELECT setval(pg_get_serial_sequence('{t}', 'id'), "
+                             f"COALESCE((SELECT MAX(id) FROM {t}), 0) + 1, false)"))
+
+
 def _seed_result(cid: int, spec: str, claimed: str, theta_true: float) -> dict:
     sim = testing.simulate_attempt(cid, spec, claimed, theta_true, 1, rng_seed=cid)
     state = {"spec": spec, "claimed_grade": claimed, "n_items": len(sim["items"]),
@@ -59,6 +69,7 @@ async def seed() -> bool:
         for e in _load("employers.json"):
             uid = EMPLOYER_USER_BASE + e["id"]
             s.add(User(id=uid, email=e["owner_email"].lower(), password_hash=pwd, role="employer", email_verified=True))
+            await s.flush()  # связей relationship нет — порядок вставки задаём сами (FK owner_id)
             s.add(Employer(id=e["id"], owner_id=uid, name=e["name"], inn=e.get("inn"), field=e.get("field"),
                            description=e.get("description"), contacts=e.get("contacts")))
         await s.flush()
@@ -72,6 +83,7 @@ async def seed() -> bool:
         for c in _load("candidates.json"):
             cid = c["id"]
             s.add(User(id=cid, email=c["email"].lower(), password_hash=pwd, role="candidate", email_verified=True))
+            await s.flush()
             s.add(CandidateProfile(
                 user_id=cid, full_name=c["full_name"], birth_date=date.fromisoformat(c["birth_date"]) if c.get("birth_date") else None,
                 phone=c.get("phone"), telegram=c.get("telegram"), city=c.get("city"), work_format=c.get("work_format"),
@@ -102,6 +114,7 @@ async def seed() -> bool:
         # демо-аккаунты для жюри (пароль demo; вход без пароля — POST /api/auth/demo/{role})
         s.add(User(id=DEMO_CANDIDATE_ID, email="candidate@demo.fsp", password_hash=pwd, role="candidate",
                    email_verified=True, is_demo=True))
+        await s.flush()
         s.add(CandidateProfile(user_id=DEMO_CANDIDATE_ID, full_name="Демо Кандидат", city="Москва", work_format="hybrid",
                                salary_expect_from=150000, skills=["Python", "FastAPI", "PostgreSQL", "Docker"],
                                experience_years=2, about="Демо-аккаунт для жюри: без теста и без истории ФСП.",
@@ -112,6 +125,7 @@ async def seed() -> bool:
         s.add(Employer(id=DEMO_EMPLOYER_ID, owner_id=DEMO_EMPLOYER_USER_ID, name="ООО «Демо Работодатель»", inn="7700000000",
                        field="разработка ПО", description="Демо-компания для проверки жюри.", contacts="hr@demo.fsp"))
         await s.flush()
+        await _sync_sequences(s)
         s.add(Need(employer_id=DEMO_EMPLOYER_ID, title="Backend-разработчик Python (middle)", spec="backend", grade="middle",
                    skills=[{"name": "Python", "weight": 3}, {"name": "FastAPI", "weight": 2}, {"name": "PostgreSQL", "weight": 2},
                            {"name": "Docker", "weight": 1}],
@@ -121,14 +135,10 @@ async def seed() -> bool:
                    skills=[{"name": "React", "weight": 3}, {"name": "TypeScript", "weight": 2}, {"name": "CSS", "weight": 1}],
                    description="Личный кабинет клиента на React + TypeScript.", salary_from=90000, salary_to=140000,
                    salary_type="net", work_format="remote", published=False))
+        await s.flush()
+        await _sync_sequences(s)
         await s.commit()
 
-    if engine.dialect.name == "postgresql":       # после явных id — сдвинуть последовательности
-        async with engine.begin() as conn:
-            for t in ("users", "employers", "needs", "external_identities", "verified_results", "grade_attempts",
-                      "categories", "invitations", "applications"):
-                await conn.execute(text(f"SELECT setval(pg_get_serial_sequence('{t}', 'id'), "
-                                        f"COALESCE((SELECT MAX(id) FROM {t}), 0) + 1, false)"))
     log.info("сид загружен")
     return True
 
