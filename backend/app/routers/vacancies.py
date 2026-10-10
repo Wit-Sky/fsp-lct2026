@@ -12,7 +12,7 @@ from app.models import Application, Employer, Need, User
 from app.routers.employer import application_out
 from app.schemas import ApplicationOut, ApplyIn, VacancyOut
 
-router = APIRouter(tags=["vacancies"])
+router = APIRouter(tags=["vacancies"], responses=responses(401, 403))  # все методы — только для кандидата
 
 
 async def _vacancy_out(session: AsyncSession, n: Need, applied: set[int]) -> dict:
@@ -34,7 +34,8 @@ async def vacancies(spec: str | None = None, grade: str | None = None, user: Use
     return [await _vacancy_out(session, n, applied) for n in rows]
 
 
-@router.get("/vacancies/{need_id}", response_model=VacancyOut, summary="Вакансия", responses=responses(404))
+@router.get("/vacancies/{need_id}", response_model=VacancyOut, summary="Вакансия",
+            description="Опубликованная вакансия с компанией и зарплатой от–до; неопубликованная — 404.", responses=responses(404))
 async def vacancy(need_id: int, user: User = Depends(candidate), session: AsyncSession = Depends(get_session)):
     n = await session.get(Need, need_id)
     if n is None or not n.published:
@@ -61,7 +62,8 @@ async def apply(need_id: int, body: ApplyIn | None = None, user: User = Depends(
     return await application_out(session, a, with_card=False)
 
 
-@router.get("/me/applications", response_model=list[ApplicationOut], summary="Мои отклики и их статусы")
+@router.get("/me/applications", response_model=list[ApplicationOut], summary="Мои отклики и их статусы",
+            description="Отклики кандидата на вакансии, новые сверху: sent → viewed → accepted | declined.")
 async def my_applications(user: User = Depends(candidate), session: AsyncSession = Depends(get_session)):
     rows = (await session.execute(select(Application).where(Application.candidate_id == user.id)
                                   .order_by(Application.created_at.desc()))).scalars().all()

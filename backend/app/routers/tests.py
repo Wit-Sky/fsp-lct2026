@@ -16,7 +16,7 @@ from app.models import CandidateProfile, Category, GradeAttempt, User
 from app.schemas import AnswerIn, CategoryOut, TestResultOut, TestStartIn, TestStateOut
 from app.services import matching, testing
 
-router = APIRouter(tags=["tests"])
+router = APIRouter(tags=["tests"], responses=responses(401, 403))  # все методы — только для кандидата
 GRACE = timedelta(seconds=15)        # запас на сетевые задержки к лимиту 5 минут
 
 

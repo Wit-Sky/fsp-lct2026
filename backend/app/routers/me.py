@@ -14,7 +14,7 @@ from app.models import CandidateProfile, ExternalIdentity, Invitation, User, Ver
 from app.schemas import InvitationOut, ProfileIn, ProfileOut, ResultsOut, ResumeDraft
 from app.services import profile as profile_svc
 
-router = APIRouter(tags=["candidate"])
+router = APIRouter(tags=["candidate"], responses=responses(401, 403))  # все методы — только для кандидата
 
 
 async def _profile(session: AsyncSession, user: User) -> CandidateProfile:
@@ -76,6 +76,7 @@ async def parse_resume(file: UploadFile = File(...), user: User = Depends(candid
 
 
 @router.get("/me/profile.pdf", summary="Стандартизированный PDF-профиль", response_class=Response,
+            description="PDF с профилем, категорией и подтверждёнными результатами в едином формате (reportlab, шрифт DejaVuSans).",
             responses={200: {"content": {"application/pdf": {}}, "description": "PDF"}})
 async def profile_pdf(user: User = Depends(candidate), session: AsyncSession = Depends(get_session)):
     from app.pdf import render_profile
@@ -153,6 +154,6 @@ async def accept(inv_id: int, user: User = Depends(candidate), session: AsyncSes
 
 
 @router.post("/invitations/{inv_id}/decline", response_model=InvitationOut, summary="Отклонить приглашение",
-             responses=responses(404, 409))
+             description="Контакты кандидата остаются скрытыми; работодатель видит статус declined.", responses=responses(404, 409))
 async def decline(inv_id: int, user: User = Depends(candidate), session: AsyncSession = Depends(get_session)):
     return await _decide(session, inv_id, user, "declined")

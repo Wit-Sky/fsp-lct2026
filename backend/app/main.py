@@ -29,7 +29,8 @@ errors.install(app)
 api = APIRouter(prefix="/api")
 
 
-@api.get("/health", tags=["system"], summary="Проверка живости")
+@api.get("/health", tags=["system"], summary="Проверка живости",
+         description="Для healthcheck контейнера и мониторинга стенда; без авторизации.")
 async def health():
     return {"status": "ok"}
 
