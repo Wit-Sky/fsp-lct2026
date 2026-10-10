@@ -166,3 +166,28 @@ async def test_profile_pdf_and_minor(client):
     assert r.json()["published"]
     pdf = await client.get("/api/me/profile.pdf", headers=hc)
     assert pdf.status_code == 200 and pdf.content[:5] == b"%PDF-"
+
+
+async def test_resume_pdf_parse_and_roles_in_profile(client):
+    import io
+    from reportlab.lib.pagesizes import A4
+    from reportlab.pdfgen import canvas
+    import app.pdf  # noqa: F401 — регистрирует кириллический шрифт DejaVuSans
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf, pagesize=A4)
+    c.setFont("DejaVuSans", 11)
+    for i, line in enumerate(["Смирнова Анна Олеговна", "anna@example.ru, +7 900 123-45-67",
+                              "Frontend-разработчик, опыт 2 года. Наставник стажёров.",
+                              "Стек: React, TypeScript, CSS. Коммуникабельность, самостоятельность."]):
+        c.drawString(60, 780 - 18 * i, line)
+    c.save()
+    hc = await register(client, "resume@example.ru")
+    r = await client.post("/api/me/resume/parse", headers=hc, files={"file": ("cv.pdf", buf.getvalue(), "application/pdf")})
+    assert r.status_code == 200, r.text
+    d = r.json()
+    assert d["full_name"] == "Смирнова Анна Олеговна" and d["spec"] == "frontend" and d["experience_years"] == 2
+    assert "Ментор" in d["roles"] and {"Коммуникация", "Самостоятельность"} <= set(d["soft_skills"])
+    bad = await client.post("/api/me/resume/parse", headers=hc, files={"file": ("cv.pdf", b"not a pdf", "application/pdf")})
+    assert bad.status_code == 422
+    r = await client.put("/api/me/profile", headers=hc, json={"roles": d["roles"], "soft_skills": d["soft_skills"]})
+    assert r.json()["roles"] == d["roles"] and r.json()["soft_skills"] == d["soft_skills"]

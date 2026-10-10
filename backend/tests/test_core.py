@@ -112,3 +112,16 @@ def test_module_boundaries():
                 assert not any(i.endswith(f"services.{other}") or i == f"app.services.{other}" for i in imps), (m, other)
         assert not any(i.split(".")[0] in ("sqlalchemy", "fastapi", "starlette") for i in imps), m
         assert not any(i.startswith("app.models") or i.startswith("app.db") for i in imps), m
+
+
+def test_resume_parse_roles_and_soft_skills():
+    text = ("Иванов Пётр Сергеевич\nivanov@mail.ru, +7 (912) 345-67-89, @ivanov_dev\n"
+            "Backend-разработчик, middle. Опыт работы 3 года. Тимлид группы из 4 человек, наставник стажёров.\n"
+            "Стек: Python, FastAPI, PostgreSQL, Docker.\n"
+            "О себе: ответственность, работа в команде, быстро учусь, стрессоустойчивость.")
+    d = profile.parse_resume_text(text)
+    assert d["full_name"] == "Иванов Пётр Сергеевич" and d["email"] == "ivanov@mail.ru"
+    assert d["experience_years"] == 3 and d["claimed_grade"] == "middle" and d["spec"] == "backend"
+    assert {"Python", "FastAPI", "PostgreSQL", "Docker"} <= set(d["skills"])
+    assert {"Тимлид", "Ментор", "Разработчик"} <= set(d["roles"])
+    assert {"Ответственность", "Работа в команде", "Обучаемость", "Стрессоустойчивость"} <= set(d["soft_skills"])

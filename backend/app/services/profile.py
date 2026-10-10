@@ -103,9 +103,39 @@ _NAME = re.compile(r"^\s*([А-ЯЁ][а-яё]+(?:-[А-ЯЁ][а-яё]+)?\s+[А-Я�
 _GRADE = re.compile(r"\b(junior|middle|senior|джун|мидл|сеньор|синьор)\b", re.I)
 _GRADE_MAP = {"джун": "junior", "мидл": "middle", "сеньор": "senior", "синьор": "senior"}
 
+# Роли в команде и софт-скиллы: словарь «шаблон → каноническое название». Порядок — порядок в черновике.
+ROLE_PATTERNS = [
+    (r"тимлид|team\s*lead|техлид|tech\s*lead|руководител\w* (?:группы|команды)", "Тимлид"),
+    (r"архитектор|architect", "Архитектор"),
+    (r"ментор|наставни[кц]", "Ментор"),
+    (r"devops|sre\b", "DevOps-инженер"),
+    (r"тестировщик|\bqa\b|тестирован\w* по", "Тестировщик"),
+    (r"аналитик|analyst", "Аналитик"),
+    (r"оператор\w* (?:бвс|бпла|дрон)|внешн\w* пилот", "Оператор БВС"),
+    (r"разработчик|программист|developer|engineer|инженер", "Разработчик"),
+]
+SOFT_PATTERNS = [
+    (r"коммуникаб|коммуникац", "Коммуникация"),
+    (r"работ\w* в команде|командн\w* работ|teamwork", "Работа в команде"),
+    (r"ответственн", "Ответственность"),
+    (r"лидерск|leadership", "Лидерство"),
+    (r"наставничеств|менторств|mentoring", "Наставничество"),
+    (r"самостоятельн", "Самостоятельность"),
+    (r"аналитическ\w* мышлени|критическ\w* мышлени", "Аналитическое мышление"),
+    (r"тайм-?менеджмент|управлени\w* временем|time management", "Тайм-менеджмент"),
+    (r"обучаем|быстро учусь|быстро осваива", "Обучаемость"),
+    (r"публичн\w* выступлени|презентаци\w* (?:решений|результатов)", "Публичные выступления"),
+    (r"стрессоустойчив", "Стрессоустойчивость"),
+]
+
+
+def _find_all(patterns: list[tuple[str, str]], low: str) -> list[str]:
+    return [name for rx, name in patterns if re.search(rx, low)]
+
 
 def parse_resume_text(text: str) -> dict:
-    """Черновик полей профиля из текста резюме: регулярные выражения + словарь навыков (CONTRACT 8.1)."""
+    """Черновик полей профиля из текста резюме: регулярные выражения + словари навыков, ролей и софт-скиллов
+    (CONTRACT 8.1; ТЗ 2.1: ФИО, контакты, стек, грейд, роли, стаж, софт-скиллы)."""
     draft: dict = {}
     if m := _NAME.search(text):
         draft["full_name"] = m.group(1)
@@ -120,6 +150,8 @@ def parse_resume_text(text: str) -> dict:
     low = text.lower()
     skills = [s for s in ALL_SKILLS if re.search(r"(?<![\w+#])" + re.escape(s.lower()) + r"(?![\w+#])", low)]
     draft["skills"] = skills
+    draft["roles"] = _find_all(ROLE_PATTERNS, low)
+    draft["soft_skills"] = _find_all(SOFT_PATTERNS, low)
     spec_hits = {spec: sum(1 for s in skills if s in vocab) for spec, vocab in SKILLS.items()}
     if skills:
         draft["spec"] = max(spec_hits, key=spec_hits.get)

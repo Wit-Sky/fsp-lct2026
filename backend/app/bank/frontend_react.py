@@ -12,9 +12,13 @@ def _which_hook(rng):
         ("Нужно подписаться на событие окна после монтирования и отписаться при размонтировании.", "useEffect"),
         ("Нужно получить доступ к DOM-элементу input, чтобы поставить на него фокус.", "useRef"),
         ("Нужно не пересчитывать дорогое вычисление при каждом рендере, пока не изменились входные данные.", "useMemo"),
+        ("Нужно прочитать текущую тему оформления из контекста, не прокидывая её через props.", "useContext"),
+        ("Нужно сохранить одну и ту же функцию-обработчик между рендерами для мемоизированного дочернего компонента.", "useCallback"),
+        ("Состояние со многими действиями (add, remove, reset) удобнее описать функцией-редьюсером.", "useReducer"),
+        ("Нужно хранить значение между рендерами, но его изменение не должно вызывать перерисовку.", "useRef"),
     ])
-    return {"text": "Какой хук React подходит? " + text,
-            **choice(rng, ans, ["useState", "useEffect", "useRef", "useMemo", "useContext"])}
+    hooks = ["useState", "useEffect", "useRef", "useMemo", "useContext", "useCallback", "useReducer"]
+    return {"text": "Какой хук React подходит? " + text, **choice(rng, ans, rng.sample(hooks, len(hooks)))}
 
 
 @template("frontend.react.basics", SPEC, TOPIC, -0.6, "single",
@@ -27,6 +31,20 @@ def _basics(rng):
          "родитель передаёт новое значение props", ["присвоить props.title = '...'", "вызвать this.forceUpdate()", "изменить DOM напрямую"]),
         ("Что вернёт компонент, чтобы ничего не отрисовать?",
          "null", ["undefined", "false в виде строки", "пустой объект {}"]),
+        ("Можно ли вызывать useState внутри условия if?",
+         "нет: хуки вызываются на верхнем уровне компонента, всегда в одном порядке",
+         ["да, если условие не меняется между рендерами", "да, в любом месте функции", "только в классовых компонентах"]),
+        ("Как правильно добавить элемент x в массив items, который хранится в состоянии?",
+         "setItems([...items, x])", ["items.push(x)", "items.push(x); setItems(items)", "items[items.length] = x"]),
+        ("Что делает <>...</> (React.Fragment)?",
+         "группирует элементы без лишнего узла в DOM", ["лениво загружает компонент", "передаёт контекст вниз по дереву",
+                                                        "мемоизирует дочерние элементы"]),
+        ("Как дочернему компоненту передать данные родителю?",
+         "родитель передаёт функцию-колбэк в props, ребёнок её вызывает",
+         ["ребёнок присваивает значение в props родителя", "через ref на родительский компонент", "никак, данные идут только вниз"]),
+        ("Что такое управляемый (controlled) input?",
+         "значение хранится в состоянии React и задаётся через value + onChange",
+         ["input с атрибутом name", "input, который рендерится только на сервере", "input без обработчика onChange"]),
     ])
     return {"text": text, **choice(rng, ans, wrong)}
 
@@ -34,10 +52,12 @@ def _basics(rng):
 @template("frontend.react.batching", SPEC, TOPIC, 0.2, "number",
           "setState с устаревшим значением в одном обработчике: обновления батчатся — частая ошибка middle.")
 def _batching(rng):
-    start, a, m = rng.randint(0, 5), rng.randint(1, 5), rng.randint(2, 4)
-    body = "\n".join(f"    setCount(count + {a});" for _ in range(m))
-    return {"text": f"count изначально равен {start}. Чему будет равен count после одного клика?",
-            "code": f"const [count, setCount] = useState({start});\nfunction onClick() {{\n{body}\n}}",
+    start, a, m = rng.randint(0, 20), rng.randint(1, 9), rng.randint(2, 5)
+    s = rng.choice(["count", "clicks", "total", "score", "value"])
+    setter = "set" + s[0].upper() + s[1:]
+    body = "\n".join(f"    {setter}({s} + {a});" for _ in range(m))
+    return {"text": f"{s} изначально равен {start}. Чему будет равен {s} после одного клика?",
+            "code": f"const [{s}, {setter}] = useState({start});\nfunction onClick() {{\n{body}\n}}",
             "answer": start + a}
 
 

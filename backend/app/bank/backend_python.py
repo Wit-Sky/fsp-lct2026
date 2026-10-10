@@ -18,7 +18,7 @@ def _slice_sum(rng):
 @template("backend.python.loop_mod", SPEC, TOPIC, -0.9, "number",
           "Цикл с условием по остатку: нужно аккуратно пройти range → лёгкое.")
 def _loop_mod(rng):
-    n, k = rng.randint(8, 16), rng.randint(2, 4)
+    n, k = rng.randint(8, 30), rng.randint(2, 5)
     acc = var_name(rng, ("total", "acc", "s", "res"))
     return {"text": "Что выведет код?",
             "code": f"{acc} = 0\nfor i in range({n}):\n    if i % {k} == 0:\n        {acc} += i\nprint({acc})",

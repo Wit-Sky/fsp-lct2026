@@ -33,6 +33,7 @@ async def _profile_out(session: AsyncSession, user: User, p: CandidateProfile) -
     return {"user_id": user.id, "email": user.email, "full_name": p.full_name or "", "birth_date": p.birth_date,
             "phone": p.phone, "telegram": p.telegram, "city": p.city, "work_format": p.work_format,
             "salary_expect_from": p.salary_expect_from, "spec": p.spec, "skills": list(p.skills or []),
+            "roles": list(p.roles or []), "soft_skills": list(p.soft_skills or []),
             "experience_years": p.experience_years, "about": p.about, "consent_pd": p.consent_pd,
             "parent_consent": p.parent_consent, "visible_fields": dict(p.visible_fields or {}),
             "minor": profile_svc.is_minor(p.birth_date), "published": profile_svc.publishable(pd),

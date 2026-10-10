@@ -55,6 +55,7 @@ async def load_candidates(session: AsyncSession, spec: str | None = None, ids: l
             "telegram": p.telegram, "city": p.city, "work_format": p.work_format,
             "salary_expect_from": p.salary_expect_from, "experience_years": p.experience_years,
             "spec": cspec, "claimed_grade": cat.grade if cat else None, "skills": list(p.skills or []), "about": p.about,
+            "roles": list(p.roles or []), "soft_skills": list(p.soft_skills or []),
             "fsp_id": fsp_ids.get(u.id), "results": results, "visible_fields": dict(p.visible_fields or {}),
             "grade": cat.grade if cat else None, "status": cat.status if cat else "none",
             "theta": cat.theta if cat else None, "tested_at": aware(cat.tested_at) if cat else None,
@@ -91,7 +92,7 @@ async def invitation_statuses(session: AsyncSession, employer_id: int) -> dict[i
 
 def card(c: dict, contacts_visible: bool, invitation_status: str | None = None) -> dict:
     base = {k: c.get(k) for k in ("id", "full_name", "city", "birth_date", "about", "experience_years", "work_format",
-                                  "salary_expect_from", "spec", "skills", "grade", "status", "theta", "tested_at",
+                                  "salary_expect_from", "spec", "skills", "roles", "soft_skills", "grade", "status", "theta", "tested_at",
                                   "results", "email", "phone", "telegram", "visible_fields", "minor")}
     base["percentile"] = c.get("theta_pct")
     base["has_fsp"] = bool(c.get("results"))
