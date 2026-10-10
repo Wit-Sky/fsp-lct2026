@@ -30,3 +30,10 @@
   в логи nginx, историю браузера и Referer. Предложение: `POST /api/auth/fsp/start` с заголовком `Authorization` возвращает
   `{"url": fsp_oidc.authorize_url(fsp_oidc.make_state(user.id))}` (state уже подписан и живёт 10 минут), фронтенд делает
   `window.location = url`. Старый GET с `?token=` убрать. Фронтенд переключу за 2 минуты, как только эндпоинт появится в main.
+
+## 11.10, ~03:50 МСК — мобильная вёрстка, стенд и автодеплой
+- Мобильная вёрстка (375 px): без горизонтального скролла; меню — лента, категории — лента, фильтры сворачиваются, скор в строку.
+- Деплой: `deploy/bootstrap.sh` (Docker, swap, пользователь deploy, `.env` со случайными секретами на сервере),
+  Caddy с автоматическим HTTPS (профиль `https`, домен `<ip>.sslip.io` без покупки домена),
+  `.github/workflows/deploy.yml` — при пуше в main: сборка фронтенда → rsync на ВМ → `docker compose up -d --build` → проверка /api/health.
+  Секреты репозитория: `DEPLOY_HOST`, `DEPLOY_SSH_KEY`.
