@@ -12,15 +12,17 @@ from app.schemas import (ApplicationOut, ApplicationStatusIn, CandidateCard, Cat
                          InvitationIn, InvitationOut, MatchesOut, NeedCreated, NeedIn, NeedOut)
 from app.services import matching, profile as profile_svc
 
-router = APIRouter(tags=["employer"])
+router = APIRouter(tags=["employer"], responses=responses(401, 403))  # все методы — только для работодателя
 
 
-@router.get("/employer", response_model=EmployerOut, summary="Профиль компании")
+@router.get("/employer", response_model=EmployerOut, summary="Профиль компании",
+            description="Профиль компании текущего работодателя: название, ИНН, сфера, описание, контакты для кандидатов.")
 async def get_employer(emp: Employer = Depends(employer)):
     return emp
 
 
-@router.put("/employer", response_model=EmployerOut, summary="Изменить профиль компании", responses=responses(422))
+@router.put("/employer", response_model=EmployerOut, summary="Изменить профиль компании",
+            description="Передаются только изменяемые поля.", responses=responses(422))
 async def put_employer(body: EmployerIn, emp: Employer = Depends(employer), session: AsyncSession = Depends(get_session)):
     emp = await session.merge(emp)
     for k, v in body.model_dump(exclude_unset=True).items():
@@ -50,20 +52,24 @@ async def create_need(body: NeedIn, emp: Employer = Depends(employer), session: 
     return {**repo.need_dict(n), "search_id": n.id}
 
 
-@router.get("/employer/needs", response_model=list[NeedOut], summary="Мои потребности и вакансии")
+@router.get("/employer/needs", response_model=list[NeedOut], summary="Мои потребности и вакансии",
+            description="Все потребности компании, новые сверху; published = true — опубликована как вакансия.")
 async def my_needs(emp: Employer = Depends(employer), session: AsyncSession = Depends(get_session)):
     rows = (await session.execute(select(Need).where(Need.employer_id == emp.id).order_by(Need.created_at.desc()))).scalars().all()
     return [repo.need_dict(n) for n in rows]
 
 
-@router.get("/needs/{need_id}", response_model=NeedOut, summary="Потребность", responses=responses(404))
+@router.get("/needs/{need_id}", response_model=NeedOut, summary="Потребность",
+            description="Потребность своей компании; чужая — 404.", responses=responses(404))
 @router.get("/searches/{need_id}", response_model=NeedOut, summary="Исходный запрос подборки (search_id = id потребности)",
+            description="Исходный запрос сохраняется: уточнение фильтров подборки (параметры /matches) его не сбрасывает.",
             responses=responses(404))
 async def get_need(need_id: int, emp: Employer = Depends(employer), session: AsyncSession = Depends(get_session)):
     return repo.need_dict(await _own_need(session, need_id, emp))
 
 
-@router.put("/needs/{need_id}", response_model=NeedOut, summary="Изменить потребность / вакансию", responses=responses(404, 422))
+@router.put("/needs/{need_id}", response_model=NeedOut, summary="Изменить потребность / вакансию",
+            description="Полная замена полей; зарплата от–до обязательна.", responses=responses(404, 422))
 async def put_need(need_id: int, body: NeedIn, emp: Employer = Depends(employer), session: AsyncSession = Depends(get_session)):
     n = await _own_need(session, need_id, emp)
     for k, v in body.model_dump().items():
