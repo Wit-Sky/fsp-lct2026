@@ -20,6 +20,7 @@ export default function NeedMatches() {
   const fspOnly = params.get("fsp_only") === "1";
   const extra = (params.get("skills") ?? "").split(",").filter(Boolean);
   const [inviting, setInviting] = useState<S["CandidateCard"] | null>(null);
+  const [showFilters, setShowFilters] = useState(false);
   const qc = useQueryClient();
   const { data: cat } = useCatalog();
 
@@ -85,9 +86,9 @@ export default function NeedMatches() {
 
       {/* Категории: целевая и соседние */}
       {cats.data && (
-        <div className="grid gap-3 sm:grid-cols-3">
+        <div className="-mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-1 sm:mx-0 sm:grid sm:grid-cols-3 sm:px-0">
           {cats.data.map((c) => (
-            <div key={`${c.spec}-${c.grade}`} className={`card ${c.target ? "border-fsp ring-1 ring-fsp/30" : "opacity-80"}`}>
+            <div key={`${c.spec}-${c.grade}`} className={`card min-w-[230px] snap-start p-4 sm:min-w-0 sm:p-5 ${c.target ? "order-first border-fsp ring-1 ring-fsp/30 sm:order-none" : "opacity-80"}`}>
               <p className="text-sm text-slate-500">{c.target ? "Целевая категория" : "Соседняя категория"}</p>
               <p className="font-bold">{SPEC[c.spec]} · {GRADE[c.grade]}</p>
               <p className="mt-1 text-sm">
@@ -101,13 +102,16 @@ export default function NeedMatches() {
       <div className="grid gap-5 lg:grid-cols-[260px_1fr]">
         <aside className="card h-fit space-y-4 lg:sticky lg:top-4">
           <div className="flex items-center justify-between">
-            <h2 className="font-bold">Уточнить</h2>
+            <button className="font-bold lg:pointer-events-none" onClick={() => setShowFilters(!showFilters)}>
+              Уточнить{filtersOn ? " •" : ""} <span className="text-fsp lg:hidden">{showFilters ? "▲" : "▼"}</span>
+            </button>
             {filtersOn && (
               <button className="text-sm text-fsp hover:underline" onClick={() => setParams({}, { replace: true })}>
                 Сбросить
               </button>
             )}
           </div>
+          <div className={`space-y-4 ${showFilters ? "" : "hidden lg:block"}`}>
           <label className="flex items-start gap-2 text-sm">
             <input type="checkbox" className="mt-0.5" checked={gradeAdj} onChange={(e) => setFilter("grade_adj", e.target.checked ? "1" : null)} />
             Соседние грейды
@@ -131,6 +135,7 @@ export default function NeedMatches() {
             </div>
           </div>
           <p className="text-xs text-slate-500">Исходный запрос сохраняется: фильтры только сужают выдачу.</p>
+          </div>
         </aside>
 
         <section className="space-y-3">
@@ -167,10 +172,10 @@ function MatchCard({ m, rank, highlight, onInvite }: { m: S["MatchOut"]; rank: n
   const c = m.candidate;
   return (
     <article className="card">
-      <div className="flex gap-4">
-        <div className="flex w-16 shrink-0 flex-col items-center">
-          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-fsp text-lg font-bold text-white">{Math.round(m.score)}</div>
-          <span className="mt-1 text-xs text-slate-500">из 100</span>
+      <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+        <div className="flex shrink-0 items-center gap-2 sm:w-16 sm:flex-col sm:gap-0">
+          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-fsp font-bold text-white sm:h-14 sm:w-14 sm:text-lg">{Math.round(m.score)}</div>
+          <span className="text-xs text-slate-500 sm:mt-1">из 100</span>
         </div>
         <div className="min-w-0 flex-1 space-y-2">
           <div className="flex flex-wrap items-center gap-2">
@@ -204,7 +209,7 @@ function MatchCard({ m, rank, highlight, onInvite }: { m: S["MatchOut"]; rank: n
             )}
           </div>
           {open && (
-            <div className="mt-2 rounded-lg bg-slate-50 p-4">
+            <div className="-mx-2 mt-2 rounded-lg bg-slate-50 p-3 sm:mx-0 sm:p-4">
               <Explain items={m.explain} />
             </div>
           )}

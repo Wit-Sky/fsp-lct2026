@@ -26,8 +26,8 @@ export default function Home() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-2xl bg-gradient-to-br from-fsp to-fsp-dark p-8 text-white">
-        <h1 className="max-w-3xl text-3xl font-bold leading-tight">
+      <section className="rounded-2xl bg-gradient-to-br from-fsp to-fsp-dark p-5 text-white sm:p-8">
+        <h1 className="max-w-3xl text-2xl font-bold leading-tight sm:text-3xl">
           Работодатель сам находит ИТ-специалиста — по подтверждённому грейду, а не по резюме
         </h1>
         <p className="mt-3 max-w-2xl text-white/85">

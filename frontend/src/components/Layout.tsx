@@ -27,14 +27,14 @@ export default function Layout() {
           <NavLink to="/" className="text-lg font-bold tracking-tight">
             ФСП <span className="text-fsp-pink">Талант</span>
           </NavLink>
-          <nav className="flex flex-1 flex-wrap gap-1">
+          <nav className="order-last -mx-4 flex w-[calc(100%+2rem)] gap-1 overflow-x-auto px-4 sm:order-none sm:mx-0 sm:w-auto sm:flex-1 sm:px-0">
             {nav.map((n) => (
               <NavLink
                 key={n.to}
                 to={n.to}
                 end={n.end}
                 className={({ isActive }) =>
-                  `rounded-md px-3 py-1.5 text-sm ${isActive ? "bg-white/15 font-semibold" : "text-white/80 hover:text-white"}`
+                  `whitespace-nowrap rounded-md px-3 py-1.5 text-sm ${isActive ? "bg-white/15 font-semibold" : "text-white/80 hover:text-white"}`
                 }
               >
                 {n.label}
@@ -42,7 +42,7 @@ export default function Layout() {
             ))}
           </nav>
           {role && (
-            <div className="flex items-center gap-3 text-sm">
+            <div className="ml-auto flex items-center gap-3 text-sm">
               <span className="rounded-full bg-white/10 px-3 py-1">{role === "employer" ? "Работодатель" : "Кандидат"}</span>
               <button
                 className="text-white/80 hover:text-white"
