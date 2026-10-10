@@ -2,6 +2,8 @@
 
 Черновик: факты вычитывает Евгений (docs/bas_samples.md). Сомнительный шаблон — enabled=False.
 """
+import math
+
 from app.bank._base import template, choice
 
 SPEC, TOPIC = "bas", "nav"
@@ -10,7 +12,7 @@ SPEC, TOPIC = "bas", "nav"
 @template("bas.nav.distance_time", SPEC, TOPIC, -1.4, "number",
           "Путь = скорость × время с переводом единиц — базовый уровень.")
 def _dist(rng):
-    v, t = rng.randint(5, 20), rng.randint(2, 10)
+    v, t = rng.randint(3, 30), rng.randint(1, 20)
     return {"text": f"Квадрокоптер летит по прямой с постоянной путевой скоростью {v} м/с. Какое расстояние в метрах он пролетит за {t} мин?",
             "answer": v * t * 60}
 
@@ -28,10 +30,12 @@ def _lat(rng):
 @template("bas.nav.lon_cos", SPEC, TOPIC, 0.2, "number",
           "Длина градуса долготы зависит от широты (× cos φ) — частая ошибка в расчётах.")
 def _lon(rng):
-    d = rng.choice([0.01, 0.02, 0.1, 0.2])
-    return {"text": f"Две точки на широте 60° с. ш. различаются по долготе на {d}°. Примите 1° по экватору = 111 км, cos 60° = 0,5. "
-                    f"Каково расстояние между точками в метрах?",
-            "answer": round(d * 111_000 * 0.5)}
+    k = rng.randint(1, 40)                                   # разница долгот k/100 градуса
+    lat, c = rng.choice([(30, 866), (40, 766), (45, 707), (50, 643), (55, 574), (60, 500), (65, 423)])   # cos × 1000
+    ds, cs = f"{k / 100:g}".replace(".", ","), f"{c / 1000:g}".replace(".", ",")
+    return {"text": f"Две точки на широте {lat}° с. ш. различаются по долготе на {ds}°. Примите 1° по экватору = 111 км, "
+                    f"cos {lat}° = {cs}. Каково расстояние между точками в метрах (округлите до целого)?",
+            "answer": (111 * k * c * 2 + 100) // 200}           # 111 000 м × k/100 × c/1000, округление «половина вверх»
 
 
 @template("bas.nav.gnss_facts", SPEC, TOPIC, 0.5, "single",
@@ -53,10 +57,18 @@ def _gnss(rng):
 @template("bas.nav.wind_roundtrip", SPEC, TOPIC, 1.0, "number",
           "Ветер вдоль маршрута «туда-обратно»: время больше, чем без ветра — нужно считать оба плеча.")
 def _wind(rng):
-    v, w, d = rng.choice([(15, 5, 1200), (20, 4, 1920), (12, 3, 1350), (18, 6, 2160), (16, 4, 1500), (25, 5, 3000)])
+    while True:                      # d кратно НОК(v − w, v + w): время по каждому плечу — целое число секунд
+        v, w = rng.randint(10, 30), rng.randint(2, 8)
+        if v - w < 6:
+            continue
+        lcm = math.lcm(v - w, v + w)
+        ks = [k for k in range(1, 400) if 600 <= k * lcm <= 6000]
+        if ks:
+            d = rng.choice(ks) * lcm
+            break
     return {"text": f"Воздушная скорость БВС {v} м/с, встречный ветер на пути «туда» {w} м/с (на обратном — попутный). "
                     f"Длина маршрута в одну сторону {d} м. Сколько секунд займёт полёт туда и обратно?",
-            "answer": d / (v - w) + d / (v + w)}
+            "answer": d // (v - w) + d // (v + w)}
 
 
 @template("bas.nav.kalman", SPEC, TOPIC, 1.6, "number",

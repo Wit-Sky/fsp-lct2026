@@ -35,15 +35,20 @@ def _mul_steps(rng):
 @template("backend.arch.nlogn", SPEC, TOPIC, 0.0, "single",
           "Комбинация линейного и логарифмического цикла → O(n log n): типичный middle-вопрос.")
 def _nlogn(rng):
-    d = rng.choice([2, 3])
-    variant = rng.choice(["nlogn", "logn", "n2half"])
+    d = rng.choice([2, 3, 4])
+    i, j = rng.choice([("i", "j"), ("a", "b"), ("x", "y"), ("k", "m")])
+    variant = rng.choice(["nlogn", "logn", "logn_mul", "n_two_loops", "n2half"])
     if variant == "nlogn":
-        code, ans = f"for i in range(n):\n    j = n\n    while j > 1:\n        j //= {d}", "O(n log n)"
+        code, ans = f"for {i} in range(n):\n    {j} = n\n    while {j} > 1:\n        {j} //= {d}", "O(n log n)"
     elif variant == "logn":
-        code, ans = f"j = n\nwhile j > 1:\n    j //= {d}\n    total += 1", "O(log n)"
+        code, ans = f"{j} = n\nwhile {j} > 1:\n    {j} //= {d}\n    total += 1", "O(log n)"
+    elif variant == "logn_mul":
+        code, ans = f"{j} = 1\nwhile {j} < n:\n    {j} *= {d}\n    total += 1", "O(log n)"
+    elif variant == "n_two_loops":
+        code, ans = f"for {i} in range(n):\n    total += {i}\nfor {j} in range({d} * n):\n    total -= 1", "O(n)"
     else:
-        code, ans = "for i in range(n):\n    for j in range(i):\n        total += 1", "O(n²)"
-    return {"text": "Какова временная сложность фрагмента?", "code": code, **choice(rng, ans, BIG_O)}
+        code, ans = f"for {i} in range(n):\n    for {j} in range({i}):\n        total += 1", "O(n²)"
+    return {"text": "Какова временная сложность фрагмента?", "code": code, **choice(rng, ans, rng.sample(BIG_O, len(BIG_O)))}
 
 
 @template("backend.arch.lru_misses", SPEC, TOPIC, 0.6, "number",
@@ -80,8 +85,8 @@ def _kafka(rng):
 @template("backend.arch.little_law", SPEC, TOPIC, 1.5, "number",
           "Закон Литтла L = λ·W для оценки ёмкости пула соединений — senior-уровень.")
 def _little(rng):
-    lam = rng.choice([100, 200, 250, 400, 500, 800, 1000])
-    w = rng.choice([20, 40, 50, 80, 100, 120, 200])
+    lam = rng.randint(2, 40) * 25
+    w = rng.randint(2, 40) * 5
     return {"text": f"Сервис стабильно получает {lam} запросов в секунду, среднее время обработки запроса — {w} мс. "
                     f"Сколько запросов в среднем обрабатывается одновременно (сколько соединений нужно пулу)?",
             "answer": lam * w // 1000 if lam * w % 1000 == 0 else round(lam * w / 1000, 1)}

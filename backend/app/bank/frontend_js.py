@@ -36,12 +36,14 @@ def _coercion(rng):
 @template("frontend.js.var_closure", SPEC, TOPIC, 0.6, "number",
           "var в цикле и замыкания: у всех функций одна переменная i — классика middle.")
 def _var_closure(rng):
-    n, j = rng.randint(3, 7), 0
-    j = rng.randint(0, n - 1)
-    f = names(rng, 1, ("fns", "handlers", "cbs", "list"))[0]
+    s, n, step = rng.randint(0, 3), rng.randint(5, 14), rng.choice([1, 1, 2, 3])
+    count = -(-(n - s) // step)                       # сколько функций положит цикл
+    j = rng.randint(0, count - 1)
+    f = names(rng, 1, ("fns", "handlers", "cbs", "list", "tasks", "jobs"))[0]
+    inc = "i++" if step == 1 else f"i += {step}"
     return {"text": "Что выведет код?",
-            "code": f"const {f} = [];\nfor (var i = 0; i < {n}; i++) {{\n  {f}.push(() => i);\n}}\nconsole.log({f}[{j}]());",
-            "answer": n}
+            "code": f"const {f} = [];\nfor (var i = {s}; i < {n}; {inc}) {{\n  {f}.push(() => i);\n}}\nconsole.log({f}[{j}]());",
+            "answer": s + count * step}
 
 
 @template("frontend.js.event_loop", SPEC, TOPIC, 1.2, "order",

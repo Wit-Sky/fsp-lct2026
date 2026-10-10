@@ -70,6 +70,8 @@ class ProfileIn(BaseModel):
     salary_expect_from: int | None = Field(None, ge=0)
     spec: Spec | None = None
     skills: list[str] | None = None
+    roles: list[str] | None = Field(None, description="Роли в команде (например, «Тимлид», «Разработчик»)")
+    soft_skills: list[str] | None = None
     experience_years: float | None = Field(None, ge=0, le=60)
     about: str | None = None
     consent_pd: bool | None = None
@@ -89,6 +91,8 @@ class ProfileOut(BaseModel):
     salary_expect_from: int | None
     spec: str | None
     skills: list[str]
+    roles: list[str] = []
+    soft_skills: list[str] = []
     experience_years: float | None
     about: str | None
     consent_pd: bool
@@ -107,6 +111,8 @@ class ResumeDraft(BaseModel):
     telegram: str | None = None
     experience_years: float | None = None
     skills: list[str] = []
+    roles: list[str] = []
+    soft_skills: list[str] = []
     spec: str | None = None
     claimed_grade: str | None = None
     text_chars: int = 0
@@ -291,6 +297,8 @@ class CandidateCard(BaseModel):
     salary_expect_from: int | None
     spec: str | None
     skills: list[str]
+    roles: list[str] = []
+    soft_skills: list[str] = []
     grade: str | None
     status: str
     theta: float | None

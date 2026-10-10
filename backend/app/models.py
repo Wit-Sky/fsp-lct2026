@@ -46,6 +46,8 @@ class CandidateProfile(Base):
     salary_expect_from: Mapped[int | None] = mapped_column(Integer, nullable=True)
     spec: Mapped[str | None] = mapped_column(String(32), nullable=True)   # результат опроса по специализации
     skills: Mapped[list] = mapped_column(JSON, default=list)
+    roles: Mapped[list] = mapped_column(JSON, default=list)              # роли в команде: «Тимлид», «Разработчик», …
+    soft_skills: Mapped[list] = mapped_column(JSON, default=list)
     experience_years: Mapped[float | None] = mapped_column(Float, nullable=True)
     about: Mapped[str | None] = mapped_column(Text, nullable=True)
     consent_pd: Mapped[bool] = mapped_column(Boolean, default=False)

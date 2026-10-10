@@ -23,9 +23,14 @@ def _status(rng):
         ("API ответил 401 — что сделать на фронтенде?", "отправить пользователя на вход / обновить токен"),
         ("API ответил 404 на /profile/<id> — что показать?", "страницу «не найдено»"),
         ("API ответил 403 — что показать?", "сообщение «нет доступа»"),
+        ("API ответил 422 на отправку формы — что сделать?", "показать ошибки валидации у полей формы"),
+        ("API ответил 500 — что показать?", "сообщение об ошибке сервера и предложение повторить позже"),
+        ("API ответил 429 — что сделать?", "подождать (Retry-After) и повторить запрос позже"),
     ])
-    return {"text": text, **choice(rng, ans, ["отправить пользователя на вход / обновить токен", "страницу «не найдено»",
-                                              "сообщение «нет доступа»", "повторять запрос в цикле"])}
+    pool = ["отправить пользователя на вход / обновить токен", "страницу «не найдено»", "сообщение «нет доступа»",
+            "показать ошибки валидации у полей формы", "сообщение об ошибке сервера и предложение повторить позже",
+            "подождать (Retry-After) и повторить запрос позже", "повторять запрос в цикле без паузы"]
+    return {"text": text, **choice(rng, ans, rng.sample(pool, len(pool)))}
 
 
 @template("frontend.web.xss", SPEC, TOPIC, 0.1, "single",
@@ -78,5 +83,14 @@ def _cors_cookie(rng):
          "HttpOnly", ["Secure", "SameSite=Strict", "Path=/"]),
         ("Какой fetch-параметр нужен, чтобы браузер отправил cookies на другой origin?",
          "credentials: 'include'", ["mode: 'no-cors'", "cache: 'reload'", "credentials: 'omit'"]),
+        ("Запрос с credentials на другой origin. Какое значение Access-Control-Allow-Origin браузер НЕ примет?",
+         "*", ["точный origin фронтенда", "https://app.site.ru, если запрос именно оттуда", "origin из белого списка, совпавший с Origin"]),
+        ("Что браузер отправит перед fetch PUT с Content-Type: application/json на другой origin?",
+         "предварительный запрос OPTIONS (preflight)", ["HEAD", "GET без тела", "ничего — сразу PUT"]),
+        ("Что означает атрибут cookie Secure?",
+         "cookie отправляется только по HTTPS", ["cookie нельзя прочитать из JavaScript", "cookie не уходит на другие сайты",
+                                                 "браузер шифрует значение cookie"]),
+        ("Какой заголовок ответа, кроме Access-Control-Allow-Origin, нужен, чтобы JS получил ответ на запрос с credentials?",
+         "Access-Control-Allow-Credentials: true", ["Access-Control-Allow-Headers: *", "Access-Control-Max-Age: 600", "Vary: Cookie"]),
     ])
     return {"text": text, **choice(rng, ans, wrong)}

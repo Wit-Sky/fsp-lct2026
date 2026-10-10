@@ -11,9 +11,12 @@ def _semantic(rng):
         ("Блок основной навигации по сайту.", "<nav>"), ("Основное содержимое страницы (один раз на странице).", "<main>"),
         ("Элемент, по нажатию на который отправляется форма.", "<button>"), ("Самостоятельная статья или карточка новости.", "<article>"),
         ("Нижняя часть страницы с контактами.", "<footer>"),
+        ("Шапка страницы с логотипом.", "<header>"), ("Боковая колонка со связанными ссылками.", "<aside>"),
+        ("Подпись к полю ввода формы.", "<label>"), ("Иллюстрация вместе с подписью к ней.", "<figure>"),
+        ("Список шагов инструкции, где важен порядок.", "<ol>"),
     ])
-    return {"text": "Какой тег семантически подходит? " + text,
-            **choice(rng, ans, ["<div>", "<span>", "<nav>", "<main>", "<section>", "<button>"])}
+    tags = ["<div>", "<span>", "<section>", "<nav>", "<main>", "<button>", "<header>", "<aside>", "<label>", "<ol>"]
+    return {"text": "Какой тег семантически подходит? " + text, **choice(rng, ans, rng.sample(tags, len(tags)))}
 
 
 @template("frontend.css.box_model", SPEC, TOPIC, -0.5, "number",
@@ -70,7 +73,7 @@ def _flex(rng):
 @template("frontend.css.margin_collapse", SPEC, TOPIC, 1.1, "number",
           "Схлопывание вертикальных margin соседних блоков — частая неожиданность.")
 def _collapse(rng):
-    m1, m2 = rng.randint(1, 8) * 4, rng.randint(1, 8) * 4
+    m1, m2 = rng.randint(2, 64), rng.randint(2, 64)
     return {"text": "Два соседних блочных элемента в обычном потоке (не flex и не grid). Какое расстояние в пикселях будет между ними по вертикали?",
             "code": f".first  {{ margin-bottom: {m1}px; }}\n.second {{ margin-top: {m2}px; }}", "answer": max(m1, m2)}
 
@@ -87,5 +90,13 @@ def _a11y(rng):
          'alt=""', ['alt="image"', "атрибут alt не указывать", 'alt="декоративная картинка"']),
         ("Чем лучше всего сделать кликабельный элемент, доступный с клавиатуры без доп. кода?",
          "<button>", ['<div onclick>', '<span role="link">', '<a> без href']),
+        ("Минимальный коэффициент контраста крупного текста (от 18pt или от 14pt жирным) по WCAG 2.1, уровень AA?",
+         "3:1", ["4.5:1", "7:1", "2:1"]),
+        ("Как связать подпись с полем ввода, чтобы скринридер прочитал её при фокусе на поле?",
+         '<label for="email"> и id="email" у input', ["только placeholder", "<span> рядом с полем", "title у тега form"]),
+        ("Какой ARIA-атрибут сообщает, что раскрывающийся блок сейчас открыт?",
+         'aria-expanded="true"', ['aria-hidden="false"', 'aria-pressed="true"', 'aria-live="polite"']),
+        ("Как сообщить скринридеру о появившемся сообщении «Сохранено», не перемещая фокус?",
+         'контейнер с aria-live="polite"', ["aria-label у кнопки «Сохранить»", 'tabindex="0" у сообщения', 'role="presentation"']),
     ])
     return {"text": text, **choice(rng, ans, wrong)}

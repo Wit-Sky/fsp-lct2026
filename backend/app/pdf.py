@@ -50,6 +50,10 @@ def render_profile(c: dict) -> bytes:
     t.setStyle(TableStyle([("GRID", (0, 0), (-1, -1), 0.3, colors.HexColor("#8A83D1")),
                            ("BACKGROUND", (0, 0), (0, -1), colors.HexColor("#FFD6E4")), ("VALIGN", (0, 0), (-1, -1), "TOP")]))
     story += [t, Paragraph("Стек", h2), Paragraph(_esc(", ".join(c.get("skills") or []) or "—"), p)]
+    if c.get("roles"):
+        story += [Paragraph("Роли в команде", h2), Paragraph(_esc(", ".join(c["roles"])), p)]
+    if c.get("soft_skills"):
+        story += [Paragraph("Софт-скиллы", h2), Paragraph(_esc(", ".join(c["soft_skills"])), p)]
     if c.get("about"):
         story += [Paragraph("О себе", h2), Paragraph(_esc(c["about"]), p)]
     story.append(Paragraph("Подтверждённые результаты ФСП", h2))
