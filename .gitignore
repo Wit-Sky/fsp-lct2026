@@ -1,0 +1,20 @@
+# ТЗ и материалы организатора — конфиденциальны (регламент ЛЦТ п. 6.3.5), держать только локально
+TZ.md
+TZ.txt
+*.pptx
+# окружение и секреты
+.env
+.env.*
+!.env.example
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+# node
+node_modules/
+dist/
+# прочее
+*.db
+.DS_Store
