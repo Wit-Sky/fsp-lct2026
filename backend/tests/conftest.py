@@ -5,9 +5,11 @@ from pathlib import Path
 
 import pytest
 
-# Тесты идут на SQLite с той же схемой и тем же сидом, что и в Postgres.
+# По умолчанию тесты идут на SQLite с той же схемой и тем же сидом, что и в Postgres.
+# Прогон на Postgres: TEST_DATABASE_URL=postgresql+asyncpg://... (база должна быть пустой).
 _tmp = Path(tempfile.mkdtemp(prefix="fsp-test-"))
-os.environ["DATABASE_URL"] = f"sqlite+aiosqlite:///{(_tmp / 'test.db').as_posix()}"
+os.environ["DATABASE_URL"] = (os.environ.get("TEST_DATABASE_URL")
+                              or f"sqlite+aiosqlite:///{(_tmp / 'test.db').as_posix()}")
 os.environ.setdefault("DEMO_COOLDOWN_MIN", "2")
 os.environ.setdefault("JWT_SECRET", "test-secret-test-secret-test-secret-32")
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
