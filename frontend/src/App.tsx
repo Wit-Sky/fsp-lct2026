@@ -3,6 +3,12 @@ import Guard from "./components/Guard";
 import Layout from "./components/Layout";
 import Placeholder from "./components/Placeholder";
 import Home from "./pages/Home";
+import CandidatePage from "./pages/employer/CandidatePage";
+import Company from "./pages/employer/Company";
+import EmployerInvitations from "./pages/employer/Invitations";
+import NeedMatches from "./pages/employer/NeedMatches";
+import Needs from "./pages/employer/Needs";
+import Search from "./pages/employer/Search";
 
 // Маршруты обоих кабинетов. Экраны-заглушки заменяются настоящими на шаге 2 (team/EVGENY.md).
 export default function App() {
@@ -22,12 +28,12 @@ export default function App() {
         </Route>
 
         <Route path="employer" element={<Guard role="employer" />}>
-          <Route index element={<Placeholder title="Подбор" hint="Мастер «Кого вы ищете» и список потребностей." />} />
-          <Route path="needs/:needId" element={<Placeholder title="Подборка кандидатов" />} />
-          <Route path="search" element={<Placeholder title="База кандидатов" />} />
-          <Route path="candidates/:candId" element={<Placeholder title="Карточка кандидата" />} />
-          <Route path="invitations" element={<Placeholder title="Мои приглашения" />} />
-          <Route path="company" element={<Placeholder title="Профиль компании" />} />
+          <Route index element={<Needs />} />
+          <Route path="needs/:needId" element={<NeedMatches />} />
+          <Route path="search" element={<Search />} />
+          <Route path="candidates/:candId" element={<CandidatePage />} />
+          <Route path="invitations" element={<EmployerInvitations />} />
+          <Route path="company" element={<Company />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" replace />} />
