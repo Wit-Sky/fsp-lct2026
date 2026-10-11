@@ -151,7 +151,7 @@ def _grade_ok(cand_grade, need_grade, grade_adj: bool) -> bool:
 
 
 def rank(need: dict, cands: list[dict], grade_adj: bool = False, fsp_only: bool = False,
-         extra_skills: list[str] | None = None, limit: int = 50, now=None, fsp_fn=None) -> list[dict]:
+         extra_skills: list[str] | None = None, limit: int | None = 50, now=None, fsp_fn=None) -> list[dict]:
     """Жёсткий фильтр по категории (специализация + грейд, опционально соседние грейды), затем ранжирование.
     extra_skills — уточнение: кандидат обязан иметь все эти навыки. → [{candidate_id, score, explain}]."""
     now = _now(now)

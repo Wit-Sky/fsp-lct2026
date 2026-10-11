@@ -37,7 +37,7 @@ async def _profile_out(session: AsyncSession, user: User, p: CandidateProfile) -
             "experience_years": p.experience_years, "about": p.about, "consent_pd": p.consent_pd,
             "parent_consent": p.parent_consent, "visible_fields": dict(p.visible_fields or {}),
             "minor": profile_svc.is_minor(p.birth_date), "published": profile_svc.publishable(pd),
-            "fsp_linked": ext is not None, "fsp_id": ext.subject if ext else None}
+            "fsp_linked": ext is not None, "fsp_id": ext.subject if ext else None, "fsp_skipped": p.fsp_skipped}
 
 
 @router.get("/me/profile", response_model=ProfileOut, summary="Мой профиль",
@@ -108,6 +108,8 @@ async def my_results(user: User = Depends(candidate), session: AsyncSession = De
 async def unlink_fsp(user: User = Depends(candidate), session: AsyncSession = Depends(get_session)):
     await session.execute(delete(ExternalIdentity).where(ExternalIdentity.user_id == user.id, ExternalIdentity.provider == "fsp"))
     await session.execute(delete(VerifiedResult).where(VerifiedResult.user_id == user.id, VerifiedResult.source == "fsp"))
+    p = await _profile(session, user)
+    p.fsp_skipped = False
     await session.commit()
     return Response(status_code=204)
 

@@ -95,9 +95,29 @@ export interface paths {
         put?: never;
         /**
          * Вход демо-аккаунтом (для жюри)
-         * @description Мгновенный вход: candidate@demo.fsp или employer@demo.fsp (пароль у обоих — demo).
+         * @description Мгновенный вход: candidate@demo.fsp или employer@demo.fsp. Каждый вход кандидата сбрасывает его тесты, категорию, приглашения и связь ФСП, чтобы жюри прошло путь с нуля.
          */
         post: operations["demo_login_api_auth_demo__role__post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/auth/fsp/start": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Подготовить связывание FSP ID
+         * @description Authorization: Bearer JWT. Возвращает URL с одноразовым кодом на 60 секунд, привязанным к кандидату и HttpOnly cookie браузера. JWT в URL не передаётся.
+         */
+        post: operations["fsp_start_api_auth_fsp_start_post"];
         delete?: never;
         options?: never;
         head?: never;
@@ -113,7 +133,7 @@ export interface paths {
         };
         /**
          * Связать профиль с FSP ID (начало OIDC)
-         * @description Браузерный переход: /api/auth/fsp/authorize?token=<JWT кандидата>. Перенаправляет на страницу входа FSP ID (в демо — встроенная имитация, для Keycloak меняются переменные окружения).
+         * @description Браузерный переход по authorize_url из POST /auth/fsp/start. Код используется один раз, затем переход на страницу FSP ID; параметр token больше не принимается.
          */
         get: operations["fsp_authorize_api_auth_fsp_authorize_get"];
         put?: never;
@@ -1198,6 +1218,19 @@ export interface components {
             /** Text */
             text: string;
         };
+        /** FspStartOut */
+        FspStartOut: {
+            /**
+             * Authorize Url
+             * @description Переход с одноразовым кодом; основной JWT в URL не передаётся
+             */
+            authorize_url: string;
+            /**
+             * Expires In
+             * @description Срок действия кода в секундах
+             */
+            expires_in: number;
+        };
         /** HTTPValidationError */
         HTTPValidationError: {
             /** Detail */
@@ -1502,6 +1535,12 @@ export interface components {
             /** Parent Consent */
             parent_consent?: boolean | null;
             /**
+             * Fsp Skipped
+             * @description Кандидат выбрал продолжить без истории ФСП
+             * @default false
+             */
+            fsp_skipped: boolean;
+            /**
              * Visible Fields
              * @description Что видно работодателю: full_name, city, birth_date, about, experience_years, results
              */
@@ -1566,6 +1605,8 @@ export interface components {
             fsp_linked: boolean;
             /** Fsp Id */
             fsp_id: string | null;
+            /** Fsp Skipped */
+            fsp_skipped: boolean;
         };
         /** RegisterIn */
         RegisterIn: {
@@ -2156,12 +2197,9 @@ export interface operations {
             };
         };
     };
-    fsp_authorize_api_auth_fsp_authorize_get: {
+    fsp_start_api_auth_fsp_start_post: {
         parameters: {
-            query: {
-                /** @description access_token кандидата */
-                token: string;
-            };
+            query?: never;
             header?: never;
             path?: never;
             cookie?: never;
@@ -2169,11 +2207,13 @@ export interface operations {
         requestBody?: never;
         responses: {
             /** @description Successful Response */
-            302: {
+            200: {
                 headers: {
                     [name: string]: unknown;
                 };
-                content?: never;
+                content: {
+                    "application/json": components["schemas"]["FspStartOut"];
+                };
             };
             /** @description Нет или неверный токен */
             401: {
@@ -2186,6 +2226,37 @@ export interface operations {
             };
             /** @description Нет доступа / кулдаун */
             403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorOut"];
+                };
+            };
+        };
+    };
+    fsp_authorize_api_auth_fsp_authorize_get: {
+        parameters: {
+            query: {
+                code: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: {
+                fsp_link?: string | null;
+            };
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            302: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Неверный запрос */
+            400: {
                 headers: {
                     [name: string]: unknown;
                 };
@@ -2212,7 +2283,9 @@ export interface operations {
             };
             header?: never;
             path?: never;
-            cookie?: never;
+            cookie?: {
+                fsp_link?: string | null;
+            };
         };
         requestBody?: never;
         responses: {
