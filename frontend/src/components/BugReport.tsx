@@ -47,10 +47,11 @@ export default function BugReport() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-4 right-4 z-40 rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-white shadow-lg hover:bg-amber-600"
-        title="Режим тестирования: ?qa=0 в адресе выключает кнопку"
+        className="fixed bottom-4 right-4 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-amber-500 text-xl shadow-lg hover:bg-amber-600"
+        title="Сообщить об ошибке (режим тестирования; ?qa=0 в адресе выключает)"
+        aria-label="Сообщить об ошибке"
       >
-        🐞 Сообщить об ошибке
+        🐞
       </button>
       {open && (
         <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 sm:items-center sm:p-4" onClick={() => setOpen(false)}>
