@@ -46,16 +46,17 @@ async def register(body: RegisterIn, session: AsyncSession = Depends(get_session
 
 @router.post("/verify", response_model=TokenOut, summary="Подтверждение email кодом",
              description="Проверяет код из письма, помечает email подтверждённым и сразу выдаёт токен.",
-             responses=responses(400, 404))
+             responses=responses(400, 404, 409))
 async def verify(body: VerifyIn, session: AsyncSession = Depends(get_session)):
     user = (await session.execute(select(User).where(User.email == body.email.lower()))).scalar_one_or_none()
     if user is None:
         raise ApiError(404, "not_found", "Пользователь не найден")
-    if not user.email_verified:
-        if user.verify_code != body.code:
-            raise ApiError(400, "invalid_code", "Неверный код подтверждения")
-        user.email_verified, user.verify_code = True, None
-        await session.commit()
+    if user.email_verified:                        # иначе токен выдавался бы по чужому email с любым кодом
+        raise ApiError(409, "already_verified", "Email уже подтверждён — войдите по паролю")
+    if not user.verify_code or user.verify_code != body.code:
+        raise ApiError(400, "invalid_code", "Неверный код подтверждения")
+    user.email_verified, user.verify_code = True, None
+    await session.commit()
     return _token(user)
 
 
