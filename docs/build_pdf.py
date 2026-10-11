@@ -150,6 +150,16 @@ def section_deploy():
     return md
 
 
+def section_backend():
+    """Приложение А — описание бэкенда от Вани (docs/backend.md) без служебного вступления."""
+    md = read(DOCS / "backend.md")
+    if not md:
+        return "# Приложение А. Бэкенд\n\n" + warn("Нет docs/backend.md.")
+    body = md.split("\n## ", 1)[1] if "\n## " in md else md
+    return ("# Приложение А. Бэкенд: подробное описание\n\n"
+            "Автор — Иван Минаев; соответствует коду в `main` на 11.10.2026.\n\n## " + body)
+
+
 def main():
     parts = ['<div class="title"><h1>FSP Talent</h1><p>Платформа подбора ИТ-специалистов с подтверждённым грейдом</p>'
              '<p>ЛЦТ-2026, спецтрек ФСП · МГТУ ГА</p><p>Сопроводительная документация</p></div>']
@@ -157,6 +167,7 @@ def main():
         0: read(SRC / "00_approach.md"), 1: read(SRC / "01_architecture.md"), 2: read(SRC / "02_testing.md"),
         3: read(SRC / "03_matching.md"), 4: section_validation(), 5: read(SRC / "05_fsp.md"),
         6: section_api(), 7: section_libs(), 8: section_deploy(), 9: read(SRC / "09_concepts.md"),
+        10: section_backend(), 11: read(SRC / "10_ui.md"), 12: read(SRC / "11_qa.md"),
     }
     for k in sorted(chunks):
         if chunks[k] is None:
