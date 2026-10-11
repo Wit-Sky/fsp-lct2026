@@ -15,7 +15,7 @@ export default function TestResult() {
   const { data: cat } = useCatalog();
   const q = useQuery({ queryKey: ["result", id], queryFn: () => get<S["TestResultOut"]>(`/tests/${id}/result`) });
   const [retry, setRetry] = useState<string | null>(null);
-  if (q.isLoading) return <Loading />;
+  if (q.isPending) return <Loading />;
   if (q.error) return <ErrorBox error={q.error} />;
   const r = q.data!;
   const lower = ORDER[ORDER.indexOf(r.claimed_grade) - 1];

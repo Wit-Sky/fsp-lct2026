@@ -12,7 +12,7 @@ export default function CandidatePage() {
   const navigate = useNavigate();
   const [inviting, setInviting] = useState(false);
   const q = useQuery({ queryKey: ["candidate", id], queryFn: () => get<S["CandidateCard"]>(`/candidates/${id}`) });
-  if (q.isLoading) return <Loading />;
+  if (q.isPending) return <Loading />;
   if (q.error) return <ErrorBox error={q.error} />;
   const c = q.data!;
 

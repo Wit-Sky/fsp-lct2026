@@ -10,7 +10,7 @@ const KIND: Record<string, string> = { solve: "Решите задачу", appro
 /** Регулярные задания от работодателей: ответ поддерживает профиль свежим, оценку видит кандидат. */
 export default function CandidateTasks() {
   const q = useQuery({ queryKey: ["my-tasks"], queryFn: () => get<S["MyTasksOut"]>("/me/tasks") });
-  if (q.isLoading) return <Loading />;
+  if (q.isPending) return <Loading />;
   if (q.error) return <ErrorBox error={q.error} />;
   const d = q.data!;
   return (

@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { GradeBadge, SpecBadge } from "../../components/Badges";
 import StartTest from "../../components/StartTest";
-import { Loading } from "../../components/States";
+import { ErrorBox, Loading } from "../../components/States";
 import { get, type S } from "../../lib/api";
 import { pct } from "../../lib/format";
 
@@ -16,9 +16,10 @@ export default function Journey() {
   const profile = useQuery({ queryKey: ["profile"], queryFn: () => get<S["ProfileOut"]>("/me/profile") });
   const category = useQuery({ queryKey: ["category"], queryFn: () => get<S["CategoryOut"]>("/me/category") });
   const invites = useQuery({ queryKey: ["my-invitations"], queryFn: () => get<S["InvitationOut"][]>("/me/invitations") });
-  if (profile.isLoading || category.isLoading) return <Loading />;
-  const p = profile.data!;
-  const c = category.data!;
+  if (profile.isPending || category.isPending) return <Loading />;
+  if (!profile.data || !category.data) return <ErrorBox error={profile.error ?? category.error} />;
+  const p = profile.data;
+  const c = category.data;
 
   const steps = [
     { key: "profile", title: "Профиль", done: !!p.full_name && p.consent_pd && (!p.minor || p.parent_consent) },

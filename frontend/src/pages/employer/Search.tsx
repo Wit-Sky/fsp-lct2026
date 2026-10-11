@@ -83,7 +83,7 @@ export default function Search() {
         </div>
       </div>
 
-      {list.isLoading ? <Loading /> : list.error ? <ErrorBox error={list.error} /> : !list.data?.length ? (
+      {list.isPending ? <Loading /> : list.error ? <ErrorBox error={list.error} /> : !list.data?.length ? (
         <Empty title="Никого не нашли" hint="Ослабьте фильтры." />
       ) : (
         <div className={`grid gap-3 md:grid-cols-2 ${list.isFetching ? "opacity-70" : ""}`}>

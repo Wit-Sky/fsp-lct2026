@@ -25,7 +25,7 @@ export default function EmployerTasks() {
         {!creating && <button className="btn-accent" onClick={() => setCreating(true)}>+ Новое задание</button>}
       </div>
       {creating && <TaskForm onDone={() => setCreating(false)} />}
-      {q.isLoading ? <Loading /> : q.error ? <ErrorBox error={q.error} /> : !q.data?.length ? (
+      {q.isPending ? <Loading /> : q.error ? <ErrorBox error={q.error} /> : !q.data?.length ? (
         !creating && <Empty title="Заданий пока нет" hint="Например: «Как бы вы спроектировали очередь уведомлений на 10 тыс. пользователей?»" />
       ) : (
         <div className="space-y-3">
@@ -101,7 +101,7 @@ function Answers({ task }: { task: S["TaskOut"] }) {
     mutationFn: ({ id, rating }: { id: number; rating: number }) => post<S["TaskAnswerOut"]>(`/task-answers/${id}/review`, { rating }),
     onSuccess: () => qc.invalidateQueries({ queryKey: ["task-answers", task.id] }),
   });
-  if (q.isLoading) return <p className="mt-3 text-sm text-slate-500">Загружаем ответы…</p>;
+  if (q.isPending) return <p className="mt-3 text-sm text-slate-500">Загружаем ответы…</p>;
   return (
     <div className="mt-4 space-y-3 border-t pt-4">
       {!q.data?.length && <p className="text-sm text-slate-500">Ответов пока нет — задание предлагается кандидатам в их кабинете.</p>}
