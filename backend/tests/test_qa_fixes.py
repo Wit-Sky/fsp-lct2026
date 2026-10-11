@@ -221,3 +221,19 @@ async def test_abandoned_expired_attempt_does_not_confirm_junior(client):
     assert res["correct"] == 0 and res["total"] == 10 and res["unanswered"] == 10
     assert not res["confirmed"] and res["theta"] < -0.5
     assert res["category"]["status"] == "unconfirmed"
+
+
+async def test_not_found_gender_and_finished_state_hides_item_difficulty(client):
+    he = await register(client, "qa-404@example.ru", "employer")
+    r = await client.get("/api/needs/999999/matches", headers=he)
+    assert r.status_code == 404 and r.json()["detail"] == "Потребность не найдена"
+    hc = await register(client, "qa-state-b@example.ru")
+    assert (await client.get("/api/tests/999999", headers=hc)).json()["detail"] == "Попытка не найдена"
+    await client.put("/api/me/profile", headers=hc, json={"full_name": "Без b", "consent_pd": True})
+    st = (await client.post("/api/tests/start", headers=hc, json={"spec": "backend", "claimed_grade": "junior"})).json()
+    async with SessionLocal() as s:
+        await s.execute(update(GradeAttempt).where(GradeAttempt.id == st["attempt_id"])
+                        .values(started_at=utcnow() - config.TEST_TIME_LIMIT - timedelta(minutes=1)))
+        await s.commit()
+    state = (await client.get(f"/api/tests/{st['attempt_id']}", headers=hc)).json()
+    assert state["finished"] and state["result"]["total"] == 10 and "items" not in state["result"]

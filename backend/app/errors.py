@@ -16,8 +16,11 @@ class ApiError(Exception):
         self.status, self.code, self.detail, self.extra = status, code, detail, extra
 
 
+_ENDING = {"Потребность": "а", "Вакансия": "а", "Попытка": "а", "Задание": "о", "Приглашение": "о"}  # род: «не найдена»
+
+
 def not_found(what: str = "Объект") -> ApiError:
-    return ApiError(404, "not_found", f"{what} не найден")
+    return ApiError(404, "not_found", f"{what} не найден{_ENDING.get(what, '')}")
 
 
 def forbidden(detail: str = "Нет доступа") -> ApiError:

@@ -28,10 +28,11 @@ def _state_out(a: GradeAttempt) -> dict:
     state = a.items
     finished = a.finished_at is not None
     item = None if finished else testing.public_item(state.get("current"), state)
+    result = {k: v for k, v in state["result"].items() if k != "items"} if finished and state.get("result") else None  # без b
     return {"attempt_id": a.id, "spec": a.spec, "claimed_grade": a.claimed_grade, "item": item, "finished": finished,
             "answered": len(state["responses"]), "total": state["n_items"], "deadline": _deadline(a),
             "item_time_limit_sec": int(config.ITEM_TIME_LIMIT.total_seconds()),
-            "result": state.get("result") if finished else None}
+            "result": result}
 
 
 async def last_finished(session: AsyncSession, user_id: int, spec: str) -> GradeAttempt | None:
