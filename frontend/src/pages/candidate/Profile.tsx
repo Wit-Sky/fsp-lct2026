@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useSearchParams } from "react-router-dom";
 import { FspResults } from "../../components/Badges";
 import { ErrorBox, Loading } from "../../components/States";
-import { ApiError, api, get, put, tokenStore, type S } from "../../lib/api";
+import { ApiError, api, get, post, put, tokenStore, type S } from "../../lib/api";
 import { useCatalog } from "../../lib/catalog";
 import { WORK_FORMAT } from "../../lib/format";
 
@@ -18,15 +18,15 @@ export default function Profile() {
   const [params, setParams] = useSearchParams();
   const q = useQuery({ queryKey: ["profile"], queryFn: () => get<S["ProfileOut"]>("/me/profile") });
   const results = useQuery({ queryKey: ["results"], queryFn: () => get<S["ResultsOut"]>("/me/results") });
-  const [f, setF] = useState<S["ProfileIn"]>({});
+  const [f, setF] = useState<Partial<S["ProfileIn"]>>({});
   const [msg, setMsg] = useState<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
   const fspFlag = params.get("fsp");
 
   useEffect(() => {
     if (!q.data) return;
-    const { user_id: _u, email: _e, minor: _m, published: _p, fsp_linked: _l, fsp_id: _i, ...rest } = q.data;
-    setF(rest as S["ProfileIn"]);
+    const { user_id: _u, email: _e, minor: _m, published: _p, fsp_linked: _l, fsp_id: _i, fsp_skipped: _s, ...rest } = q.data;
+    setF(rest as Partial<S["ProfileIn"]>);
   }, [q.data]);
   useEffect(() => {
     if (fspFlag) {
@@ -59,6 +59,10 @@ export default function Profile() {
   const unlink = useMutation({
     mutationFn: () => api("DELETE", "/me/fsp"),
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["results"] }); qc.invalidateQueries({ queryKey: ["profile"] }); },
+  });
+  const link = useMutation({
+    mutationFn: () => post<S["FspStartOut"]>("/auth/fsp/start"),
+    onSuccess: (data) => { window.location.assign(data.authorize_url); },
   });
 
   if (q.isPending) return <Loading />;
@@ -113,11 +117,12 @@ export default function Profile() {
               <button className="text-slate-500 hover:text-fsp-accent" onClick={() => unlink.mutate()}>Отвязать</button>
             </div>
           ) : (
-            <button className="btn-primary" onClick={() => { const t = tokenStore.get(); if (t) window.location.href = `/api/auth/fsp/authorize?token=${encodeURIComponent(t.access_token)}`; }}>
-              Войти через ФСП ID
+            <button className="btn-primary" onClick={() => link.mutate()} disabled={link.isPending}>
+              {link.isPending ? "Подключаем…" : "Войти через ФСП ID"}
             </button>
           )}
         </div>
+        {link.error && <ErrorBox error={link.error} />}
         {fspFlag === "linked" && <p className="text-sm text-emerald-700">ФСП ID привязан, результаты подтянуты. <button className="underline" onClick={() => setParams({})}>ок</button></p>}
         {fspFlag === "conflict" && <p className="text-sm text-fsp-accent">Этот ФСП ID уже привязан к другому профилю.</p>}
         <FspResults results={fspResults} />

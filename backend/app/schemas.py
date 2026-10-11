@@ -76,6 +76,7 @@ class ProfileIn(BaseModel):
     about: str | None = None
     consent_pd: bool | None = None
     parent_consent: bool | None = None
+    fsp_skipped: bool = Field(False, description="Кандидат выбрал продолжить без истории ФСП")
     visible_fields: dict[str, bool] | None = Field(None, description="Что видно работодателю: full_name, city, birth_date, about, experience_years, results")
 
 
@@ -102,6 +103,12 @@ class ProfileOut(BaseModel):
     published: bool = Field(description="Профиль виден работодателям (согласие на ПД; для младше 18 — согласие родителя)")
     fsp_linked: bool
     fsp_id: str | None
+    fsp_skipped: bool
+
+
+class FspStartOut(BaseModel):
+    authorize_url: str = Field(description="Переход с одноразовым кодом; основной JWT в URL не передаётся")
+    expires_in: int = Field(description="Срок действия кода в секундах")
 
 
 class ResumeDraft(BaseModel):

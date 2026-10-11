@@ -35,15 +35,6 @@ def _read(token: str, purpose: str) -> dict | None:
     return data if data.get("purpose") == purpose else None
 
 
-def make_state(user_id: int) -> str:
-    return _sign({"purpose": "fsp_state", "uid": user_id})
-
-
-def read_state(state: str) -> int | None:
-    data = _read(state, "fsp_state")
-    return int(data["uid"]) if data else None
-
-
 def authorize_url(state: str) -> str:
     """URL страницы входа провайдера (для Keycloak — /protocol/openid-connect/auth)."""
     params = {"client_id": config.FSP_CLIENT_ID, "redirect_uri": config.FSP_REDIRECT_URI, "response_type": "code",

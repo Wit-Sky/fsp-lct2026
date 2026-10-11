@@ -1,21 +1,21 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { GradeBadge, SpecBadge } from "../../components/Badges";
 import StartTest from "../../components/StartTest";
 import { ErrorBox, Loading } from "../../components/States";
-import { get, type S } from "../../lib/api";
-import { useAuth } from "../../lib/auth";
-import { useFspSkip } from "../../lib/fsp-step";
+import { get, put, type S } from "../../lib/api";
 import { GRADE, SPEC, pct } from "../../lib/format";
 
 /** Обязательный путь кандидата: профиль → FSP ID → специализация и грейд → тест → категория. */
 export default function Journey() {
   const qc = useQueryClient();
-  const { token } = useAuth();
-  const { skipped, skip } = useFspSkip(token?.user_id ?? null);
   const [closedAttempt, setClosedAttempt] = useState<number | null>(null);
   const profile = useQuery({ queryKey: ["profile"], queryFn: () => get<S["ProfileOut"]>("/me/profile") });
+  const skip = useMutation({
+    mutationFn: () => put<S["ProfileOut"]>("/me/profile", { fsp_skipped: true }),
+    onSuccess: (p) => qc.setQueryData(["profile"], p),
+  });
   const category = useQuery({ queryKey: ["category"], queryFn: () => get<S["CategoryOut"]>("/me/category") });
   const invites = useQuery({ queryKey: ["my-invitations"], queryFn: () => get<S["InvitationOut"][]>("/me/invitations") });
   const unfinished = category.data?.attempts.find((a) => !a.finished_at);
@@ -37,7 +37,7 @@ export default function Journey() {
 
   const steps = [
     { key: "profile", title: "Профиль", done: !!p.full_name && p.consent_pd && (!p.minor || p.parent_consent) },
-    { key: "fsp", title: "ФСП ID", done: p.fsp_linked || skipped || c.attempts.length > 0 },
+    { key: "fsp", title: "ФСП ID", done: p.fsp_linked || p.fsp_skipped || c.attempts.length > 0 },
     { key: "test", title: "Специализация, грейд и тест", done: c.status !== "none" },
     { key: "category", title: "Категория", done: c.status === "confirmed" },
   ];
@@ -85,10 +85,11 @@ export default function Journey() {
           <p className="text-slate-600">Результаты соревнований ФСП подтягиваются автоматически и поднимают вас внутри категории. На грейд они не влияют.</p>
           <div className="flex flex-wrap gap-2">
             <Link className="btn-primary" to="/candidate/profile#fsp">Привязать ФСП ID</Link>
-            <button className="btn-ghost" onClick={skip}>
-              У меня нет истории ФСП
+            <button className="btn-ghost" onClick={() => skip.mutate()} disabled={skip.isPending}>
+              {skip.isPending ? "Сохраняем…" : "У меня нет истории ФСП"}
             </button>
           </div>
+          {skip.error && <ErrorBox error={skip.error} />}
         </div>
       )}
       {unfinished && !attempt.data?.finished && (

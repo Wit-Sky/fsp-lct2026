@@ -109,13 +109,13 @@ async def need_matches(need_id: int, grade_adj: bool = Query(False, description=
     n = await _own_need(session, need_id, emp)
     extra = [s.strip() for s in (skills or "").split(",") if s.strip()]
     cands = repo.with_percentiles(await repo.load_candidates(session, spec=n.spec))
-    ranked = matching.rank(repo.need_dict(n), cands, grade_adj=grade_adj, fsp_only=fsp_only, extra_skills=extra, limit=limit)
+    ranked = matching.rank(repo.need_dict(n), cands, grade_adj=grade_adj, fsp_only=fsp_only, extra_skills=extra, limit=None)
     visible = await repo.visible_contacts(session, emp.id)
     inv = await repo.invitation_statuses(session, emp.id)
     by_id = {c["id"]: c for c in cands}
     items = [{**r, "candidate": repo.card(by_id[r["candidate_id"]], r["candidate_id"] in visible, inv.get(r["candidate_id"]))}
-             for r in ranked]
-    return {"need_id": n.id, "search_id": n.id, "total": len(items), "items": items,
+             for r in ranked[:limit]]
+    return {"need_id": n.id, "search_id": n.id, "total": len(ranked), "items": items,
             "filters": {"grade_adj": grade_adj, "fsp_only": fsp_only, "skills": extra, "limit": limit}}
 
 

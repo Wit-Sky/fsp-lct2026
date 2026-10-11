@@ -2,7 +2,7 @@
 from datetime import date, datetime
 
 from sqlalchemy import (JSON, Boolean, Date, DateTime, Float, ForeignKey, Integer, String, Text,
-                        UniqueConstraint, Index)
+                        UniqueConstraint, Index, false)
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db import Base, utcnow
@@ -34,6 +34,17 @@ class ExternalIdentity(Base):
     claims: Mapped[dict] = mapped_column(JSON, default=dict)
 
 
+class FspAuthorization(Base):
+    """Одноразовый вход в связывание ФСП; в БД хранятся только хэши кодов и cookie."""
+    __tablename__ = "fsp_authorizations"
+    code_hash: Mapped[str] = mapped_column(String(64), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    browser_hash: Mapped[str] = mapped_column(String(64))
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    state_hash: Mapped[str | None] = mapped_column(String(64), nullable=True, unique=True)
+    state_expires_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+
 class CandidateProfile(Base):
     __tablename__ = "candidate_profiles"
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), primary_key=True)
@@ -52,6 +63,7 @@ class CandidateProfile(Base):
     about: Mapped[str | None] = mapped_column(Text, nullable=True)
     consent_pd: Mapped[bool] = mapped_column(Boolean, default=False)
     parent_consent: Mapped[bool] = mapped_column(Boolean, default=False)
+    fsp_skipped: Mapped[bool] = mapped_column(Boolean, default=False, server_default=false())
     visible_fields: Mapped[dict] = mapped_column(JSON, default=dict)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
 

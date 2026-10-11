@@ -50,7 +50,7 @@ HTTP  →  routers/        auth, me, tests, employer, vacancies, tasks — ва�
 
 ## 3. Схема БД
 
-Миграции: `0001_initial_schema`, `0002_profile_roles_soft_skills`, `0003_regular_tasks`; при старте контейнера выполняется `alembic upgrade head`,
+Миграции: `0001_initial_schema`, `0002_profile_roles_soft_skills`, `0003_regular_tasks`, `0004_fsp_authorization_and_skip`; при старте контейнера выполняется `alembic upgrade head`,
 затем сид (только при пустой БД). URL берётся из `DATABASE_URL` в `alembic/env.py`. Типы обобщённые (`JSON`,
 `DateTime(timezone=True)`), поэтому та же схема работает на SQLite в тестах.
 
@@ -58,7 +58,8 @@ HTTP  →  routers/        auth, me, tests, employer, vacancies, tasks — ва�
 |---|---|---|
 | `users` | email, password_hash (bcrypt), role `candidate`/`employer`, email_verified, is_demo | email уникален |
 | `external_identities` | provider (`fsp`), subject (FSP ID), claims (JSON) | → users; unique(provider, subject) |
-| `candidate_profiles` | ФИО, дата рождения, контакты, город, формат, ожидания по зарплате, spec, skills, roles, soft_skills, consent_pd, parent_consent, visible_fields | PK = user_id → users |
+| `fsp_authorizations` | хэш одноразового кода, хэш cookie браузера, хэш OIDC state, сроки действия | → users; код и state используются один раз |
+| `candidate_profiles` | ФИО, дата рождения, контакты, город, формат, ожидания по зарплате, spec, skills, roles, soft_skills, consent_pd, parent_consent, visible_fields, fsp_skipped | PK = user_id → users |
 | `verified_results` | source, external_id, event, discipline, year, place, role `winner`/`prize`/`participant`, team | → users; unique(source, external_id, user_id) |
 | `grade_attempts` | spec, claimed_grade, attempt_no, started_at, finished_at, theta, result, items (состояние попытки) | → users |
 | `categories` | spec, grade, status `confirmed`/`unconfirmed`, theta, tested_at, next_attempt_at, suggest_upgrade | → users; unique(user_id, spec); индекс (spec, grade) |
@@ -70,6 +71,24 @@ HTTP  →  routers/        auth, me, tests, employer, vacancies, tasks — ва�
 | `task_answers` | answer, rating 0–3, feedback, reviewed_at | → tasks, → users; unique(task_id, candidate_id) |
 
 Все внешние ключи — `ON DELETE CASCADE`, кроме `invitations.need_id`. Приглашение без зарплатной вилки не создаётся (422).
+
+**Связывание ФСП.** Кандидат вызывает `POST /api/auth/fsp/start` с `Authorization: Bearer JWT`.
+Ответ `authorize_url` содержит случайный одноразовый код на 60 секунд, привязанный к кандидату и HttpOnly cookie браузера.
+`GET /api/auth/fsp/authorize?code=...` атомарно использует код и выдаёт непрозрачный OIDC state на 10 минут.
+Callback также одноразовый и требует ту же cookie. На HTTPS она имеет флаг Secure; SameSite=Lax допускает возврат от провайдера.
+JWT сессии в URL не передаётся; старый переход с `?token=` больше не поддерживается. Ответы связывания имеют
+`Cache-Control: no-store` и `Referrer-Policy: no-referrer`. В БД хранятся хэши кодов, state и cookie.
+
+**Шаг без ФСП.** `PUT /api/me/profile {"fsp_skipped": true}` сохраняет выбор между устройствами до первого теста.
+У существующих профилей после миграции значение false; связывание или отвязка ФСП очищает отметку.
+
+**Демовход.** `POST /api/auth/demo/candidate` при каждом входе очищает только демо-кандидата:
+попытки, категорию, внешние связи и импортированные результаты, приглашения, отклики, ответы на задания и незавершённые
+сессии связывания. Профиль возвращается к исходным демоданным, ФСП ID снова свободен для выбора. При `DEMO_MODE=0`
+демовход отключён. Демо-работодатель и обычные пользователи не сбрасываются.
+
+**Счётчик подбора.** В `/api/needs/{id}/matches` поле `total` — все кандидаты после фильтров, до ограничения `limit`;
+`items` — первые `limit` карточек. Веса и порядок ранжирования сохранены.
 
 ## 4. Банк заданий и устойчивость к утечке
 

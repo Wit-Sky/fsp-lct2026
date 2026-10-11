@@ -152,7 +152,9 @@ export default function NeedMatches() {
           ) : (
             <>
               <p className={`text-sm text-slate-500 ${matches.isFetching ? "animate-pulse" : ""}`}>
-                Показано: {matches.data.items.length}. Сначала — лучшие по соответствию потребности.
+                Найдено: {matches.data.total}.
+                {matches.data.items.length < matches.data.total && <> Показано: {matches.data.items.length}.</>}
+                {" "}Сначала — лучшие по соответствию потребности.
               </p>
               {matches.data.items.map((m, i) => (
                 <MatchCard key={m.candidate_id} rank={i + 1} m={m} highlight={needSkills} onInvite={() => setInviting(m.candidate)} />

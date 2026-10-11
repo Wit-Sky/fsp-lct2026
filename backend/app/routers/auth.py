@@ -1,8 +1,8 @@
 import html
 import logging
 
-from fastapi import APIRouter, Depends, Query
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi import APIRouter, Cookie, Depends, Query
+from fastapi.responses import HTMLResponse, RedirectResponse, Response
 from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -11,7 +11,8 @@ from app import auth as security
 from app.db import get_session, utcnow
 from app.errors import ApiError, responses
 from app.models import CandidateProfile, ExternalIdentity, User, VerifiedResult
-from app.schemas import LoginIn, RegisterIn, RegisterOut, TokenOut, VerifyIn
+from app.schemas import FspStartOut, LoginIn, RegisterIn, RegisterOut, TokenOut, VerifyIn
+from app.services import demo as demo_svc, fsp_link
 from app.services import profile as profile_svc
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -70,35 +71,63 @@ async def login(body: LoginIn, session: AsyncSession = Depends(get_session)):
 
 
 @router.post("/demo/{role}", response_model=TokenOut, summary="Вход демо-аккаунтом (для жюри)",
-             description="Мгновенный вход: candidate@demo.fsp или employer@demo.fsp (пароль у обоих — demo).",
+             description="Мгновенный вход: candidate@demo.fsp или employer@demo.fsp. Каждый вход кандидата сбрасывает "
+                         "его тесты, категорию, приглашения и связь ФСП, чтобы жюри прошло путь с нуля.",
              responses=responses(404))
 async def demo_login(role: str, session: AsyncSession = Depends(get_session)):
+    if not config.DEMO_MODE:
+        raise ApiError(404, "not_found", "Демо-вход отключён")
     email = DEMO_EMAILS.get(role)
     user = (await session.execute(select(User).where(User.email == email))).scalar_one_or_none() if email else None
-    if user is None:
+    if user is None or not user.is_demo:
         raise ApiError(404, "not_found", "Демо-аккаунт не найден (сид не загружен?)")
+    if role == "candidate":
+        await demo_svc.reset_candidate(session, user)
+        await session.commit()
     return _token(user)
 
 
 # ---------------------------------------------------------------- FSP ID (OIDC, имитация)
 
+def _set_link_cookie(response: Response, binding: str):
+    response.set_cookie(fsp_link.COOKIE_NAME, binding, httponly=True, samesite="lax",
+                        secure=config.FRONTEND_URL.startswith("https://"),
+                        max_age=fsp_link.STATE_TTL, path=fsp_link.COOKIE_PATH)
+
+
+@router.post("/fsp/start", response_model=FspStartOut, summary="Подготовить связывание FSP ID",
+             description="Authorization: Bearer JWT. Возвращает URL с одноразовым кодом на 60 секунд, "
+                         "привязанным к кандидату и HttpOnly cookie браузера. JWT в URL не передаётся.",
+             responses=responses(401, 403))
+async def fsp_start(response: Response, user: User = Depends(security.candidate),
+                    session: AsyncSession = Depends(get_session)):
+    code, binding = await fsp_link.start(session, user.id)
+    _set_link_cookie(response, binding)
+    response.headers.update(fsp_link.PRIVATE_HEADERS)
+    return FspStartOut(authorize_url=f"/api/auth/fsp/authorize?code={code}", expires_in=fsp_link.CODE_TTL)
+
+
 @router.get("/fsp/authorize", summary="Связать профиль с FSP ID (начало OIDC)",
-            description="Браузерный переход: /api/auth/fsp/authorize?token=<JWT кандидата>. Перенаправляет на страницу "
-                        "входа FSP ID (в демо — встроенная имитация, для Keycloak меняются переменные окружения).",
-            response_class=RedirectResponse, status_code=302, responses=responses(401, 403))
-async def fsp_authorize(token: str = Query(..., description="access_token кандидата"),
+            description="Браузерный переход по authorize_url из POST /auth/fsp/start. Код используется один раз, "
+                        "затем переход на страницу FSP ID; параметр token больше не принимается.",
+            response_class=RedirectResponse, status_code=302, responses=responses(400))
+async def fsp_authorize(code: str = Query(..., min_length=32, max_length=128),
+                        binding: str | None = Cookie(None, alias=fsp_link.COOKIE_NAME),
                         session: AsyncSession = Depends(get_session)):
-    data = security.decode_token(token)
-    user = await session.get(User, int(data["sub"]))
-    if user is None or user.role != "candidate":
-        raise ApiError(403, "forbidden", "Доступно только кандидату")
-    return RedirectResponse(fsp_oidc.authorize_url(fsp_oidc.make_state(user.id)), status_code=302)
+    state = await fsp_link.authorize(session, code, binding)
+    response = RedirectResponse(fsp_oidc.authorize_url(state), status_code=302, headers=fsp_link.PRIVATE_HEADERS)
+    _set_link_cookie(response, binding)
+    return response
 
 
 @router.get("/fsp/mock/login", response_class=HTMLResponse, include_in_schema=False)
 async def fsp_mock_login(state: str, redirect_uri: str = config.FSP_REDIRECT_URI, q: str = "",
+                         binding: str | None = Cookie(None, alias=fsp_link.COOKIE_NAME),
                          session: AsyncSession = Depends(get_session)):
     """Страница «ФСП ID (демо)»: выбор участника из реестра. Уже связанные записи недоступны."""
+    if config.FSP_MODE != "mock":
+        raise ApiError(404, "not_found", "Имитация FSP ID отключена")
+    await fsp_link.user_for_state(session, state, binding)
     linked = set((await session.execute(select(ExternalIdentity.subject).where(ExternalIdentity.provider == "fsp"))).scalars())
     rows = []
     for e in fsp_oidc.registry():
@@ -123,17 +152,19 @@ a{{color:#FF0053;font-weight:600;text-decoration:none}} small{{color:#666}} .bus
 <ul id="list">{''.join(r[1] for r in rows)}</ul></div>
 <script>function f(){{var q=document.getElementById('q').value.toLowerCase();document.querySelectorAll('#list li').forEach(function(li){{li.style.display=li.dataset.q.indexOf(q)>=0?'':'none'}})}}</script>
 </body></html>"""
-    return HTMLResponse(page)
+    return HTMLResponse(page, headers=fsp_link.PRIVATE_HEADERS)
 
 
 @router.get("/fsp/callback", summary="Возврат от FSP ID (конец OIDC)",
             description="Обменивает code на утверждения (sub = FSP ID), создаёт ExternalIdentity(provider='fsp') и импортирует "
                         "VerifiedResult(source='fsp') через profile.import_results. Перенаправляет в профиль кандидата.",
             response_class=RedirectResponse, status_code=302, responses=responses(400, 409))
-async def fsp_callback(code: str, state: str, session: AsyncSession = Depends(get_session)):
-    uid = fsp_oidc.read_state(state)
-    if uid is None:
-        raise ApiError(400, "invalid_state", "Сессия связывания истекла, начните заново")
+async def fsp_callback(code: str, state: str, binding: str | None = Cookie(None, alias=fsp_link.COOKIE_NAME),
+                       session: AsyncSession = Depends(get_session)):
+    uid = await fsp_link.user_for_state(session, state, binding, consume=True)
+    user = await session.get(User, uid)
+    if user is None or user.role != "candidate":
+        raise ApiError(403, "forbidden", "Доступно только кандидату")
     claims = await fsp_oidc.exchange_code(code)
     if not claims:
         raise ApiError(400, "invalid_code", "FSP ID не подтвердил вход")
@@ -141,14 +172,23 @@ async def fsp_callback(code: str, state: str, session: AsyncSession = Depends(ge
     other = (await session.execute(select(ExternalIdentity).where(
         ExternalIdentity.provider == "fsp", ExternalIdentity.subject == sub))).scalar_one_or_none()
     if other and other.user_id != uid:
-        return RedirectResponse(f"{config.FRONTEND_URL}/candidate/profile?fsp=conflict", status_code=302)
+        response = RedirectResponse(f"{config.FRONTEND_URL}/candidate/profile?fsp=conflict", status_code=302,
+                                    headers=fsp_link.PRIVATE_HEADERS)
+        response.delete_cookie(fsp_link.COOKIE_NAME, path=fsp_link.COOKIE_PATH)
+        return response
     await link_fsp(session, uid, claims)
     await session.commit()
-    return RedirectResponse(f"{config.FRONTEND_URL}/candidate/profile?fsp=linked", status_code=302)
+    response = RedirectResponse(f"{config.FRONTEND_URL}/candidate/profile?fsp=linked", status_code=302,
+                                headers=fsp_link.PRIVATE_HEADERS)
+    response.delete_cookie(fsp_link.COOKIE_NAME, path=fsp_link.COOKIE_PATH)
+    return response
 
 
 async def link_fsp(session: AsyncSession, user_id: int, claims: dict) -> list[dict]:
     """Связать внешнюю учётную запись и (пере)импортировать подтверждённые результаты источника fsp."""
+    p = await session.get(CandidateProfile, user_id)
+    if p:
+        p.fsp_skipped = False
     await session.execute(delete(ExternalIdentity).where(ExternalIdentity.user_id == user_id, ExternalIdentity.provider == "fsp"))
     session.add(ExternalIdentity(user_id=user_id, provider="fsp", subject=claims["sub"], linked_at=utcnow(),
                                  claims={k: claims.get(k) for k in ("sub", "name", "email", "iss")}))

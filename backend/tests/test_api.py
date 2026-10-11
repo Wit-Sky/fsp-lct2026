@@ -144,8 +144,9 @@ async def test_vacancy_apply_reveals_contacts(client):
 
 async def test_fsp_mock_flow(client):
     hc = await demo(client, "candidate")
-    token = hc["Authorization"].split()[1]
-    r = await client.get(f"/api/auth/fsp/authorize?token={token}", follow_redirects=False)
+    start = await client.post("/api/auth/fsp/start", headers=hc)
+    assert start.status_code == 200
+    r = await client.get(start.json()["authorize_url"], follow_redirects=False)
     assert r.status_code == 302
     page = await client.get(r.headers["location"])
     assert "ФСП ID" in page.text
