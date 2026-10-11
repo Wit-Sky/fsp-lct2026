@@ -162,15 +162,20 @@ def grade_from_theta(theta: float) -> str | None:
 def finish(state: dict) -> dict:
     """Итог попытки: θ, подтверждён ли заявленный грейд, предложение повыситься, разбор по темам.
 
-    Незаданные и неотвеченные задания (время вышло, тест брошен) засчитываются неверными: иначе пустая
-    попытка давала бы θ = 0 и подтверждала Junior.
+    Брошенная попытка (время вышло): выданное, но неотвеченное задание засчитывается неверным как обычное, а каждое
+    невыданное — неверным ответом на задание сложности порога заявленного грейда. Иначе выход после пары верных
+    ответов давал бы высокий θ, а пустая попытка — θ = 0 и подтверждённый Junior. В разбор по темам и items идут
+    только реально выданные задания; невыданные — в счётчике unanswered.
     """
-    while (item := next_item(state)) is not None:
+    item = state.get("current")
+    if item is not None and len(state["responses"]) < state["n_items"]:
         submit(state, item["item_id"], None, late=True)
-        state["responses"][-1]["skipped"] = True
+        state["responses"][-1]["unanswered"] = True
     resp = state["responses"]
-    theta = round(estimate_theta([(r["b"], r["correct"]) for r in resp]), 2)
     claimed = state["claimed_grade"]
+    not_reached = max(0, state["n_items"] - len(resp))
+    theta = round(estimate_theta([(r["b"], r["correct"]) for r in resp]
+                                 + [(THRESHOLDS[claimed], False)] * not_reached), 2)
     confirmed = theta >= THRESHOLDS[claimed]
     gi = GRADES.index(claimed)
     suggest_upgrade = confirmed and gi + 1 < len(GRADES) and theta >= THRESHOLDS[GRADES[gi + 1]]
@@ -181,7 +186,9 @@ def finish(state: dict) -> dict:
         d["total"] += 1
         d["correct"] += int(r["correct"])
     return {"theta": theta, "grade": grade_from_theta(theta), "claimed_grade": claimed, "confirmed": confirmed,
-            "suggest_upgrade": suggest_upgrade, "correct": sum(r["correct"] for r in resp), "total": len(resp),
+            "suggest_upgrade": suggest_upgrade, "correct": sum(r["correct"] for r in resp),
+            "total": len(resp) + not_reached,
+            "unanswered": sum(bool(r.get("unanswered")) for r in resp) + not_reached,
             "topics": list(by_topic.values()),
             "items": [{k: r[k] for k in ("template_id", "b", "correct", "variant_hash")} for r in resp]}
 

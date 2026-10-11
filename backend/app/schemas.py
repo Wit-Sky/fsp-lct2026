@@ -178,6 +178,7 @@ class TestResultOut(BaseModel):
     suggest_upgrade: bool
     correct: int
     total: int
+    unanswered: int = Field(0, description="Сколько заданий осталось без ответа (время вышло); входят в total и считаются неверными")
     topics: list[dict]
     category: dict | None
     next_attempt_at: datetime | None
