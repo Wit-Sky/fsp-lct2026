@@ -205,3 +205,19 @@ async def test_demo_reset_frees_fsp_and_only_resets_demo_candidate(client):
 async def test_demo_entry_disabled_outside_demo_mode(client, monkeypatch):
     monkeypatch.setattr(config, "DEMO_MODE", False)
     assert (await client.post("/api/auth/demo/candidate")).status_code == 404
+
+
+async def test_abandoned_expired_attempt_does_not_confirm_junior(client):
+    hc = await register(client, "qa-empty-attempt@example.ru")
+    await client.put("/api/me/profile", headers=hc, json={"full_name": "Пустая попытка", "consent_pd": True})
+    attempt = await client.post("/api/tests/start", headers=hc, json={"spec": "backend", "claimed_grade": "junior"})
+    assert attempt.status_code == 201, attempt.text
+    attempt_id = attempt.json()["attempt_id"]
+    async with SessionLocal() as s:
+        await s.execute(update(GradeAttempt).where(GradeAttempt.id == attempt_id)
+                        .values(started_at=utcnow() - config.TEST_TIME_LIMIT - timedelta(minutes=1)))
+        await s.commit()
+    res = (await client.get(f"/api/tests/{attempt_id}/result", headers=hc)).json()
+    assert res["correct"] == 0 and res["total"] == 10
+    assert not res["confirmed"] and res["theta"] < -0.5
+    assert res["category"]["status"] == "unconfirmed"

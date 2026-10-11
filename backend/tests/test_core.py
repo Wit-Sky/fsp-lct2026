@@ -73,6 +73,18 @@ def test_attempt_flow_and_adaptivity():
     assert bs[-1] > bs[0], "после верных ответов сложность должна расти"
 
 
+def test_unanswered_items_count_as_wrong():
+    for answered in (0, 3):
+        state = testing.build_attempt(8, "backend", "junior", 1)
+        for _ in range(answered):
+            item = testing.next_item(state)
+            testing.submit(state, item["item_id"], item["answer"])
+        testing.next_item(state)                       # выданное, но брошенное задание
+        res = testing.finish(state)
+        assert res["total"] == 10 and res["correct"] == answered
+        assert not res["confirmed"] and res["theta"] < THRESHOLDS["junior"]
+
+
 def test_fsp_score_without_history():
     score, explain = profile.fsp_score([], "backend")
     assert score == 0 and "Нет истории ФСП" in explain[0]["text"]
