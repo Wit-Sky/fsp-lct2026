@@ -17,7 +17,7 @@ export default function EmployerInvitations() {
         <h1 className="text-2xl font-bold">Мои приглашения</h1>
         <p className="text-slate-600">Статусы обновляются сами. Когда кандидат принимает приглашение, здесь появляются его контакты.</p>
       </div>
-      {q.isLoading ? <Loading /> : q.error ? <ErrorBox error={q.error} /> : !q.data?.length ? (
+      {q.isPending ? <Loading /> : q.error ? <ErrorBox error={q.error} /> : !q.data?.length ? (
         <Empty title="Вы ещё никого не пригласили" hint="Откройте подборку по потребности и нажмите «Пригласить»."
           action={<Link className="btn-primary" to="/employer">К подбору</Link>} />
       ) : (

@@ -56,9 +56,9 @@ export default function NeedMatches() {
   };
   const filtersOn = gradeAdj || fspOnly || extra.length > 0;
 
-  if (need.isLoading) return <Loading />;
-  if (need.error) return <ErrorBox error={need.error} />;
-  const n = need.data!;
+  if (need.isPending) return <Loading />;
+  if (need.error || !need.data) return <ErrorBox error={need.error} />;
+  const n = need.data;
   const needSkills = new Set(n.skills.map((s) => String((s as { name: string }).name).toLowerCase()));
   extra.forEach((s) => needSkills.add(s.toLowerCase()));
 
@@ -139,7 +139,7 @@ export default function NeedMatches() {
         </aside>
 
         <section className="space-y-3">
-          {matches.isLoading ? (
+          {matches.isPending ? (
             <Loading text="Подбираем кандидатов…" />
           ) : matches.error ? (
             <ErrorBox error={matches.error} />

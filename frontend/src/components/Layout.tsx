@@ -1,5 +1,7 @@
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../lib/auth";
+import BugReport from "./BugReport";
+import ErrorBoundary from "./ErrorBoundary";
 
 const candidateNav = [
   { to: "/candidate", label: "Мой путь", end: true },
@@ -20,6 +22,7 @@ const employerNav = [
 export default function Layout() {
   const { role, signOut } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
   const nav = role === "employer" ? employerNav : role === "candidate" ? candidateNav : [];
 
   return (
@@ -60,11 +63,14 @@ export default function Layout() {
         </div>
       </header>
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
-        <Outlet />
+        <ErrorBoundary resetKey={location.pathname}>
+          <Outlet />
+        </ErrorBoundary>
       </main>
       <footer className="border-t border-slate-200 py-4 text-center text-xs text-slate-500">
         ЛЦТ-2026 · спецтрек Федерации спортивного программирования
       </footer>
+      <BugReport />
     </div>
   );
 }

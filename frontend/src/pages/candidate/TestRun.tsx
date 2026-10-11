@@ -38,7 +38,7 @@ export default function TestRun() {
     },
   });
 
-  if (initial.isLoading || !state) return <Loading text="Готовим задания…" />;
+  if (initial.isPending || !state) return <Loading text="Готовим задания…" />;
   if (initial.error) return <ErrorBox error={initial.error} />;
   const item = state.item;
   const left = Math.max(0, Math.floor((new Date(state.deadline).getTime() - now) / 1000));

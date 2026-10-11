@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { GradeBadge, SpecBadge } from "../../components/Badges";
 import StartTest from "../../components/StartTest";
-import { Loading } from "../../components/States";
+import { ErrorBox, Loading } from "../../components/States";
 import ThetaScale from "../../components/ThetaScale";
 import { get, type S } from "../../lib/api";
 import { useCatalog } from "../../lib/catalog";
@@ -11,8 +11,9 @@ import { GRADE, SPEC, dateTime, pct } from "../../lib/format";
 export default function Category() {
   const { data: cat } = useCatalog();
   const q = useQuery({ queryKey: ["category"], queryFn: () => get<S["CategoryOut"]>("/me/category") });
-  if (q.isLoading) return <Loading />;
-  const c = q.data!;
+  if (q.isPending) return <Loading />;
+  if (!q.data) return <ErrorBox error={q.error} />;
+  const c = q.data;
   return (
     <div className="space-y-5">
       <h1 className="text-2xl font-bold">Моя категория</h1>

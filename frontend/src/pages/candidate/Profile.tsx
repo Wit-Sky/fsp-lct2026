@@ -61,7 +61,7 @@ export default function Profile() {
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["results"] }); qc.invalidateQueries({ queryKey: ["profile"] }); },
   });
 
-  if (q.isLoading) return <Loading />;
+  if (q.isPending) return <Loading />;
   if (q.error) return <ErrorBox error={q.error} />;
   const p = q.data!;
   const minor = f.birth_date ? (Date.now() - new Date(f.birth_date).getTime()) / (365.25 * 864e5) < 18 : p.minor;

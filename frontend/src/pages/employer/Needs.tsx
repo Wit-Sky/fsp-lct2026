@@ -25,7 +25,7 @@ export default function Needs() {
 
       {creating && <NeedWizard onCancel={() => setCreating(false)} />}
 
-      {needs.isLoading ? (
+      {needs.isPending ? (
         <Loading />
       ) : needs.error ? (
         <ErrorBox error={needs.error} />

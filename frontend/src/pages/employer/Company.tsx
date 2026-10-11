@@ -19,7 +19,7 @@ export default function Company() {
     },
     onError: (e) => setMsg(e instanceof ApiError ? e.message : "Ошибка сохранения"),
   });
-  if (q.isLoading) return <Loading />;
+  if (q.isPending) return <Loading />;
   if (q.error) return <ErrorBox error={q.error} />;
   const f = (k: keyof S["EmployerIn"]) => ({
     value: (form[k] as string | null | undefined) ?? "",

@@ -32,7 +32,7 @@ export default function Vacancies() {
       </div>
       {err && <p className="text-sm text-fsp-accent">{err}</p>}
       {tab === "list" ? (
-        list.isLoading ? <Loading /> : list.error ? <ErrorBox error={list.error} /> : !list.data?.length ? <Empty title="Открытых вакансий пока нет" /> : (
+        list.isPending ? <Loading /> : list.error ? <ErrorBox error={list.error} /> : !list.data?.length ? <Empty title="Открытых вакансий пока нет" /> : (
           <div className="grid gap-3 md:grid-cols-2">
             {list.data.map((v) => (
               <article key={v.id} className="card space-y-2">
@@ -49,7 +49,7 @@ export default function Vacancies() {
             ))}
           </div>
         )
-      ) : mine.isLoading ? <Loading /> : !mine.data?.length ? <Empty title="Откликов пока нет" /> : (
+      ) : mine.isPending ? <Loading /> : !mine.data?.length ? <Empty title="Откликов пока нет" /> : (
         <div className="space-y-2">
           {mine.data.map((a) => (
             <div key={a.id} className="card flex flex-wrap items-center justify-between gap-2">

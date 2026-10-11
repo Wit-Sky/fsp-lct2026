@@ -25,7 +25,7 @@ export default function CandidateInvitations() {
         <h1 className="text-2xl font-bold">Приглашения</h1>
         <p className="text-slate-600">Работодатели сами выходят на вас. Условия и зарплата — до начала общения.</p>
       </div>
-      {q.isLoading ? <Loading /> : q.error ? <ErrorBox error={q.error} /> : !q.data?.length ? (
+      {q.isPending ? <Loading /> : q.error ? <ErrorBox error={q.error} /> : !q.data?.length ? (
         <Empty title="Приглашений пока нет" hint="Подтверждённый грейд и привязанный ФСП ID поднимают вас в подборках. Пока ждёте — посмотрите открытые вакансии." />
       ) : (
         <div className="space-y-3">

@@ -1,5 +1,6 @@
 // Типизированный клиент API. Типы — из OpenAPI бэкенда: `npm run gen:api` перегенерирует api-schema.ts.
 import type { components } from "./api-schema";
+import { recordQaEvent } from "./qa";
 
 export type S = components["schemas"];
 export type Token = S["TokenOut"];
@@ -60,6 +61,7 @@ export async function api<T>(method: Method, path: string, body?: unknown): Prom
     } catch {
       /* не JSON */
     }
+    recordQaEvent("api", `${method} /api${path} → ${res.status}${code ? ` ${code}` : ""}: ${detail}`);
     throw new ApiError(res.status, detail, code);
   }
   if (res.status === 204) return undefined as T;
