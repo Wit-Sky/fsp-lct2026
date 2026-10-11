@@ -1,6 +1,6 @@
 """Модуль matching: подбор кандидатов под потребность работодателя с объяснением (CONTRACT 4, 8.3).
 
-Чистые функции без БД и FastAPI. Не импортирует testing и profile (ADR 0001): оценка ФСП приходит данными
+Чистые функции без БД и FastAPI. Не импортирует testing и profile: оценка ФСП приходит данными
 (cand["fsp_score"], cand["fsp_explain"]) или через переданную функцию fsp_fn.
 """
 from bisect import bisect_left, bisect_right

@@ -125,7 +125,7 @@ def _imports(path: Path) -> set[str]:
 
 
 def test_module_boundaries():
-    """testing / profile / matching не импортируют друг друга, SQLAlchemy и FastAPI (ADR 0001)."""
+    """testing / profile / matching не импортируют друг друга, SQLAlchemy и FastAPI."""
     mods = ("testing", "profile", "matching")
     for m in mods:
         imps = _imports(SERVICES / f"{m}.py")

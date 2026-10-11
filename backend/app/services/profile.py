@@ -1,6 +1,6 @@
 """Модуль profile: внешние учётные записи и подтверждённые результаты, видимость профиля (CONTRACT 8.3).
 
-Чистые функции без БД и FastAPI. Не импортирует testing и matching (ADR 0001).
+Чистые функции без БД и FastAPI. Не импортирует testing и matching.
 """
 import re
 from datetime import date
