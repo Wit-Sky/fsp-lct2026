@@ -7,7 +7,7 @@ import InviteModal from "../../components/InviteModal";
 import { Empty, ErrorBox, Loading } from "../../components/States";
 import { get, post, type S } from "../../lib/api";
 import { useCatalog } from "../../lib/catalog";
-import { GRADE, SPEC, WORK_FORMAT, money, pct } from "../../lib/format";
+import { GRADE, SPEC, WORK_FORMAT, money, pct, candidateNoun } from "../../lib/format";
 
 /**
  * Главный экран продукта: подборка по потребности.
@@ -92,7 +92,7 @@ export default function NeedMatches() {
               <p className="text-sm text-slate-500">{c.target ? "Целевая категория" : "Соседняя категория"}</p>
               <p className="font-bold">{SPEC[c.spec]} · {GRADE[c.grade]}</p>
               <p className="mt-1 text-sm">
-                <b>{c.total}</b> кандидатов · {c.confirmed} подтверждены · {c.with_fsp} с ФСП
+                <b>{c.total}</b> {candidateNoun(c.total)} · {c.confirmed} подтверждены · {c.with_fsp} с ФСП
               </p>
             </div>
           ))}
@@ -152,7 +152,7 @@ export default function NeedMatches() {
           ) : (
             <>
               <p className={`text-sm text-slate-500 ${matches.isFetching ? "animate-pulse" : ""}`}>
-                Найдено: {matches.data.total}. Сначала — лучшие по соответствию потребности.
+                Показано: {matches.data.items.length}. Сначала — лучшие по соответствию потребности.
               </p>
               {matches.data.items.map((m, i) => (
                 <MatchCard key={m.candidate_id} rank={i + 1} m={m} highlight={needSkills} onInvite={() => setInviting(m.candidate)} />
@@ -196,7 +196,7 @@ function MatchCard({ m, rank, highlight, onInvite }: { m: S["MatchOut"]; rank: n
           <FspResults results={c.results} compact />
           <div className="flex flex-wrap items-center gap-3 pt-1">
             <button className="text-sm font-semibold text-fsp hover:underline" onClick={() => setOpen(!open)}>
-              {open ? "Скрыть объяснение" : "Почему он здесь"}
+              {open ? "Скрыть объяснение" : "Почему в подборке"}
             </button>
             <span className="text-sm text-slate-500">
               {c.contacts_hidden ? "🔒 Контакты откроются после принятия приглашения" : `📇 ${[c.email, c.phone, c.telegram].filter(Boolean).join(" · ")}`}

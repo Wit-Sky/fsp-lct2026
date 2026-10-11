@@ -1,4 +1,4 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ErrorBox, Loading } from "../../components/States";
@@ -9,14 +9,26 @@ import { GRADE, SPEC } from "../../lib/format";
 export default function TestRun() {
   const id = Number(useParams().attemptId);
   const navigate = useNavigate();
+  const qc = useQueryClient();
   const initial = useQuery({ queryKey: ["attempt", id], queryFn: () => get<S["TestStateOut"]>(`/tests/${id}`), gcTime: 0 });
   const [state, setState] = useState<S["TestStateOut"] | null>(null);
   const [answer, setAnswer] = useState<unknown>(null);
   const [order, setOrder] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [now, setNow] = useState(Date.now());
+  const expired = state?.attempt_id === id && now >= new Date(state.deadline).getTime();
+  const expiry = useQuery({
+    queryKey: ["expired-attempt", id],
+    queryFn: () => get<S["TestStateOut"]>(`/tests/${id}`),
+    enabled: expired && !state?.finished,
+    // Сервер допускает 15 секунд на задержки сети. Ждём окончательное состояние, без новых ответов.
+    refetchInterval: (q) => q.state.data?.finished || q.state.status === "error" ? false : 2000,
+    staleTime: Infinity,
+  });
 
+  useEffect(() => { setState(null); }, [id]);
   useEffect(() => { if (initial.data) setState(initial.data); }, [initial.data]);
+  useEffect(() => { if (expiry.data) setState(expiry.data); }, [expiry.data]);
   useEffect(() => {
     const t = setInterval(() => setNow(Date.now()), 500);
     return () => clearInterval(t);
@@ -25,7 +37,13 @@ export default function TestRun() {
     setAnswer(null);
     setOrder(state?.item?.kind === "order" ? [...(state.item.options ?? [])] : []);
   }, [state?.item?.item_id]); // eslint-disable-line react-hooks/exhaustive-deps
-  useEffect(() => { if (state?.finished) navigate(`/candidate/result/${id}`, { replace: true }); }, [state?.finished, id, navigate]);
+  useEffect(() => {
+    if (state?.attempt_id !== id || !state.finished) return;
+    qc.invalidateQueries({ queryKey: ["category"] });
+    qc.invalidateQueries({ queryKey: ["profile"] });
+    const timedOut = state.answered < state.total && Date.now() >= new Date(state.deadline).getTime();
+    navigate(`/candidate/result/${id}${timedOut ? "?timeout=1" : ""}`, { replace: true });
+  }, [state?.finished, state?.answered, state?.total, state?.deadline, id, navigate, qc]);
 
   const submit = useMutation({
     mutationFn: (a: unknown) => post<S["TestStateOut"]>(`/tests/${id}/answer`, { item_id: state!.item!.item_id, answer: a }),
@@ -38,8 +56,18 @@ export default function TestRun() {
     },
   });
 
-  if (initial.isPending || !state) return <Loading text="Готовим задания…" />;
   if (initial.error) return <ErrorBox error={initial.error} />;
+  if (initial.isPending || !state) return <Loading text="Готовим задания…" />;
+  if (expired && !state.finished) return (
+    <div className="card space-y-3" role="status">
+      <h1 className="text-xl font-bold">Время теста истекло</h1>
+      <p>Сохраняем ответы и получаем результат. Новая попытка начнётся отдельно.</p>
+      {expiry.error && <>
+        <ErrorBox error={expiry.error} />
+        <button className="btn-primary" onClick={() => expiry.refetch()}>Получить результат</button>
+      </>}
+    </div>
+  );
   const item = state.item;
   const left = Math.max(0, Math.floor((new Date(state.deadline).getTime() - now) / 1000));
   const mm = String(Math.floor(left / 60)).padStart(1, "0");

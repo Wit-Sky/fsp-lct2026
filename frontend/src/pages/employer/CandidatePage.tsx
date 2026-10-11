@@ -5,7 +5,7 @@ import { FspResults, GradeBadge, SkillChips, SpecBadge, StatusBadge } from "../.
 import InviteModal from "../../components/InviteModal";
 import { ErrorBox, Loading } from "../../components/States";
 import { get, type S } from "../../lib/api";
-import { WORK_FORMAT, date, pct } from "../../lib/format";
+import { WORK_FORMAT, date, pct, decimal } from "../../lib/format";
 
 export default function CandidatePage() {
   const id = Number(useParams().candId);
@@ -21,7 +21,7 @@ export default function CandidatePage() {
     ["Стаж", c.experience_years != null ? `${c.experience_years} г.` : "—"],
     ["Формат работы", c.work_format ? WORK_FORMAT[c.work_format] : "—"],
     ["Ожидания", c.salary_expect_from ? `от ${c.salary_expect_from.toLocaleString("ru-RU")} ₽` : "—"],
-    ["Тест", c.theta != null ? `θ = ${c.theta.toFixed(2)}, лучше ${pct(c.percentile)} категории, ${date(c.tested_at)}` : "не проходил"],
+    ["Тест", c.theta != null ? `θ = ${decimal(c.theta)}, лучше ${pct(c.percentile)} категории, ${date(c.tested_at)}` : "не проходил"],
   ];
 
   return (
