@@ -170,7 +170,7 @@ async def result(attempt_id: int, user: User = Depends(candidate), session: Asyn
     cat = (await session.execute(select(Category).where(Category.user_id == user.id, Category.spec == a.spec))).scalar_one_or_none()
     return {"attempt_id": a.id, "spec": a.spec, "claimed_grade": a.claimed_grade, "theta": res["theta"], "grade": res["grade"],
             "confirmed": res["confirmed"], "suggest_upgrade": res["suggest_upgrade"], "correct": res["correct"],
-            "total": res["total"], "topics": res["topics"],
+            "total": res["total"], "unanswered": res.get("unanswered", 0), "topics": res["topics"],
             "category": {"spec": cat.spec, "grade": cat.grade, "status": cat.status, "theta": cat.theta} if cat else None,
             "next_attempt_at": aware(cat.next_attempt_at) if cat else None,
             "started_at": aware(a.started_at), "finished_at": aware(a.finished_at)}

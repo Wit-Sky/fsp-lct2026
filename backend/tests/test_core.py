@@ -81,8 +81,18 @@ def test_unanswered_items_count_as_wrong():
             testing.submit(state, item["item_id"], item["answer"])
         testing.next_item(state)                       # выданное, но брошенное задание
         res = testing.finish(state)
-        assert res["total"] == 10 and res["correct"] == answered
+        assert res["total"] == 10 and res["correct"] == answered and res["unanswered"] == 10 - answered
         assert not res["confirmed"] and res["theta"] < THRESHOLDS["junior"]
+        # в разбор по темам — только реально выданные задания (отвеченные + брошенное), невыданные не выдумываются
+        assert sum(t["total"] for t in res["topics"]) == len(res["items"]) == answered + 1
+
+
+def test_quitting_early_cannot_inflate_theta():
+    state = testing.build_attempt(9, "backend", "middle", 1)
+    for _ in range(3):
+        item = testing.next_item(state)
+        testing.submit(state, item["item_id"], item["answer"])
+    assert not testing.finish(state)["confirmed"]  # 3 верных и выход — не Middle (без добивки было бы θ ≈ 2,6)
 
 
 def test_fsp_score_without_history():

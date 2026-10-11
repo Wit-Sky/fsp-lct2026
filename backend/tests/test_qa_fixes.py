@@ -218,6 +218,6 @@ async def test_abandoned_expired_attempt_does_not_confirm_junior(client):
                         .values(started_at=utcnow() - config.TEST_TIME_LIMIT - timedelta(minutes=1)))
         await s.commit()
     res = (await client.get(f"/api/tests/{attempt_id}/result", headers=hc)).json()
-    assert res["correct"] == 0 and res["total"] == 10
+    assert res["correct"] == 0 and res["total"] == 10 and res["unanswered"] == 10
     assert not res["confirmed"] and res["theta"] < -0.5
     assert res["category"]["status"] == "unconfirmed"
