@@ -50,8 +50,7 @@ async def finalize(session: AsyncSession, a: GradeAttempt, now: datetime) -> dic
     """Завершить попытку и обновить категорию. Грейд не понижается принудительно: подтверждённая категория
     сохраняется при провале теста на более высокий грейд."""
     state = copy.deepcopy(a.items)
-    state["current"] = None
-    res = testing.finish(state)
+    res = testing.finish(state)                    # текущее и оставшиеся задания засчитываются неверными
     a.theta, a.finished_at = res["theta"], now
     a.result = "confirmed" if res["confirmed"] else "failed"
     state["result"] = res

@@ -160,7 +160,14 @@ def grade_from_theta(theta: float) -> str | None:
 
 
 def finish(state: dict) -> dict:
-    """Итог попытки: θ, подтверждён ли заявленный грейд, предложение повыситься, разбор по темам."""
+    """Итог попытки: θ, подтверждён ли заявленный грейд, предложение повыситься, разбор по темам.
+
+    Незаданные и неотвеченные задания (время вышло, тест брошен) засчитываются неверными: иначе пустая
+    попытка давала бы θ = 0 и подтверждала Junior.
+    """
+    while (item := next_item(state)) is not None:
+        submit(state, item["item_id"], None, late=True)
+        state["responses"][-1]["skipped"] = True
     resp = state["responses"]
     theta = round(estimate_theta([(r["b"], r["correct"]) for r in resp]), 2)
     claimed = state["claimed_grade"]
