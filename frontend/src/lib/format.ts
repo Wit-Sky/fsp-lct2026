@@ -24,6 +24,19 @@ export function money(from?: number | null, to?: number | null, type?: string | 
 
 export const pct = (v?: number | null) => (v == null ? "—" : `${Math.round(v * 100)} %`);
 
+export function decimal(v: number | null | undefined, digits = 2) {
+  if (v == null) return "—";
+  return new Intl.NumberFormat("ru-RU", { minimumFractionDigits: digits, maximumFractionDigits: digits })
+    .format(v).replace(/^-/, "−");
+}
+
+export function candidateNoun(count: number) {
+  const n = Math.abs(count) % 100;
+  if (n >= 11 && n <= 14) return "кандидатов";
+  const last = n % 10;
+  return last === 1 ? "кандидат" : last >= 2 && last <= 4 ? "кандидата" : "кандидатов";
+}
+
 export function dateTime(iso?: string | null) {
   if (!iso) return "—";
   return new Date(iso).toLocaleString("ru-RU", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });

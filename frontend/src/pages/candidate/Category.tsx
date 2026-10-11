@@ -6,7 +6,7 @@ import { ErrorBox, Loading } from "../../components/States";
 import ThetaScale from "../../components/ThetaScale";
 import { get, type S } from "../../lib/api";
 import { useCatalog } from "../../lib/catalog";
-import { GRADE, SPEC, dateTime, pct } from "../../lib/format";
+import { GRADE, SPEC, dateTime, pct, decimal } from "../../lib/format";
 
 export default function Category() {
   const { data: cat } = useCatalog();
@@ -24,7 +24,7 @@ export default function Category() {
           <div className="card space-y-2">
             <div className="flex flex-wrap items-center gap-2"><SpecBadge spec={c.spec} /><GradeBadge grade={c.grade} status={c.status} /></div>
             <p className="text-sm text-slate-600">
-              θ = {c.theta?.toFixed(2)} · лучше {pct(c.percentile)} категории · тест {dateTime(c.tested_at)}
+              θ = {decimal(c.theta)} · лучше {pct(c.percentile)} категории · тест {dateTime(c.tested_at)}
               {c.confirmed_at ? ` · подтверждён ${dateTime(c.confirmed_at)}` : ""}
             </p>
             {c.theta != null && <ThetaScale theta={c.theta} thresholds={cat?.grades ?? []} />}
@@ -49,7 +49,7 @@ export default function Category() {
               {c.attempts.map((a) => (
                 <tr key={a.id} className="border-t">
                   <td className="py-1.5">{dateTime(a.started_at)}</td><td>{SPEC[a.spec]}</td><td>{GRADE[a.claimed_grade]}</td>
-                  <td className="tabular-nums">{a.theta?.toFixed(2) ?? "—"}</td>
+                  <td className="tabular-nums">{decimal(a.theta)}</td>
                   <td>{a.finished_at ? <Link className="text-fsp hover:underline" to={`/candidate/result/${a.id}`}>{a.result === "confirmed" ? "подтверждён" : "не подтверждён"}</Link> : <Link className="text-fsp" to={`/candidate/test/${a.id}`}>продолжить</Link>}</td>
                 </tr>
               ))}

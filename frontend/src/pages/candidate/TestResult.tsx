@@ -1,17 +1,18 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import StartTest from "../../components/StartTest";
 import { ErrorBox, Loading } from "../../components/States";
 import ThetaScale from "../../components/ThetaScale";
 import { get, type S } from "../../lib/api";
 import { useCatalog } from "../../lib/catalog";
-import { GRADE, SPEC, dateTime } from "../../lib/format";
+import { GRADE, SPEC, dateTime, decimal } from "../../lib/format";
 
 const ORDER = ["junior", "middle", "senior"];
 
 export default function TestResult() {
   const id = Number(useParams().attemptId);
+  const [params] = useSearchParams();
   const { data: cat } = useCatalog();
   const q = useQuery({ queryKey: ["result", id], queryFn: () => get<S["TestResultOut"]>(`/tests/${id}/result`) });
   const [retry, setRetry] = useState<string | null>(null);
@@ -24,10 +25,11 @@ export default function TestResult() {
   return (
     <div className="mx-auto max-w-3xl space-y-5">
       <div className={`card ${r.confirmed ? "border-emerald-300 bg-emerald-50" : "border-amber-300 bg-amber-50"}`}>
+        {params.get("timeout") === "1" && <p className="mb-2 text-sm text-amber-800">Время теста истекло. Результат рассчитан по сохранённым ответам.</p>}
         <p className="text-sm text-slate-600">{SPEC[r.spec]} · тест на {GRADE[r.claimed_grade]}</p>
         <h1 className="mt-1 text-2xl font-bold">{r.confirmed ? `Грейд ${GRADE[r.claimed_grade]} подтверждён` : `Грейд ${GRADE[r.claimed_grade]} пока не подтверждён`}</h1>
         <p className="mt-1 text-slate-700">
-          Верных ответов: {r.correct} из {r.total}. Оценка способности θ = {r.theta.toFixed(2)}
+          Верных ответов: {r.correct} из {r.total}. Оценка способности θ = {decimal(r.theta)}
           {r.grade ? ` — уровень ${GRADE[r.grade]}` : " — ниже порога Junior"}.
         </p>
         {!r.confirmed && <p className="mt-1 text-sm text-slate-600">Работодатели видят заявленный грейд с пометкой «не подтверждён», ниже в выдаче. Принудительно грейд не понижается.</p>}

@@ -1,5 +1,5 @@
 import type { S } from "../lib/api";
-import { FACTOR } from "../lib/format";
+import { FACTOR, decimal } from "../lib/format";
 
 /**
  * «Почему он здесь»: вклад каждого фактора в итоговый скор 0–100 (вес × значение × 100)
@@ -19,7 +19,7 @@ export default function Explain({ items }: { items: S["ExplainItem"][] }) {
                 <div className="flex items-baseline justify-between gap-3">
                   <span className="font-semibold">{FACTOR[e.factor] ?? e.factor}</span>
                   <span className="tabular-nums text-slate-500">
-                    {points.toFixed(1)} из {max.toFixed(0)}
+                    {decimal(points, 1)} из {decimal(max, 0)}
                   </span>
                 </div>
                 <div className="mt-1 h-2 overflow-hidden rounded-full bg-slate-100">

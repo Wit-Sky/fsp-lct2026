@@ -1,21 +1,35 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { GradeBadge, SpecBadge } from "../../components/Badges";
 import StartTest from "../../components/StartTest";
 import { ErrorBox, Loading } from "../../components/States";
 import { get, type S } from "../../lib/api";
-import { pct } from "../../lib/format";
-
-export const FSP_SKIP_KEY = "fsp_skip";
-const skipped = () => {
-  try { return localStorage.getItem(FSP_SKIP_KEY) === "1"; } catch { return false; }
-};
+import { useAuth } from "../../lib/auth";
+import { useFspSkip } from "../../lib/fsp-step";
+import { GRADE, SPEC, pct } from "../../lib/format";
 
 /** Обязательный путь кандидата: профиль → FSP ID → специализация и грейд → тест → категория. */
 export default function Journey() {
+  const qc = useQueryClient();
+  const { token } = useAuth();
+  const { skipped, skip } = useFspSkip(token?.user_id ?? null);
+  const [closedAttempt, setClosedAttempt] = useState<number | null>(null);
   const profile = useQuery({ queryKey: ["profile"], queryFn: () => get<S["ProfileOut"]>("/me/profile") });
   const category = useQuery({ queryKey: ["category"], queryFn: () => get<S["CategoryOut"]>("/me/category") });
   const invites = useQuery({ queryKey: ["my-invitations"], queryFn: () => get<S["InvitationOut"][]>("/me/invitations") });
+  const unfinished = category.data?.attempts.find((a) => !a.finished_at);
+  const attempt = useQuery({
+    queryKey: ["journey-attempt", unfinished?.id],
+    queryFn: () => get<S["TestStateOut"]>(`/tests/${unfinished!.id}`),
+    enabled: !!unfinished,
+  });
+  useEffect(() => {
+    if (attempt.data?.finished) {
+      setClosedAttempt(attempt.data.attempt_id);
+      qc.invalidateQueries({ queryKey: ["category"] });
+    }
+  }, [attempt.data?.finished, attempt.data?.attempt_id, qc]);
   if (profile.isPending || category.isPending) return <Loading />;
   if (!profile.data || !category.data) return <ErrorBox error={profile.error ?? category.error} />;
   const p = profile.data;
@@ -23,7 +37,7 @@ export default function Journey() {
 
   const steps = [
     { key: "profile", title: "Профиль", done: !!p.full_name && p.consent_pd && (!p.minor || p.parent_consent) },
-    { key: "fsp", title: "ФСП ID", done: p.fsp_linked || skipped() },
+    { key: "fsp", title: "ФСП ID", done: p.fsp_linked || skipped || c.attempts.length > 0 },
     { key: "test", title: "Специализация, грейд и тест", done: c.status !== "none" },
     { key: "category", title: "Категория", done: c.status === "confirmed" },
   ];
@@ -33,14 +47,14 @@ export default function Journey() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Мой путь{p.full_name ? `, ${p.full_name.split(" ")[1] ?? p.full_name}` : ""}</h1>
+        <h1 className="text-2xl font-bold">Мой путь</h1>
         <p className="text-slate-600">Пройдите шаги — и работодатели увидят вас в своей категории и смогут пригласить.</p>
       </div>
 
       <ol className="grid gap-2 sm:grid-cols-4">
         {steps.map((s, i) => (
           <li key={s.key} className={`rounded-lg border p-3 text-sm ${s.done ? "border-emerald-300 bg-emerald-50" : s.key === current ? "border-fsp bg-white ring-1 ring-fsp" : "border-slate-200 bg-white text-slate-500"}`}>
-            <span className="font-semibold">{s.done ? "✓" : i + 1}. {s.title}</span>
+            <span className="font-semibold">{s.done ? "✓" : `${i + 1}.`} {s.title}</span>
           </li>
         ))}
       </ol>
@@ -49,6 +63,13 @@ export default function Journey() {
         <Link to="/candidate/invitations" className="card block border-fsp-accent bg-fsp-tint/40">
           <b>📩 Новых приглашений: {newInvites}.</b> Условия и зарплата — внутри.
         </Link>
+      )}
+
+      {closedAttempt != null && (
+        <div className="card space-y-2 border-amber-300 bg-amber-50">
+          <p>Предыдущая попытка завершена. Проверьте результат перед новым тестом.</p>
+          <Link className="btn-primary" to={`/candidate/result/${closedAttempt}`}>Посмотреть результат</Link>
+        </div>
       )}
 
       {current === "profile" && (
@@ -64,13 +85,24 @@ export default function Journey() {
           <p className="text-slate-600">Результаты соревнований ФСП подтягиваются автоматически и поднимают вас внутри категории. На грейд они не влияют.</p>
           <div className="flex flex-wrap gap-2">
             <Link className="btn-primary" to="/candidate/profile#fsp">Привязать ФСП ID</Link>
-            <button className="btn-ghost" onClick={() => { try { localStorage.setItem(FSP_SKIP_KEY, "1"); } catch { /* */ } profile.refetch(); }}>
+            <button className="btn-ghost" onClick={skip}>
               У меня нет истории ФСП
             </button>
           </div>
         </div>
       )}
-      {current === "test" && (
+      {unfinished && !attempt.data?.finished && (
+        <div className="card space-y-3 border-amber-300 bg-amber-50">
+          <h2 className="text-lg font-bold">У вас есть незавершённая попытка</h2>
+          <p className="text-slate-700">
+            {SPEC[unfinished.spec]} · тест на {GRADE[unfinished.claimed_grade]}.
+            Продолжите попытку; если время истекло, откроется её результат.
+          </p>
+          <Link className="btn-primary" to={`/candidate/test/${unfinished.id}`}>Продолжить попытку</Link>
+          {attempt.error && <ErrorBox error={attempt.error} />}
+        </div>
+      )}
+      {current === "test" && !unfinished && (
         <div className="card space-y-3">
           <h2 className="text-lg font-bold">Шаг 3. Выберите специализацию и грейд</h2>
           <StartTest defaultSpec={p.spec} />

@@ -25,6 +25,7 @@ export default function StartTest({ defaultSpec, defaultGrade, compact }: { defa
 
   const lockedUntil = category.data?.spec === spec ? category.data?.can_retest?.[grade] : null;
   const locked = lockedUntil && new Date(lockedUntil) > new Date();
+  const active = category.data?.attempts.find((a) => !a.finished_at && a.spec === spec && a.claimed_grade === grade);
 
   return (
     <div className="space-y-4">
@@ -62,7 +63,7 @@ export default function StartTest({ defaultSpec, defaultGrade, compact }: { defa
       {locked && <p className="text-sm text-amber-700">Тест на этот грейд будет доступен {dateTime(lockedUntil)}. Можно выбрать грейд ниже.</p>}
       {error && <p className="text-sm text-fsp-accent">{error}</p>}
       <button className="btn-accent" disabled={start.isPending || !!locked} onClick={() => { setError(null); start.mutate(); }}>
-        {start.isPending ? "Готовим задания…" : "Начать тест"}
+        {start.isPending ? "Готовим задания…" : active ? "Продолжить попытку" : "Начать тест"}
       </button>
     </div>
   );
